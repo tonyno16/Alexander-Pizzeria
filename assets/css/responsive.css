@@ -1,0 +1,105 @@
+/* === Global Responsive Adjustments === */
+
+/* Tablet landscape and below */
+@media (max-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet portrait and below */
+@media (max-width: 768px) {
+  :root {
+    --space-section: 3rem;
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* Tabs scroll on mobile */
+  .tabs {
+    gap: 0;
+    padding-bottom: 2px;
+  }
+
+  .tab {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+
+  .btn--large {
+    padding: 14px 24px;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print */
+@media print {
+  .site-header,
+  .site-footer,
+  .whatsapp-widget,
+  .nav__toggle,
+  .btn,
+  .hero__cta,
+  .location-card__actions,
+  .tabs,
+  .iframe-wrapper {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 12pt;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}

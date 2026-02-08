@@ -1,0 +1,151 @@
+{
+  "business": {
+    "name": "Alexander Pizzeria",
+    "legalName": "Alexander S.R.L.",
+    "vatId": "IT10021390017",
+    "headquarters": "Via Pinerolo 149, 10045 Piossasco TO, Italia",
+    "whatsapp": "+393923734826",
+    "whatsappDisplay": "+39 392 373 4826",
+    "fidelityUrl": "https://pnssm.pro/psm4t3y",
+    "website": "https://www.alexanderpizzeria.com",
+    "socialMedia": {
+      "instagram": "https://www.instagram.com/alexander.pizzeria/",
+      "facebook": "https://www.facebook.com/alexanderpizzeria/"
+    },
+    "tracking": {
+      "ga4Id": "309439443",
+      "facebookPixelId": "256613265809196",
+      "iubendaSiteId": "1444752",
+      "iubendaPolicyId": "32284578"
+    }
+  },
+  "locations": [
+    {
+      "id": "pinerolo",
+      "name": "Alexander Pinerolo",
+      "city": "Pinerolo",
+      "displayCity": "Pinerolo",
+      "type": ["Pizzeria"],
+      "typeDisplay": "Pizzeria",
+      "address": "Via Achille Midana, 37",
+      "fullAddress": "Via Achille Midana, 37, 10064 Pinerolo TO",
+      "postalCode": "10064",
+      "province": "TO",
+      "country": "IT",
+      "phone": "+390121332035",
+      "phoneDisplay": "+39 0121 332035",
+      "hours": {
+        "display": "Tutti i giorni: 19:00 - 23:30",
+        "lunch": false,
+        "schema": "Mo-Su 19:00-23:30"
+      },
+      "geo": {
+        "lat": 44.883,
+        "lng": 7.330
+      },
+      "urls": {
+        "booking": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.forms.pienissimo.pro/?id=Fl7E3J",
+        "takeaway": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.delivery.pienissimo.pro/?id=7CZfad",
+        "menu": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.menu.pienissimo.pro/?id=111"
+      },
+      "mapsQuery": "Via+Achille+Midana+37+Pinerolo+TO",
+      "slug": "pinerolo"
+    },
+    {
+      "id": "piossasco",
+      "name": "Alexander Piossasco",
+      "city": "Piossasco",
+      "displayCity": "Piossasco",
+      "type": ["Pizzeria"],
+      "typeDisplay": "Pizzeria",
+      "address": "Via Pinerolo, 149",
+      "fullAddress": "Via Pinerolo, 149, 10045 Piossasco TO",
+      "postalCode": "10045",
+      "province": "TO",
+      "country": "IT",
+      "phone": "+390117601733",
+      "phoneDisplay": "+39 011 760 1733",
+      "hours": {
+        "display": "Tutti i giorni: 19:00 - 23:30",
+        "lunch": false,
+        "schema": "Mo-Su 19:00-23:30"
+      },
+      "geo": {
+        "lat": 44.984,
+        "lng": 7.465
+      },
+      "urls": {
+        "booking": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.forms.pienissimo.pro/?id=PMl7Y4",
+        "takeaway": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.delivery.pienissimo.pro/?id=wNYEmx",
+        "menu": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10"
+      },
+      "mapsQuery": "Via+Pinerolo+149+Piossasco+TO",
+      "slug": "piossasco"
+    },
+    {
+      "id": "giaveno",
+      "name": "Alexander Valsangone",
+      "city": "Giaveno",
+      "displayCity": "Giaveno (Valsangone)",
+      "type": ["Pizzeria", "Ristorante"],
+      "typeDisplay": "Pizzeria e Ristorante",
+      "address": "Piazza Molines, 45",
+      "fullAddress": "Piazza Molines, 45, 10094 Giaveno TO",
+      "postalCode": "10094",
+      "province": "TO",
+      "country": "IT",
+      "phone": "+390119376286",
+      "phoneDisplay": "+39 011 937 6286",
+      "hours": {
+        "display": "Tutti i giorni: 12:00 - 15:00 / 19:00 - 23:30",
+        "lunch": true,
+        "schema": "Mo-Su 12:00-15:00,Mo-Su 19:00-23:30"
+      },
+      "geo": {
+        "lat": 45.042,
+        "lng": 7.353
+      },
+      "urls": {
+        "booking": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.forms.pienissimo.pro/?id=Fl7E3J",
+        "takeaway": "https://4ajacb1xf2rpvydbkjcepog7qvryk252.delivery.pienissimo.pro/?id=K0nOww",
+        "menu": "https://4ajacb1xf2rpvydbkjcepog7qvryk252.menu.pienissimo.pro/?id=142"
+      },
+      "mapsQuery": "Piazza+Molines+45+Giaveno+TO",
+      "slug": "giaveno",
+      "specialFeatures": ["porciniMushrooms", "lunchService"],
+      "servesCuisine": ["Pizza", "Cucina Italiana", "Piatti ai Funghi Porcini"]
+    },
+    {
+      "id": "rivoli",
+      "name": "Alexander Rivoli",
+      "city": "Rivoli",
+      "displayCity": "Rivoli",
+      "type": ["Pizzeria", "Ristorante"],
+      "typeDisplay": "Pizzeria e Ristorante",
+      "address": "Piazza Principe Eugenio, 7",
+      "fullAddress": "Piazza Principe Eugenio, 7, 10098 Rivoli TO",
+      "postalCode": "10098",
+      "province": "TO",
+      "country": "IT",
+      "phone": "+390110608880",
+      "phoneDisplay": "+39 011 060 8880",
+      "hours": {
+        "display": "Tutti i giorni: 19:00 - 23:30",
+        "lunch": false,
+        "schema": "Mo-Su 19:00-23:30"
+      },
+      "geo": {
+        "lat": 45.072,
+        "lng": 7.513
+      },
+      "urls": {
+        "booking": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.forms.pienissimo.pro/?id=RbxKIr",
+        "takeaway": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.delivery.pienissimo.pro/?id=WCwQ8h",
+        "menu": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.menu.pienissimo.pro/?id=175"
+      },
+      "mapsQuery": "Piazza+Principe+Eugenio+7+Rivoli+TO",
+      "slug": "rivoli",
+      "servesCuisine": ["Pizza", "Cucina Italiana"]
+    }
+  ]
+}

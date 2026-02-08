@@ -1,0 +1,335 @@
+/* === Buttons === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 12px 24px;
+  border-radius: var(--border-radius-pill);
+  border: 2px solid transparent;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  color: var(--color-black);
+}
+
+.btn--secondary {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn--secondary:hover {
+  background-color: #333;
+  border-color: #333;
+  color: var(--color-white);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline-light {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-white);
+}
+
+.btn--outline-light:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.btn--small {
+  padding: 8px 16px;
+  font-size: var(--font-size-sm);
+}
+
+.btn--large {
+  padding: 16px 32px;
+  font-size: var(--font-size-lg);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.btn-group--center {
+  justify-content: center;
+}
+
+.btn-group--column {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Cards === */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.card__body {
+  padding: var(--space-lg);
+}
+
+.card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.card__text {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+.card__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.card__actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* === Tags / Badges === */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag--gold {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.tag--dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* === Tabs === */
+.tabs {
+  display: flex;
+  gap: var(--space-xs);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--space-xl);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+  padding: var(--space-md) var(--space-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.tab:hover {
+  color: var(--color-primary);
+}
+
+.tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* === Forms === */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  background-color: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+  outline: none;
+}
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: var(--color-error);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-xs);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 4px;
+  accent-color: var(--color-primary);
+}
+
+.form-file {
+  padding: var(--space-lg);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.form-file:hover {
+  border-color: var(--color-primary);
+}
+
+/* === Iframe wrapper === */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--color-bg-alt);
+}
+
+.iframe-wrapper iframe {
+  border: none;
+  width: 100%;
+  min-height: 650px;
+}
+
+/* === Divider === */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-xl) 0;
+}
+
+/* === Icon inline === */
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.icon--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--lg {
+  width: 24px;
+  height: 24px;
+}

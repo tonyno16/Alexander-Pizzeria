@@ -1,0 +1,91 @@
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* Section */
+.section {
+  padding: var(--space-section) 0;
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section--dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-on-dark);
+}
+
+.section--dark .section-title {
+  color: var(--color-white);
+}
+
+.section--dark .section-subtitle,
+.section--dark .text-muted {
+  color: var(--color-text-on-dark-muted);
+}
+
+.section--dark a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--gap-sm {
+  gap: var(--space-sm);
+}
+
+.flex--gap-md {
+  gap: var(--space-md);
+}
+
+.flex--gap-lg {
+  gap: var(--space-lg);
+}
