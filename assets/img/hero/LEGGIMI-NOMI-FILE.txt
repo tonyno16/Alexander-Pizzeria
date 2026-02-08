@@ -1,0 +1,24 @@
+=== IMMAGINI HERO - NOMI E DOVE SALVARLE ===
+
+Cartella: assets/img/hero/
+
+OPZIONE A - Una sola immagine (più semplice)
+  Nome file: hero.jpg  oppure  hero.webp  oppure  hero.png
+  Il sito userà questa immagine su tutti i dispositivi.
+  Consiglio: larghezza almeno 1920px, formato JPG o WebP per peso ridotto.
+
+OPZIONE B - Tre versioni (desktop / tablet / mobile)
+  Nomi file:
+    hero-desktop.webp   (es. 1920 x 1080 px - per schermi grandi)
+    hero-tablet.webp   (es. 1200 x 800 px - per tablet)
+    hero-mobile.webp   (es. 768 x 1024 px - per smartphone)
+  In questo caso va aggiornato il CSS per caricare la versione giusta in base alla larghezza schermo.
+
+REGOLE GENERALI
+- Usa solo lettere minuscole, numeri e trattino (-).
+- Evita spazi e caratteri speciali nel nome.
+- Esempi corretti: hero.jpg, hero-pizza.webp, hero-desktop.jpg
+- Esempi da evitare: Hero Immagine.png, immagine hero (1).jpg
+
+File già presente: Orange-Gluten-Free-Pizza-Facebook-Post-.png
+  È già collegato alla homepage. Se in futuro lo rinomini (es. hero.png), aggiorna il percorso in index.html nella sezione hero (cerca "hero__bg-img" e url('assets/img/hero/...')).

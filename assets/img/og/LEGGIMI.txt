@@ -1,0 +1,4 @@
+Qui metti le immagini Open Graph (anteprima quando si condividono i link sui social).
+Formato consigliato: 1200 x 630 px.
+Nome per la homepage: og-home.jpg
+Vedi FOTO-DA-AGGIUNGERE.md per l'elenco completo.

@@ -1,0 +1,7 @@
+In questa cartella metti le foto delle 4 sedi.
+Nomi file da usare:
+  pinerolo.jpg
+  piossasco.jpg
+  giaveno.jpg
+  rivoli.jpg
+Vedi FOTO-DA-AGGIUNGERE.md nella root del sito per i dettagli.

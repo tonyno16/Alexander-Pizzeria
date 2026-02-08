@@ -46,6 +46,7 @@ Alexander-Pizzeria/
 
 1. **Aprire il file:** doppio clic su `index.html`.
 2. **Con server locale (consigliato):**
+
    ```bash
    # Con Python
    python -m http.server 8000

@@ -94,8 +94,9 @@ git remote add origin https://github.com/tonyno16/Alexander-Pizzeria.git
 git push -u origin main
 ```
 
-**Cosa fa:**  
-- Invia tutti i commit locali (in questo caso il “first commit”) sul branch `main` del repository `origin` (GitHub).  
+**Cosa fa:**
+
+- Invia tutti i commit locali (in questo caso il “first commit”) sul branch `main` del repository `origin` (GitHub).
 - L’opzione `-u` (o `--set-upstream`) collega il branch locale `main` al branch remoto `origin/main`. Dopo questo primo push potrai usare semplicemente `git push` e `git pull` senza specificare `origin main`.
 
 **Nota:** La prima volta GitHub potrebbe chiedere **login** (browser o token). Se usi HTTPS e la password non funziona, GitHub richiede un **Personal Access Token** invece della password dell’account.
@@ -104,14 +105,14 @@ git push -u origin main
 
 ## 3. Spiegazione comando per comando
 
-| Comando | Significato breve |
-|--------|--------------------|
-| `git init` | Crea un nuovo repository Git nella cartella corrente. |
-| `git add .` | Aggiunge tutti i file modificati/nuovi allo staging. |
-| `git commit -m "messaggio"` | Salva uno snapshot dello staging con un messaggio. |
-| `git branch -M main` | Rinomina il branch corrente in `main`. |
-| `git remote add origin <url>` | Collega il repo locale al repo GitHub (nome `origin`). |
-| `git push -u origin main` | Invia i commit su GitHub e imposta `main` come branch predefinito per push/pull. |
+| Comando                       | Significato breve                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| `git init`                    | Crea un nuovo repository Git nella cartella corrente.                            |
+| `git add .`                   | Aggiunge tutti i file modificati/nuovi allo staging.                             |
+| `git commit -m "messaggio"`   | Salva uno snapshot dello staging con un messaggio.                               |
+| `git branch -M main`          | Rinomina il branch corrente in `main`.                                           |
+| `git remote add origin <url>` | Collega il repo locale al repo GitHub (nome `origin`).                           |
+| `git push -u origin main`     | Invia i commit su GitHub e imposta `main` come branch predefinito per push/pull. |
 
 ---
 
@@ -145,15 +146,18 @@ Se è la prima volta dopo il “first commit” e non hai usato `-u`, usa:
 ## 5. Comandi utili
 
 - **Stato e differenze**
+
   - `git status` — file modificati, in staging, non tracciati.
   - `git diff` — differenze non ancora in staging.
   - `git diff --staged` — differenze già in staging.
 
 - **Storia**
+
   - `git log` — elenco commit (q per uscire).
   - `git log --oneline` — un commit per riga.
 
 - **Remote**
+
   - `git remote -v` — elenco remote (es. `origin`).
   - Cambiare URL del remote:  
     `git remote set-url origin https://github.com/tonyno16/Alexander-Pizzeria.git`
