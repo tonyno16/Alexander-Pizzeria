@@ -1,0 +1,22 @@
+COME VEDERE I POST INSTAGRAM REALI IN HOMEPAGE
+==============================================
+
+Il sito usa l'embed ufficiale di Instagram: i post si vedono davvero.
+
+COSA FARE (2 minuti):
+--------------------
+1. Vai su Instagram (da telefono o PC) e apri 3 post che vuoi mostrare in homepage.
+2. Su ogni post: clicca i tre puntini in alto a destra → "Incorpora" (o "Embed").
+3. Copia il codice che Instagram ti mostra (è un <blockquote class="instagram-media" ...>).
+4. In index.html cerca la sezione "INSTAGRAM FEED" e sostituisci i tre blockquote placeholder con i tuoi tre codici copiati.
+
+Dettaglio: ogni blockquote ha un attributo data-instgrm-permalink="https://www.instagram.com/p/XXXX/".
+- I placeholder hanno link finti (CXXXXXXXXXX).
+- Sostituisci ogni blockquote con quello che Instagram ti dà quando clicchi "Incorpora" su un post.
+
+Vuoi mostrare più di 3 post?
+- Aggiungi altri blockquote dentro la div con class="instagram-embed-grid".
+- Su mobile si impilano uno sotto l'altro.
+
+Alternativa con servizi esterni:
+- EmbedSocial, Elfsight, SnapWidget: offrono widget che aggiornano il feed da soli. Cercare "Instagram feed widget" e incollare il codice che ti danno nella stessa sezione.

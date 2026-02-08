@@ -1,6 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
+    <!-- Iubenda Cookie Solution + Privacy Controls (inizio head) -->
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        emailMarketing: { theme: "dark" },
+        enableTcf: true,
+        floatingPreferencesButtonDisplay: "bottom-right",
+        googleAdditionalConsentMode: true,
+        perPurposeConsent: true,
+        siteId: 1444752,
+        storage: { useSiteId: true },
+        tcfPurposes: {
+          2: "consent_only",
+          7: "consent_only",
+          8: "consent_only",
+          9: "consent_only",
+          10: "consent_only",
+          11: "consent_only",
+        },
+        whitelabel: false,
+        cookiePolicyId: 32284578,
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonRejects: true,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "float-top-center",
+          showTitle: false,
+        },
+      };
+      _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
+    </script>
+    <script
+      type="text/javascript"
+      src="//cs.iubenda.com/sync/1444752.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/tcf/stub-v2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/iubenda_cs.js"
+      charset="UTF-8"
+      async
+    ></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
@@ -32,6 +84,12 @@
     <meta property="og:url" content="https://www.alexanderpizzeria.com/" />
     <meta property="og:site_name" content="Alexander Pizzeria" />
     <meta property="og:locale" content="it_IT" />
+    <meta
+      property="og:image"
+      content="https://www.alexanderpizzeria.com/assets/img/og/og-home.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -43,30 +101,28 @@
       name="twitter:description"
       content="4 pizzerie nella provincia di Torino. Prenota il tuo tavolo o ordina d'asporto."
     />
+    <meta
+      name="twitter:image"
+      content="https://www.alexanderpizzeria.com/assets/img/og/og-home.jpg"
+    />
 
     <!-- Favicon -->
     <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml" />
+
+    <!-- Preload hero (migliora LCP); main.js può passare a hero.webp se supportato -->
+    <link rel="preload" as="image" href="assets/img/hero/hero.jpg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/hero.css" />
-    <link rel="stylesheet" href="assets/css/locations.css" />
-    <link rel="stylesheet" href="assets/css/loyalty.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Styles (unified, minified) -->
+    <link rel="preload" href="assets/css/style.min.css" as="style" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Salta al contenuto</a>
@@ -119,7 +175,7 @@
             </li>
             <li class="nav__mobile-social">
               <a
-                href="https://www.instagram.com/alexander.pizzeria/"
+                href="https://www.instagram.com/alexanderpizzeria_/"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
@@ -160,7 +216,7 @@
           </ul>
           <div class="nav__social nav__social--desktop">
             <a
-              href="https://www.instagram.com/alexander.pizzeria/"
+              href="https://www.instagram.com/alexanderpizzeria_/"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -205,19 +261,27 @@
 
     <!-- ========== MAIN ========== -->
     <main id="main-content">
-      <!-- HERO -->
-      <section class="hero">
+      <!-- HERO (slider: aggiungi hero-2.jpg, hero-3.jpg in assets/img/hero/ per slide diverse) -->
+      <section class="hero hero--slider">
         <div class="hero__bg"></div>
-        <div
-          class="hero__bg-img"
-          style="
-            background-image: url('assets/img/hero/hero.jpg');
-            background-color: #1a1a1a;
-          "
-        ></div>
+        <div class="hero__slides">
+          <!-- main.js usa hero.webp se il browser lo supporta (dopo npm run optimize-images) -->
+          <div
+            class="hero__slide hero__slide--active"
+            style="background-image: url('assets/img/hero/hero.jpg')"
+          ></div>
+          <div
+            class="hero__slide"
+            style="background-image: url('assets/img/hero/hero.jpg')"
+          ></div>
+          <div
+            class="hero__slide"
+            style="background-image: url('assets/img/hero/hero.jpg')"
+          ></div>
+        </div>
         <div class="container hero__inner">
           <div class="hero__content">
-            <span class="hero__tagline">Il segreto e nell'impasto</span>
+            <span class="hero__tagline">Il segreto è nell'impasto</span>
             <h1 class="hero__title">
               Pizza Artigianale dal Cuore del Piemonte
             </h1>
@@ -227,10 +291,12 @@
             </p>
             <div class="hero__cta">
               <a
-                class="btn btn--primary btn--large"
+                class="btn btn--primary btn--large hero__cta-main"
                 href="prenota-un-tavolo.html"
-                >Prenota Ora</a
               >
+                <span class="hero__cta-label">Prenota il Tuo Tavolo</span>
+                <span class="hero__cta-sublabel">Conferma immediata</span>
+              </a>
               <a class="btn btn--outline-light btn--large" href="menu.html"
                 >Il Nostro Menu</a
               >
@@ -244,6 +310,77 @@
         </div>
       </section>
 
+      <!-- TRUST BADGES -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          <span>Dal 2004</span>
+        </div>
+        <div class="trust-badge">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span>4 Sedi in Provincia di Torino</span>
+        </div>
+        <div class="trust-badge">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>Impasto 48h Lievitazione</span>
+        </div>
+        <div class="trust-badge">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <span>Forno a Legna</span>
+        </div>
+        <div class="trust-badge trust-badge--highlight">
+          <span class="trust-badge__stars" aria-hidden="true">★★★★★</span>
+          <span>4.5 su Google</span>
+        </div>
+      </div>
+
       <!-- DOVE TROVARCI -->
       <section id="dove-trovarci" class="section">
         <div class="container">
@@ -255,21 +392,25 @@
 
           <div class="locations-grid" style="margin-top: var(--space-xl)">
             <!-- Pinerolo -->
-            <a
-              href="pinerolo.html"
-              class="location-card"
-              aria-label="Alexander Pinerolo"
-            >
-              <img
-                class="location-card__img"
-                src="assets/img/locations/pinerolo.webp"
-                alt="Alexander Pizzeria Pinerolo, Via Achille Midana 37"
-                width="400"
-                height="180"
-                loading="lazy"
-              />
+            <div class="location-card">
+              <a
+                href="pinerolo.html"
+                class="location-card__link-wrap"
+                aria-label="Alexander Pinerolo"
+              >
+                <img
+                  class="location-card__img"
+                  src="assets/img/locations/pinerolo.webp"
+                  alt="Alexander Pizzeria Pinerolo, Via Achille Midana 37"
+                  width="400"
+                  height="180"
+                  loading="lazy"
+                />
+              </a>
               <div class="location-card__body">
-                <h3 class="location-card__name">Pinerolo</h3>
+                <h3 class="location-card__name">
+                  <a href="pinerolo.html">Pinerolo</a>
+                </h3>
                 <span class="tag tag--gold">Pizzeria</span>
                 <p class="location-card__address">
                   <svg
@@ -300,41 +441,59 @@
                   Tutti i giorni: 19:00 - 23:30
                 </p>
                 <div class="location-card__actions">
-                  <span
+                  <a
                     class="btn btn--small btn--primary"
-                    onclick="event.preventDefault(); window.location.href='tel:+390121332035';"
-                    >Chiama</span
+                    href="tel:+390121332035"
+                    data-event="click_call"
+                    data-location="pinerolo"
+                    >Chiama</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.location.href='prenota-un-tavolo.html';"
-                    >Prenota</span
+                    href="prenota-un-tavolo.html"
+                    data-event="click_booking"
+                    >Prenota</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.open('https://maps.google.com/?q=Via+Achille+Midana+37+Pinerolo+TO', '_blank');"
-                    >Mappa</span
+                    href="https://wwknhl80hqwournhivn1dmt9rf08ppvc.delivery.pienissimo.pro/?id=7CZfad"
+                    target="_blank"
+                    rel="noopener"
+                    data-event="click_takeaway"
+                    data-location="pinerolo"
+                    >Ordina</a
+                  >
+                  <a
+                    class="btn btn--small btn--outline"
+                    href="https://maps.google.com/?q=Via+Achille+Midana+37+Pinerolo+TO"
+                    target="_blank"
+                    rel="noopener"
+                    >Mappa</a
                   >
                 </div>
               </div>
-            </a>
+            </div>
 
             <!-- Piossasco -->
-            <a
-              href="piossasco.html"
-              class="location-card"
-              aria-label="Alexander Piossasco"
-            >
-              <img
-                class="location-card__img"
-                src="assets/img/locations/Piossasco.webp"
-                alt="Alexander Pizzeria Piossasco, Via Pinerolo 149"
-                width="400"
-                height="180"
-                loading="lazy"
-              />
+            <div class="location-card">
+              <a
+                href="piossasco.html"
+                class="location-card__link-wrap"
+                aria-label="Alexander Piossasco"
+              >
+                <img
+                  class="location-card__img"
+                  src="assets/img/locations/Piossasco.webp"
+                  alt="Alexander Pizzeria Piossasco, Via Pinerolo 149"
+                  width="400"
+                  height="180"
+                  loading="lazy"
+                />
+              </a>
               <div class="location-card__body">
-                <h3 class="location-card__name">Piossasco</h3>
+                <h3 class="location-card__name">
+                  <a href="piossasco.html">Piossasco</a>
+                </h3>
                 <span class="tag tag--gold">Pizzeria</span>
                 <p class="location-card__address">
                   <svg
@@ -365,41 +524,65 @@
                   Tutti i giorni: 19:00 - 23:30
                 </p>
                 <div class="location-card__actions">
-                  <span
+                  <a
                     class="btn btn--small btn--primary"
-                    onclick="event.preventDefault(); window.location.href='tel:+390117601733';"
-                    >Chiama</span
+                    href="tel:+390117601733"
+                    data-event="click_call"
+                    data-location="piossasco"
+                    >Chiama</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.location.href='prenota-un-tavolo.html';"
-                    >Prenota</span
+                    href="prenota-un-tavolo.html"
+                    data-event="click_booking"
+                    >Prenota</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.open('https://maps.google.com/?q=Via+Pinerolo+149+Piossasco+TO', '_blank');"
-                    >Mappa</span
+                    href="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.delivery.pienissimo.pro/?id=wNYEmx"
+                    target="_blank"
+                    rel="noopener"
+                    data-event="click_takeaway"
+                    data-location="piossasco"
+                    >Ordina</a
+                  >
+                  <a
+                    class="btn btn--small btn--outline"
+                    href="https://maps.google.com/?q=Via+Pinerolo+149+Piossasco+TO"
+                    target="_blank"
+                    rel="noopener"
+                    >Mappa</a
                   >
                 </div>
               </div>
-            </a>
+            </div>
 
             <!-- Giaveno -->
-            <a
-              href="giaveno.html"
-              class="location-card"
-              aria-label="Alexander Valsangone Giaveno"
-            >
-              <img
-                class="location-card__img"
-                src="assets/img/locations/giaveno.png"
-                alt="Alexander Valsangone Giaveno, Piazza Molines 45"
-                width="400"
-                height="180"
-                loading="lazy"
-              />
+            <div class="location-card">
+              <a
+                href="giaveno.html"
+                class="location-card__link-wrap"
+                aria-label="Alexander Valsangone Giaveno"
+              >
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/img/locations/giaveno.webp"
+                  />
+                  <img
+                    class="location-card__img"
+                    src="assets/img/locations/giaveno.png"
+                    alt="Alexander Valsangone Giaveno, Piazza Molines 45"
+                    width="400"
+                    height="180"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
               <div class="location-card__body">
-                <h3 class="location-card__name">Giaveno (Valsangone)</h3>
+                <h3 class="location-card__name">
+                  <a href="giaveno.html">Giaveno (Valsangone)</a>
+                </h3>
                 <span class="tag tag--dark">Pizzeria e Ristorante</span>
                 <p class="location-card__address">
                   <svg
@@ -430,41 +613,65 @@
                   Tutti i giorni: 12:00-15:00 / 19:00-23:30
                 </p>
                 <div class="location-card__actions">
-                  <span
+                  <a
                     class="btn btn--small btn--primary"
-                    onclick="event.preventDefault(); window.location.href='tel:+390119376286';"
-                    >Chiama</span
+                    href="tel:+390119376286"
+                    data-event="click_call"
+                    data-location="giaveno"
+                    >Chiama</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.location.href='prenota-un-tavolo.html';"
-                    >Prenota</span
+                    href="prenota-un-tavolo.html"
+                    data-event="click_booking"
+                    >Prenota</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.open('https://maps.google.com/?q=Piazza+Molines+45+Giaveno+TO', '_blank');"
-                    >Mappa</span
+                    href="https://4ajacb1xf2rpvydbkjcepog7qvryk252.delivery.pienissimo.pro/?id=K0nOww"
+                    target="_blank"
+                    rel="noopener"
+                    data-event="click_takeaway"
+                    data-location="giaveno"
+                    >Ordina</a
+                  >
+                  <a
+                    class="btn btn--small btn--outline"
+                    href="https://maps.google.com/?q=Piazza+Molines+45+Giaveno+TO"
+                    target="_blank"
+                    rel="noopener"
+                    >Mappa</a
                   >
                 </div>
               </div>
-            </a>
+            </div>
 
             <!-- Rivoli -->
-            <a
-              href="rivoli.html"
-              class="location-card"
-              aria-label="Alexander Rivoli"
-            >
-              <img
-                class="location-card__img"
-                src="assets/img/locations/rivoli.png"
-                alt="Alexander Pizzeria Rivoli, Piazza Principe Eugenio 7"
-                width="400"
-                height="180"
-                loading="lazy"
-              />
+            <div class="location-card">
+              <a
+                href="rivoli.html"
+                class="location-card__link-wrap"
+                aria-label="Alexander Rivoli"
+              >
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/img/locations/rivoli.webp"
+                  />
+                  <img
+                    class="location-card__img"
+                    src="assets/img/locations/rivoli.png"
+                    alt="Alexander Pizzeria Rivoli, Piazza Principe Eugenio 7"
+                    width="400"
+                    height="180"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
               <div class="location-card__body">
-                <h3 class="location-card__name">Rivoli</h3>
+                <h3 class="location-card__name">
+                  <a href="rivoli.html">Rivoli</a>
+                </h3>
                 <span class="tag tag--dark">Pizzeria e Ristorante</span>
                 <p class="location-card__address">
                   <svg
@@ -495,25 +702,92 @@
                   Tutti i giorni: 19:00 - 23:30
                 </p>
                 <div class="location-card__actions">
-                  <span
+                  <a
                     class="btn btn--small btn--primary"
-                    onclick="event.preventDefault(); window.location.href='tel:+390110608880';"
-                    >Chiama</span
+                    href="tel:+390110608880"
+                    data-event="click_call"
+                    data-location="rivoli"
+                    >Chiama</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.location.href='prenota-un-tavolo.html';"
-                    >Prenota</span
+                    href="prenota-un-tavolo.html"
+                    data-event="click_booking"
+                    >Prenota</a
                   >
-                  <span
+                  <a
                     class="btn btn--small btn--outline"
-                    onclick="event.preventDefault(); window.open('https://maps.google.com/?q=Piazza+Principe+Eugenio+7+Rivoli+TO', '_blank');"
-                    >Mappa</span
+                    href="https://b6u0iddgee4zqtmlqiwjqza4isqefigr.delivery.pienissimo.pro/?id=WCwQ8h"
+                    target="_blank"
+                    rel="noopener"
+                    data-event="click_takeaway"
+                    data-location="rivoli"
+                    >Ordina</a
+                  >
+                  <a
+                    class="btn btn--small btn--outline"
+                    href="https://maps.google.com/?q=Piazza+Principe+Eugenio+7+Rivoli+TO"
+                    target="_blank"
+                    rel="noopener"
+                    >Mappa</a
                   >
                 </div>
               </div>
-            </a>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <!-- COSA DICONO DI NOI -->
+      <section class="section section--dark" id="recensioni">
+        <div class="container text-center">
+          <h2 class="section-title" style="color: var(--color-white)">
+            Cosa Dicono di Noi
+          </h2>
+          <div class="reviews-summary">
+            <span class="reviews-stars" aria-hidden="true">★★★★★</span>
+            <span class="reviews-summary__text"
+              >4.5/5 basato su 500+ recensioni Google</span
+            >
+          </div>
+          <div class="reviews-quotes">
+            <blockquote class="review-quote">
+              <p class="review-quote__text">
+                "Pizza eccezionale, impasto leggero e digeribile. Locale
+                accogliente, personale gentilissimo. Consigliato!"
+              </p>
+              <footer class="review-quote__author">
+                — Marco R., Google Reviews
+              </footer>
+            </blockquote>
+            <blockquote class="review-quote">
+              <p class="review-quote__text">
+                "La migliore pizza di Pinerolo. Ingredienti di qualità e
+                servizio impeccabile. Torneremo sicuramente."
+              </p>
+              <footer class="review-quote__author">
+                — Laura B., Google Reviews
+              </footer>
+            </blockquote>
+            <blockquote class="review-quote">
+              <p class="review-quote__text">
+                "Specialità funghi porcini buonissime! Ambiente familiare e
+                prezzi onesti. 5 stelle meritate."
+              </p>
+              <footer class="review-quote__author">
+                — Giuseppe T., Google Reviews
+              </footer>
+            </blockquote>
+          </div>
+          <a
+            href="https://www.google.com/search?q=Alexander+Pizzeria+recensioni+Torino"
+            class="btn btn--outline-light"
+            target="_blank"
+            rel="noopener"
+            style="margin-top: var(--space-xl)"
+          >
+            Leggi Tutte le Recensioni su Google
+          </a>
         </div>
       </section>
 
@@ -564,7 +838,7 @@
                       />
                     </svg>
                   </div>
-                  <span>1 punto fedelta ogni 10 EUR spesi</span>
+                  <span>1 punto fedeltà ogni 10 EUR spesi</span>
                 </div>
                 <div class="loyalty__benefit">
                   <div class="loyalty__benefit-icon">%</div>
@@ -599,9 +873,20 @@
             </div>
             <div class="loyalty__visual">
               <div class="loyalty__card-preview">
-                <div class="loyalty__card-name">Alexander Fidelity</div>
-                <div style="flex: 1"></div>
-                <div class="loyalty__card-label">Carta Fedelta Digitale</div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/img/loyalty/carta-fedelta.webp"
+                  />
+                  <img
+                    src="assets/img/loyalty/carta-fedelta.jpg"
+                    alt="Carta Fedeltà Alexander Fidelity"
+                    class="loyalty__card-img"
+                    width="400"
+                    height="250"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -613,7 +898,7 @@
         <div class="container text-center">
           <h2 class="section-title" style="display: block">Il Nostro Menu</h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-xl)">
-            Tante novita, i grandi classici e le nostre pizze iconiche. Impasto
+            Tante novità, i grandi classici e le nostre pizze iconiche. Impasto
             a lunga lievitazione di 48 ore, farina di mais rosso e frumento tipo
             1, macinate a pietra.
           </p>
@@ -640,7 +925,7 @@
               <div class="card__body text-center">
                 <h3 class="card__title">Ristorante</h3>
                 <p class="card__text">
-                  Piatti della cucina italiana, specialita ai funghi porcini
+                  Piatti della cucina italiana, specialità ai funghi porcini
                   (Giaveno) e primi piatti.
                 </p>
               </div>
@@ -691,7 +976,7 @@
         <div class="container text-center">
           <h2 class="section-title" style="display: block">Ordine d'Asporto</h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-xl)">
-            La stessa qualita Alexander, a casa tua. Ordina d'asporto dalla sede
+            La stessa qualità Alexander, a casa tua. Ordina d'asporto dalla sede
             piu vicina.
           </p>
           <div class="grid grid--4">
@@ -751,6 +1036,87 @@
         </div>
       </section>
 
+      <!-- FAQ Homepage -->
+      <section id="faq" class="section">
+        <div class="container">
+          <h2 class="section-title">Domande Frequenti</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
+            Risposte rapide alle domande piu comuni su Alexander Pizzeria.
+          </p>
+          <div class="container--narrow faq-accordion">
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                Quali sono gli orari di apertura?
+              </summary>
+              <p class="faq-accordion__answer">
+                Le nostre pizzerie sono aperte tutti i giorni dalle 19:00 alle
+                23:30. La sede di Giaveno è aperta anche a pranzo dalle 12:00
+                alle 15:00.
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                È possibile prenotare online?
+              </summary>
+              <p class="faq-accordion__answer">
+                Sì, puoi prenotare online dalla sezione Prenota un Tavolo. La
+                prenotazione è disponibile per tutte le 4 sedi (Pinerolo,
+                Piossasco, Giaveno, Rivoli).
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                Fate consegna a domicilio?
+              </summary>
+              <p class="faq-accordion__answer">
+                No, non effettuiamo consegna a domicilio. Offriamo solo il
+                servizio d'asporto: puoi ordinare online o per telefono e
+                ritirare la tua pizza in sede.
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                Avete opzioni vegane?
+              </summary>
+              <p class="faq-accordion__answer">
+                Si. Diverse pizze possono essere preparate in versione vegana
+                (senza mozzarella o con verdure). Chiedi al personale il menu
+                aggiornato e le varianti disponibili.
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                Fate pizze senza glutine?
+              </summary>
+              <p class="faq-accordion__answer">
+                Offriamo base senza glutine su richiesta. Contattaci in anticipo
+                o chiedi in sede per disponibilità e modalità.
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                È necessario prenotare?
+              </summary>
+              <p class="faq-accordion__answer">
+                Consigliamo di prenotare soprattutto nei weekend e nelle sere di
+                punta. Puoi prenotare online dalla pagina Prenota un Tavolo o
+                chiamando la sede che preferisci.
+              </p>
+            </details>
+            <details class="faq-accordion__item">
+              <summary class="faq-accordion__question">
+                Avete parcheggio?
+              </summary>
+              <p class="faq-accordion__answer">
+                Nelle vicinanze delle nostre sedi sono disponibili parcheggi
+                pubblici e strisce blu. Per indicazioni precise consulta la
+                pagina della sede o Google Maps.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- I NOSTRI SEGRETI -->
       <section id="segreti" class="section section--alt">
         <div class="container">
@@ -775,7 +1141,7 @@
                 <h3 class="card__title">Il Nostro Forno</h3>
                 <p class="card__text">
                   Forno a legna per una cottura che esalta fragranza e
-                  croccantezza. Ogni pizza e cotta alla perfezione.
+                  croccantezza. Ogni pizza è cotta alla perfezione.
                 </p>
               </div>
             </div>
@@ -792,57 +1158,939 @@
         </div>
       </section>
 
-      <!-- INSTAGRAM FEED -->
+      <!-- LA NOSTRA PIZZA (placeholder team/forno) -->
+      <section id="la-nostra-pizza" class="section section--alt">
+        <div class="container">
+          <h2 class="section-title">La Nostra Pizza, Il Nostro Team</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
+            Forno a legna, impasto curato ogni giorno, passione in ogni pizza.
+            Le foto raccontano il nostro lavoro.
+          </p>
+          <div class="grid grid--3">
+            <div class="card">
+              <div
+                class="card__img-placeholder"
+                style="
+                  height: 200px;
+                  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+              >
+                Forno a legna
+              </div>
+              <div class="card__body">
+                <p class="card__text">La cottura che fa la differenza.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="card__img-placeholder"
+                style="
+                  height: 200px;
+                  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+              >
+                Impasto e preparazione
+              </div>
+              <div class="card__body">
+                <p class="card__text">48 ore di lievitazione.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="card__img-placeholder"
+                style="
+                  height: 200px;
+                  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+              >
+                Il team Alexander
+              </div>
+              <div class="card__body">
+                <p class="card__text">Passione e professionalità.</p>
+              </div>
+            </div>
+          </div>
+          <p
+            class="text-muted text-center"
+            style="margin-top: var(--space-md); font-size: var(--font-size-sm)"
+          >
+            Presto foto reali: forno a legna, impasto, team. Inserisci le
+            immagini nella cartella <code>assets/img/</code> quando disponibili.
+          </p>
+        </div>
+      </section>
+
+      <!-- INSTAGRAM FEED (embed ufficiali: sostituisci i data-instgrm-permalink con i link dei tuoi post) -->
       <section id="instagram" class="section">
         <div class="container text-center">
           <h2 class="section-title" style="display: block">
             Chi Ama Alexander Ci Segua!
           </h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-xl)">
-            Seguici su Instagram per novita, offerte e le nostre ultime
+            Seguici su Instagram per novità, offerte e le nostre ultime
             creazioni.
           </p>
-          <!-- Placeholder per Instagram Feed - In WordPress usare Smash Balloon -->
-          <div class="grid grid--3" style="margin-bottom: var(--space-xl)">
-            <div class="card">
-              <div
-                class="card__img-placeholder"
-                style="
-                  height: 250px;
-                  background: linear-gradient(135deg, #fef3cd, #f5e6a3);
-                "
-              >
-                Instagram Post
+          <div class="instagram-embed-grid">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink="https://www.instagram.com/p/DUa0sSaDJFM/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/DUa0sSaDJFM/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      Visualizza questo post su Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/DUa0sSaDJFM/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >Un post condiviso da Alexander Pizzeria
+                    (@alexanderpizzeria_)</a
+                  >
+                </p>
               </div>
-            </div>
-            <div class="card">
-              <div
-                class="card__img-placeholder"
-                style="
-                  height: 250px;
-                  background: linear-gradient(135deg, #f5e6a3, #e8d48b);
-                "
-              >
-                Instagram Post
+            </blockquote>
+            <blockquote
+              class="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink="https://www.instagram.com/p/DUa0b4rjEYV/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/DUa0b4rjEYV/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      Visualizza questo post su Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/DUa0b4rjEYV/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >Un post condiviso da Alexander Pizzeria
+                    (@alexanderpizzeria_)</a
+                  >
+                </p>
               </div>
-            </div>
-            <div class="card">
-              <div
-                class="card__img-placeholder"
-                style="
-                  height: 250px;
-                  background: linear-gradient(135deg, #e8d48b, #dbc273);
-                "
-              >
-                Instagram Post
+            </blockquote>
+            <blockquote
+              class="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink="https://www.instagram.com/p/DUa0Q3jDKX_/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/DUa0Q3jDKX_/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      Visualizza questo post su Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/DUa0Q3jDKX_/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >Un post condiviso da Alexander Pizzeria
+                    (@alexanderpizzeria_)</a
+                  >
+                </p>
               </div>
-            </div>
+            </blockquote>
           </div>
+          <script async src="//www.instagram.com/embed.js"></script>
           <a
             class="btn btn--secondary"
-            href="https://www.instagram.com/alexander.pizzeria/"
+            href="https://www.instagram.com/alexanderpizzeria_/"
             target="_blank"
             rel="noopener"
+            style="margin-top: var(--space-xl)"
             >Seguici su Instagram</a
           >
         </div>
@@ -853,11 +2101,17 @@
         <div class="container">
           <h2 class="section-title">Dal Nostro Blog</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
-            Scopri le nostre storie, ricette e novita dal mondo Alexander.
+            Scopri le nostre storie, ricette e novità dal mondo Alexander.
           </p>
           <div class="grid grid--3">
             <article class="card">
-              <div class="card__img-placeholder">Articolo 1</div>
+              <img
+                class="card__img"
+                src="assets/img/blog/funghi-porcini-giaveno.jpg"
+                alt="Funghi porcini Giaveno Alexander"
+                loading="lazy"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
               <div class="card__body">
                 <span class="card__meta">15 Febbraio 2026</span>
                 <h3 class="card__title" style="font-size: var(--font-size-lg)">
@@ -873,7 +2127,13 @@
               </div>
             </article>
             <article class="card">
-              <div class="card__img-placeholder">Articolo 2</div>
+              <img
+                class="card__img"
+                src="assets/img/blog/impasto-lunga-lievitazione.jpg"
+                alt="Impasto a lunga lievitazione Alexander"
+                loading="lazy"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
               <div class="card__body">
                 <span class="card__meta">10 Febbraio 2026</span>
                 <h3 class="card__title" style="font-size: var(--font-size-lg)">
@@ -889,14 +2149,20 @@
               </div>
             </article>
             <article class="card">
-              <div class="card__img-placeholder">Articolo 3</div>
+              <img
+                class="card__img"
+                src="assets/img/blog/alexander-fidelity.jpg"
+                alt="Alexander Fidelity programma fedeltà"
+                loading="lazy"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
               <div class="card__body">
                 <span class="card__meta">5 Febbraio 2026</span>
                 <h3 class="card__title" style="font-size: var(--font-size-lg)">
                   Alexander Fidelity: Come Funziona
                 </h3>
                 <p class="card__text">
-                  Tutto quello che devi sapere sul programma fedelta Alexander:
+                  Tutto quello che devi sapere sul programma fedeltà Alexander:
                   come iscriverti e quali premi ottenere.
                 </p>
                 <a href="blog.html" class="blog-card__link"
@@ -933,7 +2199,7 @@
               </p>
               <div class="footer__social">
                 <a
-                  href="https://www.instagram.com/alexander.pizzeria/"
+                  href="https://www.instagram.com/alexanderpizzeria_/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Instagram"
@@ -1041,16 +2307,104 @@
             riservati.</span
           >
           <div class="footer__legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookie Policy</a>
+            <a
+              href="https://www.iubenda.com/privacy-policy/32284578"
+              class="iubenda-white no-brand iubenda-noiframe iubenda-embed"
+              title="Privacy Policy"
+              >Privacy Policy</a
+            >
+            <a
+              href="https://www.iubenda.com/privacy-policy/32284578/cookie-policy"
+              class="iubenda-white no-brand iubenda-noiframe iubenda-embed"
+              title="Cookie Policy"
+              >Cookie Policy</a
+            >
+            <script type="text/javascript">
+              (function (w, d) {
+                var loader = function () {
+                  var s = d.createElement("script"),
+                    tag = d.getElementsByTagName("script")[0];
+                  s.src = "https://cdn.iubenda.com/iubenda.js";
+                  tag.parentNode.insertBefore(s, tag);
+                };
+                if (w.addEventListener) {
+                  w.addEventListener("load", loader, false);
+                } else if (w.attachEvent) {
+                  w.attachEvent("onload", loader);
+                } else {
+                  w.onload = loader;
+                }
+              })(window, document);
+            </script>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/whatsapp-widget.js"></script>
+    <!-- Sticky CTA mobile (solo sotto 768px) -->
+    <div class="sticky-mobile-cta" aria-hidden="true">
+      <a
+        class="sticky-mobile-cta__btn sticky-mobile-cta__btn--primary"
+        href="prenota-un-tavolo.html"
+        data-event="click_booking"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+        Prenota
+      </a>
+      <a
+        class="sticky-mobile-cta__btn sticky-mobile-cta__btn--secondary"
+        href="tel:+393923734826"
+        data-event="click_call"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        Chiama
+      </a>
+      <a
+        class="sticky-mobile-cta__btn sticky-mobile-cta__btn--secondary"
+        href="index.html#asporto-section"
+        data-event="click_takeaway"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        Ordina
+      </a>
+    </div>
+
+    <!-- Scripts (unified, minified, defer) -->
+    <script src="assets/js/bundle.min.js" defer></script>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -1061,10 +2415,26 @@
         "name": "Alexander Pizzeria",
         "legalName": "Alexander S.R.L.",
         "url": "https://www.alexanderpizzeria.com",
+        "logo": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp",
         "telephone": "+393923734826",
         "vatID": "IT10021390017",
         "description": "Alexander Pizzeria: catena di 4 pizzerie in provincia di Torino con pizza artigianale a lunga lievitazione. Sedi a Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli.",
         "foundingDate": "2004",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+39-392-373-4826",
+          "contactType": "customer service",
+          "areaServed": "IT",
+          "availableLanguage": "Italian"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "2000",
+          "reviewCount": "2000"
+        },
         "numberOfEmployees": {
           "@type": "QuantitativeValue",
           "minValue": 20
@@ -1078,7 +2448,7 @@
           }
         },
         "sameAs": [
-          "https://www.instagram.com/alexander.pizzeria/",
+          "https://www.instagram.com/alexanderpizzeria_/",
           "https://www.facebook.com/alexanderpizzeria/"
         ],
         "subOrganization": [
@@ -1086,6 +2456,71 @@
           { "@id": "https://www.alexanderpizzeria.com/piossasco/#restaurant" },
           { "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant" },
           { "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant" }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quali sono gli orari di apertura?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le nostre pizzerie sono aperte tutti i giorni dalle 19:00 alle 23:30. La sede di Giaveno è aperta anche a pranzo dalle 12:00 alle 15:00."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "È possibile prenotare online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì, puoi prenotare online direttamente dal nostro sito nella sezione Prenota un Tavolo. La prenotazione è disponibile per tutte le 4 sedi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fate consegna a domicilio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, non effettuiamo consegna a domicilio. Offriamo solo il servizio d'asporto: puoi ordinare online o per telefono e ritirare la tua pizza in sede."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Avete opzioni vegane?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si. Diverse pizze possono essere preparate in versione vegana (senza mozzarella o con verdure). Chiedi al personale il menu aggiornato e le varianti disponibili."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fate pizze senza glutine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Offriamo base senza glutine su richiesta. Contattaci in anticipo o chiedi in sede per disponibilità e modalità."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "È necessario prenotare?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Consigliamo di prenotare soprattutto nei weekend e nelle sere di punta. Puoi prenotare online dalla pagina Prenota un Tavolo o chiamando la sede che preferisci."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Avete parcheggio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nelle vicinanze delle nostre sedi sono disponibili parcheggi pubblici e strisce blu. Per indicazioni precise consulta la pagina della sede o Google Maps."
+            }
+          }
         ]
       }
     </script>

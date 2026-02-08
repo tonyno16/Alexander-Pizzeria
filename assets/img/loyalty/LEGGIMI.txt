@@ -1,0 +1,3 @@
+Immagine della CARTA FEDELTA (Alexander Fidelity).
+Nome file da usare: carta-fedelta.jpg  (oppure .webp o .png)
+Proporzione consigliata: circa 1.6 : 1 (es. 400 x 250 px o 800 x 500 px).

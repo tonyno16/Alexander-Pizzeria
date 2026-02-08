@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        emailMarketing: { theme: "dark" },
+        enableTcf: true,
+        floatingPreferencesButtonDisplay: "bottom-right",
+        googleAdditionalConsentMode: true,
+        perPurposeConsent: true,
+        siteId: 1444752,
+        storage: { useSiteId: true },
+        tcfPurposes: {
+          2: "consent_only",
+          7: "consent_only",
+          8: "consent_only",
+          9: "consent_only",
+          10: "consent_only",
+          11: "consent_only",
+        },
+        whitelabel: false,
+        cookiePolicyId: 32284578,
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonRejects: true,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "float-top-center",
+          showTitle: false,
+        },
+      };
+      _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
+    </script>
+    <script
+      type="text/javascript"
+      src="//cs.iubenda.com/sync/1444752.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/tcf/stub-v2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/iubenda_cs.js"
+      charset="UTF-8"
+      async
+    ></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      Pizzeria Alexander Piossasco | Via Pinerolo 149 | Pizza Artigianale
+      Pizzeria a Piossasco | Alexander Pizza Artigianale | Via Pinerolo 149
     </title>
     <meta
       name="description"
@@ -35,6 +86,10 @@
     />
     <meta property="og:site_name" content="Alexander Pizzeria" />
     <meta property="og:locale" content="it_IT" />
+    <meta
+      property="og:image"
+      content="https://www.alexanderpizzeria.com/assets/img/og/og-home.jpg"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +109,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -121,7 +176,7 @@
             </li>
             <li class="nav__mobile-social">
               <a
-                href="https://www.instagram.com/alexander.pizzeria/"
+                href="https://www.instagram.com/alexanderpizzeria_/"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
@@ -162,7 +217,7 @@
           </ul>
           <div class="nav__social nav__social--desktop">
             <a
-              href="https://www.instagram.com/alexander.pizzeria/"
+              href="https://www.instagram.com/alexanderpizzeria_/"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -599,7 +654,7 @@
               </p>
               <div class="footer__social">
                 <a
-                  href="https://www.instagram.com/alexander.pizzeria/"
+                  href="https://www.instagram.com/alexanderpizzeria_/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Instagram"
@@ -707,16 +762,42 @@
             riservati.</span
           >
           <div class="footer__legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookie Policy</a>
+            <a
+              href="https://www.iubenda.com/privacy-policy/32284578"
+              class="iubenda-white no-brand iubenda-noiframe iubenda-embed"
+              title="Privacy Policy"
+              >Privacy Policy</a
+            >
+            <a
+              href="https://www.iubenda.com/privacy-policy/32284578/cookie-policy"
+              class="iubenda-white no-brand iubenda-noiframe iubenda-embed"
+              title="Cookie Policy"
+              >Cookie Policy</a
+            >
+            <script type="text/javascript">
+              (function (w, d) {
+                var loader = function () {
+                  var s = d.createElement("script"),
+                    tag = d.getElementsByTagName("script")[0];
+                  s.src = "https://cdn.iubenda.com/iubenda.js";
+                  tag.parentNode.insertBefore(s, tag);
+                };
+                if (w.addEventListener) {
+                  w.addEventListener("load", loader, false);
+                } else if (w.attachEvent) {
+                  w.attachEvent("onload", loader);
+                } else {
+                  w.onload = loader;
+                }
+              })(window, document);
+            </script>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/whatsapp-widget.js"></script>
+    <script src="assets/js/bundle.min.js" defer></script>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -766,12 +847,20 @@
           "name": "Alexander S.R.L."
         },
         "sameAs": [
-          "https://www.instagram.com/alexander.pizzeria/",
+          "https://www.instagram.com/alexanderpizzeria_/",
           "https://www.facebook.com/alexanderpizzeria/"
         ],
         "hasMenu": {
           "@type": "Menu",
           "url": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "500",
+          "reviewCount": "500"
         }
       }
     </script>

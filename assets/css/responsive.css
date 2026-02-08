@@ -1,5 +1,54 @@
 /* === Global Responsive Adjustments === */
 
+/* Sticky mobile CTA: hidden on desktop */
+.sticky-mobile-cta {
+  display: none;
+}
+
+/* Tablet portrait and below */
+@media (max-width: 768px) {
+  .sticky-mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 80;
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-sm);
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .sticky-mobile-cta__btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: 14px 16px;
+    border-radius: var(--border-radius-pill);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .sticky-mobile-cta__btn--primary {
+    background: var(--color-primary);
+    color: var(--color-black);
+    border: 2px solid var(--color-primary);
+  }
+  .sticky-mobile-cta__btn--secondary {
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 2px solid var(--color-black);
+  }
+  /* Evita che il contenuto finisca sotto la barra sticky */
+  main {
+    padding-bottom: 80px;
+  }
+}
+
 /* Tablet landscape and below */
 @media (max-width: 1024px) {
   .grid--4 {
@@ -49,8 +98,12 @@
     grid-template-columns: 1fr;
   }
 
-  h1 { font-size: var(--font-size-2xl); }
-  h2 { font-size: var(--font-size-xl); }
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+  h2 {
+    font-size: var(--font-size-xl);
+  }
 
   .btn--large {
     padding: 14px 24px;
@@ -72,6 +125,7 @@
   .site-header,
   .site-footer,
   .whatsapp-widget,
+  .sticky-mobile-cta,
   .nav__toggle,
   .btn,
   .hero__cta,

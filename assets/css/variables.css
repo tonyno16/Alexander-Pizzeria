@@ -1,24 +1,26 @@
 :root {
   /* Alexander Pizzeria palette */
-  --color-primary: #C9A227;
-  --color-primary-light: #D4B44A;
-  --color-primary-dark: #A8851E;
-  --color-black: #1A1A1A;
-  --color-white: #FFFFFF;
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F8F8F8;
+  --color-primary: #c9a227;
+  --color-primary-light: #d4b44a;
+  --color-primary-dark: #a8851e;
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f8f8;
   --color-bg-dark: #111111;
   --color-text: #333333;
   --color-text-light: #666666;
-  --color-text-on-dark: #FFFFFF;
-  --color-text-on-dark-muted: #BBBBBB;
-  --color-border: #E0E0E0;
-  --color-border-light: #F0F0F0;
-  --color-success: #28A745;
-  --color-error: #DC3545;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: #bbbbbb;
+  --color-border: #e0e0e0;
+  --color-border-light: #f0f0f0;
+  --color-success: #28a745;
+  --color-error: #dc3545;
 
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-family-heading: "Lora", Georgia, "Times New Roman", serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

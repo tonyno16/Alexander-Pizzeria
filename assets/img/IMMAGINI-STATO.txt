@@ -1,0 +1,20 @@
+=== STATO IMMAGINI - Alexander Pizzeria ===
+
+✅ GIÀ PRESENTI (non ti manca)
+------------------------------
+• assets/img/logo/favicon.svg     → Favicon (icona tab browser) - OK
+• assets/img/logo/logo.webp      → Logo (al momento il sito usa testo in header/footer, non questa immagine; puoi usarla se vuoi sostituire il testo)
+• assets/img/hero/hero.jpg       → Sfondo hero homepage - OK
+• assets/img/locations/          → Foto sedi (pinerolo, Piossasco, giaveno, rivoli) - OK
+
+
+❌ CHE TI MANCANO (opzionale ma utili)
+-------------------------------------
+• assets/img/og/og-home.jpg      → Anteprima quando si condivide il link (WhatsApp, Facebook). Formato: 1200 x 630 px. Senza questo i social mostrano nessuna immagine o una generica.
+• assets/img/blog/*.jpg          → Immagini articoli blog (es. funghi-porcini-giaveno.jpg). Ora le card blog usano placeholder; se aggiungi le foto le possiamo collegare.
+
+
+RIEPILOGO
+---------
+Favicon e logo: NON ti mancano (favicon usato, logo.webp presente ma non inserito in header).
+Ti manca soprattutto: 1 immagine Open Graph (og-home.jpg) per la condivisione sui social.
