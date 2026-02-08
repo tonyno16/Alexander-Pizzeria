@@ -1,0 +1,6 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null,
+  "rewrites": [{ "source": "/404", "destination": "/404.html" }]
+}
