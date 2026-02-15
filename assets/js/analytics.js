@@ -12,7 +12,7 @@
   "use strict";
 
   // Google Analytics 4 - Sostituire con il proprio Measurement ID (es. G-ABC123XY)
-  var GA4_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var GA4_MEASUREMENT_ID = "G-VP4K6WX6P4";
 
   function loadGA4() {
     if (!GA4_MEASUREMENT_ID || GA4_MEASUREMENT_ID.indexOf("XXX") !== -1) return;
