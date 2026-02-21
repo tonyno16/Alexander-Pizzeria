@@ -103,7 +103,7 @@
   <body>
     <a class="skip-link" href="#main-content">Salta al contenuto</a>
 
-    <!-- Iubenda in body (migliora FCP/LCP): config + inlineDelay, script senza defer per autoblocking -->
+    <!-- Iubenda: config subito, script caricati dopo idle/2s per non bloccare LCP e thread principale -->
     <script type="text/javascript">
       var _iub = _iub || [];
       _iub.csConfiguration = {
@@ -137,11 +137,34 @@
         },
       };
       _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
+      (function loadIubendaWhenIdle() {
+        var urls = [
+          "//cs.iubenda.com/sync/1444752.js",
+          "//cdn.iubenda.com/cs/tcf/stub-v2.js",
+          "//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js",
+        ];
+        var main = "//cdn.iubenda.com/cs/iubenda_cs.js";
+        function inject() {
+          urls.forEach(function (src) {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = src;
+            document.body.appendChild(s);
+          });
+          var m = document.createElement("script");
+          m.type = "text/javascript";
+          m.charset = "UTF-8";
+          m.async = true;
+          m.src = main;
+          document.body.appendChild(m);
+        }
+        if (typeof requestIdleCallback !== "undefined") {
+          requestIdleCallback(inject, { timeout: 2000 });
+        } else {
+          setTimeout(inject, 1500);
+        }
+      })();
     </script>
-    <script type="text/javascript" src="//cs.iubenda.com/sync/1444752.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
     <!-- ========== HEADER ========== -->
     <header class="site-header">
