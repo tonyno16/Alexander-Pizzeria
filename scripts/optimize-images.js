@@ -51,11 +51,12 @@ async function run() {
     console.log("  hero/hero.webp creato");
   }
 
-  // --- Locations: varianti 400w e 800w per srcset (risparmio ~119 KiB) + compressione ---
+  // --- Locations: varianti 400w e 800w per srcset; quality 70 + effort 6 per ~43 KiB risparmio ---
   const locationNames = ["pinerolo", "Piossasco", "giaveno", "rivoli"];
   const locDir = path.join(ROOT, "assets", "img", "locations");
   if (!fs.existsSync(locDir)) fs.mkdirSync(locDir, { recursive: true });
 
+  const locWebpOpts = { quality: 70, effort: 6 };
   for (const name of locationNames) {
     const baseName = name === "Piossasco" ? "Piossasco" : name.toLowerCase();
     const webpPath = img("locations/" + baseName + ".webp");
@@ -63,12 +64,11 @@ async function run() {
     const inputPath = fs.existsSync(webpPath) ? webpPath : pngPath;
     if (!fs.existsSync(inputPath)) continue;
 
-    const quality = 78;
     for (const width of [400, 800]) {
       const outPath = img("locations/" + baseName + "-" + width + ".webp");
       await sharp(inputPath)
         .resize(width, null, { withoutEnlargement: true })
-        .webp({ quality })
+        .webp(locWebpOpts)
         .toFile(outPath);
       const stat = fs.statSync(outPath);
       console.log(

@@ -1,62 +1,6 @@
 <!doctype html>
 <html lang="it">
   <head>
-    <!-- Iubenda Cookie Solution + Privacy Controls (inizio head) -->
-    <script type="text/javascript">
-      var _iub = _iub || [];
-      _iub.csConfiguration = {
-        askConsentAtCookiePolicyUpdate: true,
-        emailMarketing: { theme: "dark" },
-        enableTcf: true,
-        floatingPreferencesButtonDisplay: "bottom-right",
-        googleAdditionalConsentMode: true,
-        perPurposeConsent: true,
-        siteId: 1444752,
-        storage: { useSiteId: true },
-        tcfPurposes: {
-          2: "consent_only",
-          7: "consent_only",
-          8: "consent_only",
-          9: "consent_only",
-          10: "consent_only",
-          11: "consent_only",
-        },
-        whitelabel: false,
-        cookiePolicyId: 32284578,
-        banner: {
-          acceptButtonDisplay: true,
-          closeButtonRejects: true,
-          customizeButtonDisplay: true,
-          explicitWithdrawal: true,
-          listPurposes: true,
-          position: "float-top-center",
-          showTitle: false,
-        },
-      };
-      _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
-    </script>
-    <!-- Iubenda: defer per non bloccare il rendering (ordine preservato) -->
-    <script
-      type="text/javascript"
-      src="//cs.iubenda.com/sync/1444752.js"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.iubenda.com/cs/tcf/stub-v2.js"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.iubenda.com/cs/iubenda_cs.js"
-      charset="UTF-8"
-      async
-    ></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
@@ -158,6 +102,46 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Salta al contenuto</a>
+
+    <!-- Iubenda in body (migliora FCP/LCP): config + inlineDelay, script senza defer per autoblocking -->
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        emailMarketing: { theme: "dark" },
+        enableTcf: true,
+        floatingPreferencesButtonDisplay: "bottom-right",
+        googleAdditionalConsentMode: true,
+        inlineDelay: 300,
+        perPurposeConsent: true,
+        siteId: 1444752,
+        storage: { useSiteId: true },
+        tcfPurposes: {
+          2: "consent_only",
+          7: "consent_only",
+          8: "consent_only",
+          9: "consent_only",
+          10: "consent_only",
+          11: "consent_only",
+        },
+        whitelabel: false,
+        cookiePolicyId: 32284578,
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonRejects: true,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "float-top-center",
+          showTitle: false,
+        },
+      };
+      _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
+    </script>
+    <script type="text/javascript" src="//cs.iubenda.com/sync/1444752.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
     <!-- ========== HEADER ========== -->
     <header class="site-header">

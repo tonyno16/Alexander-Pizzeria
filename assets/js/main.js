@@ -42,7 +42,7 @@
     }
   });
 
-  // --- Smooth Scroll for anchor links (letture layout in un frame per ridurre reflow) ---
+  // --- Smooth Scroll: prima write (closeNav), poi in rAF solo read layout + scroll (evita reflow forzato) ---
   var headerEl = document.querySelector(".site-header");
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -51,15 +51,15 @@
         var target = document.querySelector(targetId);
         if (target) {
           e.preventDefault();
-          var headerHeight = headerEl ? headerEl.offsetHeight : 0;
-          var targetTop = target.getBoundingClientRect().top;
-          var targetPosition = targetTop + window.pageYOffset - headerHeight;
-          requestAnimationFrame(function () {
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
-          });
           if (navList && navList.classList.contains("open")) {
             closeNav();
           }
+          requestAnimationFrame(function () {
+            var headerHeight = headerEl ? headerEl.offsetHeight : 0;
+            var targetTop = target.getBoundingClientRect().top;
+            var targetPosition = targetTop + window.pageYOffset - headerHeight;
+            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          });
         }
       }
     });
