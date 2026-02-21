@@ -42,8 +42,14 @@
     }
   });
 
-  // --- Smooth Scroll: prima write (closeNav), poi in rAF solo read layout + scroll (evita reflow forzato) ---
+  // --- Smooth Scroll: closeNav subito; doppio rAF + cache altezza header (minimizza reflow forzato) ---
   var headerEl = document.querySelector(".site-header");
+  var headerHeightCached = null;
+  if (headerEl && typeof window.addEventListener !== "undefined") {
+    window.addEventListener("resize", function () {
+      headerHeightCached = null;
+    });
+  }
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {
       var targetId = link.getAttribute("href");
@@ -55,10 +61,15 @@
             closeNav();
           }
           requestAnimationFrame(function () {
-            var headerHeight = headerEl ? headerEl.offsetHeight : 0;
-            var targetTop = target.getBoundingClientRect().top;
-            var targetPosition = targetTop + window.pageYOffset - headerHeight;
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+            requestAnimationFrame(function () {
+              if (headerHeightCached == null && headerEl) {
+                headerHeightCached = headerEl.offsetHeight;
+              }
+              var headerHeight = headerHeightCached || 0;
+              var targetTop = target.getBoundingClientRect().top;
+              var targetPosition = targetTop + window.pageYOffset - headerHeight;
+              window.scrollTo({ top: targetPosition, behavior: "smooth" });
+            });
           });
         }
       }
