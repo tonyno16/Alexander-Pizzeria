@@ -42,7 +42,8 @@
     }
   });
 
-  // --- Smooth Scroll for anchor links ---
+  // --- Smooth Scroll for anchor links (letture layout in un frame per ridurre reflow) ---
+  var headerEl = document.querySelector(".site-header");
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (e) {
       var targetId = link.getAttribute("href");
@@ -50,16 +51,12 @@
         var target = document.querySelector(targetId);
         if (target) {
           e.preventDefault();
-          var headerHeight = document.querySelector(".site-header")
-            ? document.querySelector(".site-header").offsetHeight
-            : 0;
-          var targetPosition =
-            target.getBoundingClientRect().top +
-            window.pageYOffset -
-            headerHeight;
-          window.scrollTo({ top: targetPosition, behavior: "smooth" });
-
-          // Close mobile nav if open
+          var headerHeight = headerEl ? headerEl.offsetHeight : 0;
+          var targetTop = target.getBoundingClientRect().top;
+          var targetPosition = targetTop + window.pageYOffset - headerHeight;
+          requestAnimationFrame(function () {
+            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          });
           if (navList && navList.classList.contains("open")) {
             closeNav();
           }

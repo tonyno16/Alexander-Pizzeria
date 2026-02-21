@@ -12,7 +12,7 @@ npm run optimize-images
 Lo script:
 
 - **Hero:** comprime `hero.jpg` (obiettivo ~500 KB) e crea `hero.webp`
-- **Sedi:** crea `giaveno.webp` e `rivoli.webp` da i PNG (pinerolo e Piossasco sono già WebP)
+- **Sedi:** per ogni sede (pinerolo, Piossasco, giaveno, rivoli) genera **400w e 800w** WebP da `.webp` o `.png` esistenti (`nome-400.webp`, `nome-800.webp`) per `srcset` e risparmio ~119 KiB. Se manca il `.webp` (solo PNG), crea anche `nome.webp` come default.
 - **Loyalty:** comprime `carta-fedelta.jpg` e `carta-fedelta1.jpg` e crea le versioni `.webp`
 
 I file originali `.jpg` e `.png` vengono sovrascritti (solo hero e loyalty) o affiancati (WebP in `locations/`). Tieni un backup se necessario.
@@ -22,12 +22,13 @@ I file originali `.jpg` e `.png` vengono sovrascritti (solo hero e loyalty) o af
 - **&lt;picture&gt;** con fallback: Giaveno, Rivoli (card sedi), Carta Fedeltà; le pagine Giaveno e Rivoli usano &lt;picture&gt; nell’hero.
 - **Hero homepage:** `main.js` rileva il supporto WebP e, se presente, usa `hero.webp` per le slide.
 - **Lazy loading:** le immagini below-the-fold hanno già `loading="lazy"` (card sedi, loyalty, blog).
+- **Sedi (srcset):** le card usano `srcset` con `nome-400.webp` e `nome-800.webp`; il browser sceglie la risoluzione in base a `sizes`. Esegui `npm run optimize-images` prima del deploy per generare questi file.
 
 ## Dopo aver eseguito lo script
 
 - In homepage le slide hero useranno `hero.webp` sui browser che lo supportano.
-- Le card sedi e la carta fedeltà useranno automaticamente i WebP tramite &lt;picture&gt;.
-- Controlla che in `assets/img/hero/`, `assets/img/locations/` e `assets/img/loyalty/` ci siano i nuovi file `.webp`.
+- Le card sedi useranno le varianti 400w/800w tramite `srcset` (e &lt;picture&gt; per Giaveno/Rivoli).
+- Controlla che in `assets/img/hero/`, `assets/img/locations/` (inclusi `*-400.webp` e `*-800.webp`) e `assets/img/loyalty/` ci siano i file generati.
 
 ## Verifica
 

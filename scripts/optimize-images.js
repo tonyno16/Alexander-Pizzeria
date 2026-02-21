@@ -51,20 +51,39 @@ async function run() {
     console.log("  hero/hero.webp creato");
   }
 
-  // --- Locations: PNG → WebP (giaveno, rivoli) ---
-  for (const name of ["giaveno", "rivoli"]) {
-    const pngPath = img("locations/" + name + ".png");
-    if (fs.existsSync(pngPath)) {
-      await sharp(pngPath)
-        .resize(800, null, { withoutEnlargement: true })
-        .webp({ quality: 85 })
-        .toFile(img("locations/" + name + ".webp"));
-      const stat = fs.statSync(img("locations/" + name + ".webp"));
+  // --- Locations: varianti 400w e 800w per srcset (risparmio ~119 KiB) + compressione ---
+  const locationNames = ["pinerolo", "Piossasco", "giaveno", "rivoli"];
+  const locDir = path.join(ROOT, "assets", "img", "locations");
+  if (!fs.existsSync(locDir)) fs.mkdirSync(locDir, { recursive: true });
+
+  for (const name of locationNames) {
+    const baseName = name === "Piossasco" ? "Piossasco" : name.toLowerCase();
+    const webpPath = img("locations/" + baseName + ".webp");
+    const pngPath = img("locations/" + baseName + ".png");
+    const inputPath = fs.existsSync(webpPath) ? webpPath : pngPath;
+    if (!fs.existsSync(inputPath)) continue;
+
+    const quality = 78;
+    for (const width of [400, 800]) {
+      const outPath = img("locations/" + baseName + "-" + width + ".webp");
+      await sharp(inputPath)
+        .resize(width, null, { withoutEnlargement: true })
+        .webp({ quality })
+        .toFile(outPath);
+      const stat = fs.statSync(outPath);
       console.log(
-        "  locations/" + name + ".webp creato:",
+        "  locations/" + path.basename(outPath) + ":",
         (stat.size / 1024).toFixed(0),
         "KB"
       );
+    }
+    // Mantieni anche il file principale 800w come fallback se non esiste
+    if (!fs.existsSync(webpPath) && fs.existsSync(pngPath)) {
+      await sharp(pngPath)
+        .resize(800, null, { withoutEnlargement: true })
+        .webp({ quality: 82 })
+        .toFile(webpPath);
+      console.log("  locations/" + baseName + ".webp creato (default)");
     }
   }
 
