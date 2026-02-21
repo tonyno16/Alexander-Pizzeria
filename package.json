@@ -6,7 +6,9 @@
     "optimize-images": "node scripts/optimize-images.js",
     "build:css": "node scripts/build-css.js",
     "build:js": "node scripts/build-js.js",
-    "build": "npm run build:css && npm run build:js"
+    "build": "npm run build:css && npm run build:js",
+    "dev": "npx --yes serve . -l 3000",
+    "start": "npx --yes serve . -l 3000"
   },
   "devDependencies": {
     "clean-css": "^5.3.3",
