@@ -120,7 +120,7 @@
 .hero__cta-sublabel {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  opacity: 0.9;
+  color: var(--color-black);
 }
 
 /* Hero location variant (for location pages) */

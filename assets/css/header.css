@@ -56,7 +56,7 @@
 
 .nav__link:hover,
 .nav__link.active {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 /* Social links in header */
@@ -160,7 +160,7 @@
   .nav__link:hover,
   .nav__link.active {
     background-color: var(--color-bg-alt);
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
   }
 
   .nav__mobile-social {

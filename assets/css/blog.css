@@ -62,12 +62,12 @@
 
 .blog-card__link {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-size: var(--font-size-sm);
 }
 
 .blog-card__link:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 /* Single post */

@@ -35,17 +35,21 @@
       };
       _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
     </script>
+    <!-- Iubenda: defer per non bloccare il rendering (ordine preservato) -->
     <script
       type="text/javascript"
       src="//cs.iubenda.com/sync/1444752.js"
+      defer
     ></script>
     <script
       type="text/javascript"
       src="//cdn.iubenda.com/cs/tcf/stub-v2.js"
+      defer
     ></script>
     <script
       type="text/javascript"
       src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"
+      defer
     ></script>
     <script
       type="text/javascript"
@@ -116,16 +120,34 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml" />
 
-    <!-- Preload hero (migliora LCP); main.js può passare a hero.webp se supportato -->
+    <!-- Preload LCP (hero): fetchpriority=high; main.js usa hero.webp se supportato -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/img/hero/hero.webp"
+      fetchpriority="high"
+    />
     <link rel="preload" as="image" href="assets/img/hero/hero.jpg" />
 
-    <!-- Fonts -->
+    <!-- Preconnect per Iubenda (riduce latenza quando i cookie script si caricano) -->
+    <link rel="preconnect" href="https://cs.iubenda.com" />
+    <link rel="preconnect" href="https://cdn.iubenda.com" />
+
+    <!-- Fonts: caricamento asincrono per non bloccare il rendering -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      />
+    </noscript>
 
     <!-- Styles (unified, minified) -->
     <link rel="preload" href="assets/css/style.min.css" as="style" />
@@ -412,6 +434,7 @@
                   width="400"
                   height="180"
                   loading="lazy"
+                  sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px"
                 />
               </a>
               <div class="location-card__body">
@@ -453,6 +476,7 @@
                     href="tel:+390121332035"
                     data-event="click_call"
                     data-location="pinerolo"
+                    aria-label="Chiama sede di Pinerolo"
                     >Chiama</a
                   >
                   <a
@@ -495,6 +519,7 @@
                   width="400"
                   height="180"
                   loading="lazy"
+                  sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px"
                 />
               </a>
               <div class="location-card__body">
@@ -536,6 +561,7 @@
                     href="tel:+390117601733"
                     data-event="click_call"
                     data-location="piossasco"
+                    aria-label="Chiama sede di Piossasco"
                     >Chiama</a
                   >
                   <a
@@ -578,11 +604,12 @@
                   />
                   <img
                     class="location-card__img"
-                    src="assets/img/locations/giaveno.png"
+                    src="assets/img/locations/giaveno.webp"
                     alt="Alexander Valsangone Giaveno, Piazza Molines 45"
                     width="400"
                     height="180"
                     loading="lazy"
+                    sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px"
                   />
                 </picture>
               </a>
@@ -625,6 +652,7 @@
                     href="tel:+390119376286"
                     data-event="click_call"
                     data-location="giaveno"
+                    aria-label="Chiama sede di Giaveno"
                     >Chiama</a
                   >
                   <a
@@ -667,11 +695,12 @@
                   />
                   <img
                     class="location-card__img"
-                    src="assets/img/locations/rivoli.png"
+                    src="assets/img/locations/rivoli.webp"
                     alt="Alexander Pizzeria Rivoli, Piazza Principe Eugenio 7"
                     width="400"
                     height="180"
                     loading="lazy"
+                    sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px"
                   />
                 </picture>
               </a>
@@ -714,6 +743,7 @@
                     href="tel:+390110608880"
                     data-event="click_call"
                     data-location="rivoli"
+                    aria-label="Chiama sede di Rivoli"
                     >Chiama</a
                   >
                   <a
@@ -2081,7 +2111,41 @@
               </div>
             </blockquote>
           </div>
-          <script async src="//www.instagram.com/embed.js"></script>
+          <!-- Instagram embed.js caricato in lazy quando la sezione è in viewport -->
+          <script>
+            (function () {
+              var section = document.getElementById("instagram");
+              if (!section) return;
+              function setInstagramIframeTitles() {
+                section.querySelectorAll("iframe.instagram-media").forEach(function (iframe, i) {
+                  if (!iframe.title) iframe.title = "Post Instagram Alexander Pizzeria " + (i + 1);
+                });
+              }
+              var io = new IntersectionObserver(
+                function (entries) {
+                  if (!entries[0].isIntersecting) return;
+                  io.disconnect();
+                  var s = document.createElement("script");
+                  s.async = true;
+                  s.src = "https://www.instagram.com/embed.js";
+                  s.onload = function () {
+                    var done = 0;
+                    function tryTitle() {
+                      setInstagramIframeTitles();
+                      if (section.querySelectorAll("iframe.instagram-media").length > 0) done++;
+                      if (done < 3) setTimeout(tryTitle, 600);
+                    }
+                    setTimeout(tryTitle, 300);
+                    var mo = new MutationObserver(setInstagramIframeTitles);
+                    mo.observe(section, { childList: true, subtree: true });
+                  };
+                  document.body.appendChild(s);
+                },
+                { rootMargin: "200px" }
+              );
+              io.observe(section);
+            })();
+          </script>
           <a
             class="btn btn--secondary"
             href="https://www.instagram.com/alexanderpizzeria_/"
@@ -2338,12 +2402,13 @@
       </div>
     </footer>
 
-    <!-- Sticky CTA mobile (solo sotto 768px) -->
-    <div class="sticky-mobile-cta" aria-hidden="true">
+    <!-- Sticky CTA mobile (solo sotto 768px); senza aria-hidden per accessibilità -->
+    <div class="sticky-mobile-cta" role="group" aria-label="Azioni rapide">
       <a
         class="sticky-mobile-cta__btn sticky-mobile-cta__btn--primary"
         href="prenota-un-tavolo.html"
         data-event="click_booking"
+        aria-label="Prenota un tavolo"
       >
         <svg
           width="20"
@@ -2364,6 +2429,7 @@
         class="sticky-mobile-cta__btn sticky-mobile-cta__btn--secondary"
         href="tel:+390117601733"
         data-event="click_call"
+        aria-label="Chiama"
       >
         <svg
           width="20"
@@ -2383,6 +2449,7 @@
         class="sticky-mobile-cta__btn sticky-mobile-cta__btn--secondary"
         href="index.html#asporto-section"
         data-event="click_takeaway"
+        aria-label="Ordina asporto"
       >
         <svg
           width="20"
