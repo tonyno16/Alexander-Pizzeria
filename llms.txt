@@ -1,0 +1,26 @@
+# Alexander Pizzeria
+
+> Catena di 4 pizzerie in provincia di Torino (Pinerolo, Piossasco, Giaveno, Rivoli). Pizza artigianale a lunga lievitazione 48h, forno a legna. Prenotazione tavolo e ordine d'asporto online. Sede Giaveno (Alexander Valsangone) anche ristorante e aperta a pranzo. Alexander S.R.L., dal 2004.
+
+Contatto principale: WhatsApp +39 392 373 4826. Sito: https://www.alexanderpizzeria.com
+
+## Pagine principali
+
+- [Home](https://www.alexanderpizzeria.com/): presentazione, sedi, hero, CTA prenota/ordina
+- [Menu](https://www.alexanderpizzeria.com/menu.html): menu con ordine online per le 4 sedi
+- [Prenota un tavolo](https://www.alexanderpizzeria.com/prenota-un-tavolo.html): form prenotazione per Pinerolo, Piossasco, Giaveno, Rivoli
+- [Alexander Lovers](https://www.alexanderpizzeria.com/alexander-lovers.html): programma fedeltà
+- [Lavora con noi](https://www.alexanderpizzeria.com/lavora-con-noi.html): candidature
+- [Blog](https://www.alexanderpizzeria.com/blog.html): articoli su sedi, impasto, funghi porcini Giaveno, pizza senza glutine, ecc.
+
+## Sedi (indirizzi e orari)
+
+- [Pinerolo](https://www.alexanderpizzeria.com/pinerolo.html): Via Achille Midana 37. Orari: 19:00-23:30 tutti i giorni. Tel. +39 0121 332035
+- [Piossasco](https://www.alexanderpizzeria.com/piossasco.html): Via Pinerolo 149. Orari: 19:00-23:30 tutti i giorni. Tel. +39 011 760 1733
+- [Giaveno – Alexander Valsangone](https://www.alexanderpizzeria.com/giaveno.html): Piazza Molines 45. Pizzeria e ristorante. Orari: 12:00-15:00 e 19:00-23:30. Tel. +39 011 937 6286
+- [Rivoli](https://www.alexanderpizzeria.com/rivoli.html): Piazza Principe Eugenio 7. Orari: 19:00-23:30 tutti i giorni. Tel. +39 011 060 8880
+
+## Optional
+
+- [Privacy e Cookie](https://www.iubenda.com/privacy-policy/32284578): informativa privacy Alexander Pizzeria
+- [Articolo Funghi Porcini Giaveno](https://www.alexanderpizzeria.com/blog-post-template.html): tradizione funghi in Valsangone e piatti Alexander Giaveno
