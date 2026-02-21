@@ -56,7 +56,7 @@ async function run() {
   const locDir = path.join(ROOT, "assets", "img", "locations");
   if (!fs.existsSync(locDir)) fs.mkdirSync(locDir, { recursive: true });
 
-  const locWebpOpts = { quality: 70, effort: 6 };
+  const locWebpOpts = { quality: 66, effort: 6 };
   for (const name of locationNames) {
     const baseName = name === "Piossasco" ? "Piossasco" : name.toLowerCase();
     const webpPath = img("locations/" + baseName + ".webp");
