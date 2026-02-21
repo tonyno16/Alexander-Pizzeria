@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
   <head>
     <!-- Iubenda Cookie Solution + Privacy Controls (inizio head) -->
@@ -140,7 +140,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -297,15 +300,15 @@
           <!-- main.js usa hero.webp se il browser lo supporta (dopo npm run optimize-images) -->
           <div
             class="hero__slide hero__slide--active"
-            style="background-image: url('assets/img/hero/hero.jpg')"
+            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
           ></div>
           <div
             class="hero__slide"
-            style="background-image: url('assets/img/hero/hero.jpg')"
+            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
           ></div>
           <div
             class="hero__slide"
-            style="background-image: url('assets/img/hero/hero.jpg')"
+            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
           ></div>
         </div>
         <div class="container hero__inner">
@@ -356,7 +359,7 @@
             <line x1="8" y1="2" x2="8" y2="6" />
             <line x1="3" y1="10" x2="21" y2="10" />
           </svg>
-          <span>Dal 2004</span>
+          <span>Dal 2009</span>
         </div>
         <div class="trust-badge">
           <svg
@@ -430,7 +433,10 @@
                 <img
                   class="location-card__img"
                   src="assets/img/locations/pinerolo-800.webp"
-                  srcset="assets/img/locations/pinerolo-400.webp 400w, assets/img/locations/pinerolo-800.webp 800w"
+                  srcset="
+                    assets/img/locations/pinerolo-400.webp 400w,
+                    assets/img/locations/pinerolo-800.webp 800w
+                  "
                   alt="Alexander Pizzeria Pinerolo, Via Achille Midana 37"
                   width="400"
                   height="180"
@@ -516,7 +522,10 @@
                 <img
                   class="location-card__img"
                   src="assets/img/locations/Piossasco-800.webp"
-                  srcset="assets/img/locations/Piossasco-400.webp 400w, assets/img/locations/Piossasco-800.webp 800w"
+                  srcset="
+                    assets/img/locations/Piossasco-400.webp 400w,
+                    assets/img/locations/Piossasco-800.webp 800w
+                  "
                   alt="Alexander Pizzeria Piossasco, Via Pinerolo 149"
                   width="400"
                   height="180"
@@ -602,12 +611,18 @@
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="assets/img/locations/giaveno-400.webp 400w, assets/img/locations/giaveno-800.webp 800w"
+                    srcset="
+                      assets/img/locations/giaveno-400.webp 400w,
+                      assets/img/locations/giaveno-800.webp 800w
+                    "
                   />
                   <img
                     class="location-card__img"
                     src="assets/img/locations/giaveno-800.webp"
-                    srcset="assets/img/locations/giaveno-400.webp 400w, assets/img/locations/giaveno-800.webp 800w"
+                    srcset="
+                      assets/img/locations/giaveno-400.webp 400w,
+                      assets/img/locations/giaveno-800.webp 800w
+                    "
                     alt="Alexander Valsangone Giaveno, Piazza Molines 45"
                     width="400"
                     height="180"
@@ -694,12 +709,18 @@
                 <picture>
                   <source
                     type="image/webp"
-                    srcset="assets/img/locations/rivoli-400.webp 400w, assets/img/locations/rivoli-800.webp 800w"
+                    srcset="
+                      assets/img/locations/rivoli-400.webp 400w,
+                      assets/img/locations/rivoli-800.webp 800w
+                    "
                   />
                   <img
                     class="location-card__img"
                     src="assets/img/locations/rivoli-800.webp"
-                    srcset="assets/img/locations/rivoli-400.webp 400w, assets/img/locations/rivoli-800.webp 800w"
+                    srcset="
+                      assets/img/locations/rivoli-400.webp 400w,
+                      assets/img/locations/rivoli-800.webp 800w
+                    "
                     alt="Alexander Pizzeria Rivoli, Piazza Principe Eugenio 7"
                     width="400"
                     height="180"
@@ -1274,7 +1295,8 @@
                 background: #fff;
                 border: 0;
                 border-radius: 3px;
-                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                box-shadow:
+                  0 0 1px 0 rgba(0, 0, 0, 0.5),
                   0 1px 10px 0 rgba(0, 0, 0, 0.15);
                 margin: 1px;
                 max-width: 540px;
@@ -1557,7 +1579,8 @@
                 background: #fff;
                 border: 0;
                 border-radius: 3px;
-                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                box-shadow:
+                  0 0 1px 0 rgba(0, 0, 0, 0.5),
                   0 1px 10px 0 rgba(0, 0, 0, 0.15);
                 margin: 1px;
                 max-width: 540px;
@@ -1840,7 +1863,8 @@
                 background: #fff;
                 border: 0;
                 border-radius: 3px;
-                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                box-shadow:
+                  0 0 1px 0 rgba(0, 0, 0, 0.5),
                   0 1px 10px 0 rgba(0, 0, 0, 0.15);
                 margin: 1px;
                 max-width: 540px;
@@ -2121,9 +2145,13 @@
               var section = document.getElementById("instagram");
               if (!section) return;
               function setInstagramIframeTitles() {
-                section.querySelectorAll("iframe.instagram-media").forEach(function (iframe, i) {
-                  if (!iframe.title) iframe.title = "Post Instagram Alexander Pizzeria " + (i + 1);
-                });
+                section
+                  .querySelectorAll("iframe.instagram-media")
+                  .forEach(function (iframe, i) {
+                    if (!iframe.title)
+                      iframe.title =
+                        "Post Instagram Alexander Pizzeria " + (i + 1);
+                  });
               }
               var io = new IntersectionObserver(
                 function (entries) {
@@ -2136,7 +2164,11 @@
                     var done = 0;
                     function tryTitle() {
                       setInstagramIframeTitles();
-                      if (section.querySelectorAll("iframe.instagram-media").length > 0) done++;
+                      if (
+                        section.querySelectorAll("iframe.instagram-media")
+                          .length > 0
+                      )
+                        done++;
                       if (done < 3) setTimeout(tryTitle, 600);
                     }
                     setTimeout(tryTitle, 300);
@@ -2145,7 +2177,7 @@
                   };
                   document.body.appendChild(s);
                 },
-                { rootMargin: "200px" }
+                { rootMargin: "200px" },
               );
               io.observe(section);
             })();
