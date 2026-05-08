@@ -198,6 +198,173 @@
   line-height: 1.7;
 }
 
+/* === USP Cards (3-column) === */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.usp-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.usp-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.usp-card__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-md);
+  color: var(--color-primary);
+}
+
+.usp-card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+  color: var(--color-black);
+}
+
+.usp-card__text {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+/* === Signature Pizzas List === */
+.signature-pizzas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.signature-pizza {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.signature-pizza__name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  font-family: var(--font-family-heading);
+  white-space: nowrap;
+}
+
+.signature-pizza__desc {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* === Reviews / Testimonials === */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.review-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card__stars {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  letter-spacing: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.review-card__text {
+  color: var(--color-text);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
+.review-card__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-sm);
+}
+
+.review-card__author {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+}
+
+.reviews-summary {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+}
+
+.reviews-summary__rating {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+}
+
+/* === Related links box === */
+.related-box {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.related-box__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+  color: var(--color-black);
+}
+
+.related-box__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.related-box__list a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  transition: color var(--transition-fast);
+}
+
+.related-box__list a:hover {
+  color: var(--color-primary);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .locations-grid {
@@ -205,6 +372,16 @@
   }
 
   .location-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid,
+  .signature-pizzas,
+  .related-box__list {
     grid-template-columns: 1fr;
   }
 }
