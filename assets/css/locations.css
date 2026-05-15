@@ -159,6 +159,24 @@
   gap: var(--space-lg);
 }
 
+.location-actions-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Prenota tavolo: widget in evidenza in alto */
+.location-prenota-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.iframe-wrapper--prenota {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--color-white);
+}
+
 .location-action-card {
   text-align: center;
 }

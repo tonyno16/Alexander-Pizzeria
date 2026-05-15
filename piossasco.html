@@ -495,9 +495,8 @@
             </div>
           </div>
           <div class="location-info-bar__actions">
-            <a class="btn btn--primary btn--small" href="tel:+390117601733"
-              >Chiama</a
-            >
+            <a class="btn btn--primary btn--small" href="#prenota">Prenota un Tavolo</a>
+            <a class="btn btn--outline btn--small" href="tel:+390117601733">Chiama</a>
             <a
               class="btn btn--outline btn--small"
               href="https://maps.google.com/?q=Via+Pinerolo+149+Piossasco+TO"
@@ -508,6 +507,25 @@
           </div>
         </div>
       </div>
+
+      <!-- PRENOTA TAVOLO (top CTA) -->
+      <section class="section" id="prenota">
+        <div class="container">
+          <h2 class="section-title">Prenota il Tuo Tavolo a Piossasco</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
+            Assicurati un posto nella sede storica di Alexander: il locale è piccolo e si riempie in fretta nei weekend. Bastano pochi click.
+          </p>
+          <div class="location-prenota-wrapper">
+            <div class="iframe-wrapper iframe-wrapper--prenota">
+              <iframe
+                src="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.forms.pienissimo.pro/?id=PMl7Y4"
+                title="Prenota un tavolo - Alexander Piossasco"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ABOUT -->
       <section class="section">
@@ -706,44 +724,16 @@
         </div>
       </section>
 
-      <!-- ACTIONS: PRENOTA, ASPORTO, MENU -->
+      <!-- ACTIONS: ASPORTO + MENU -->
       <section class="section section--alt">
         <div class="container">
-          <h2 class="section-title">Prenota, Ordina o Sfoglia il Menu</h2>
+          <h2 class="section-title">Ordina d'Asporto o Sfoglia il Menu</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
-            Scegli come vivere l'esperienza Alexander Piossasco: prenota un
-            tavolo, ordina d'asporto o consulta il nostro menu.
+            Ordina la tua pizza Alexander Piossasco d'asporto, a domicilio o consulta il menu completo.
           </p>
-          <div class="location-actions-grid">
-            <!-- Prenota Tavolo -->
-            <div class="location-action-card">
-              <h3 class="location-action-card__title">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-                Prenota Tavolo
-              </h3>
-              <div class="iframe-wrapper">
-                <iframe
-                  src="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.forms.pienissimo.pro/?id=PMl7Y4"
-                  title="Prenota un tavolo - Alexander Piossasco"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-
+          <div class="location-actions-grid location-actions-grid--two">
             <!-- Asporto -->
-            <div class="location-action-card">
+            <div class="location-action-card" id="asporto">
               <h3 class="location-action-card__title">
                 <svg
                   width="20"
