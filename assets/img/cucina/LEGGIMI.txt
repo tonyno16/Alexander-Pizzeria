@@ -1,0 +1,18 @@
+=== Foto piatti cucina — Giaveno ===
+
+Cartella: assets/img/cucina/
+Formato: JPG o WebP, 960×1440 px (2:3 verticale) — va bene così com'è.
+
+Porcini:
+  tagliolino-porcini.jpg
+  porcini-fritti.jpg
+  risotto-porcini.jpg
+  battuta-fassona-porcini.jpg
+  tagliata-coalvi-porcini.jpg
+
+Piemontesi:
+  plin-piemontese.jpg
+  tagliata-topinambur.jpg
+  vitello-tonnato.jpg
+  tiramisu.jpg
+  tarte-tatin.jpg
