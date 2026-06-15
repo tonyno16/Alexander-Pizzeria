@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="it">
   <head>
-    <meta charset="utf-8" />
+        <script src="assets/js/cookie-consent.js"></script>
+<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
     <meta
@@ -119,71 +120,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Salta al contenuto</a>
-
-    <!-- Iubenda: config subito, script caricati dopo idle/2s per non bloccare LCP e thread principale -->
-    <script type="text/javascript">
-      var _iub = _iub || [];
-      _iub.csConfiguration = {
-        askConsentAtCookiePolicyUpdate: true,
-        emailMarketing: { theme: "dark" },
-        enableTcf: true,
-        floatingPreferencesButtonDisplay: "bottom-right",
-        googleAdditionalConsentMode: true,
-        inlineDelay: 300,
-        perPurposeConsent: true,
-        siteId: 1444752,
-        storage: { useSiteId: true },
-        tcfPurposes: {
-          2: "consent_only",
-          7: "consent_only",
-          8: "consent_only",
-          9: "consent_only",
-          10: "consent_only",
-          11: "consent_only",
-        },
-        whitelabel: false,
-        cookiePolicyId: 32284578,
-        banner: {
-          acceptButtonDisplay: true,
-          closeButtonRejects: true,
-          customizeButtonDisplay: true,
-          explicitWithdrawal: true,
-          listPurposes: true,
-          position: "float-top-center",
-          showTitle: false,
-        },
-      };
-      _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
-      (function loadIubendaWhenIdle() {
-        var urls = [
-          "//cs.iubenda.com/sync/1444752.js",
-          "//cdn.iubenda.com/cs/tcf/stub-v2.js",
-          "//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js",
-        ];
-        var main = "//cdn.iubenda.com/cs/iubenda_cs.js";
-        function inject() {
-          urls.forEach(function (src) {
-            var s = document.createElement("script");
-            s.type = "text/javascript";
-            s.src = src;
-            document.body.appendChild(s);
-          });
-          var m = document.createElement("script");
-          m.type = "text/javascript";
-          m.charset = "UTF-8";
-          m.async = true;
-          m.src = main;
-          document.body.appendChild(m);
-        }
-        if (typeof requestIdleCallback !== "undefined") {
-          requestIdleCallback(inject, { timeout: 2000 });
-        } else {
-          setTimeout(inject, 1500);
-        }
-      })();
-    </script>
-
-    <!-- ========== HEADER ========== -->
+<!-- ========== HEADER ========== -->
     <header class="site-header">
       <div class="container header__inner">
         <a

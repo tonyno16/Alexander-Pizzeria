@@ -1,57 +1,45 @@
 (function () {
   'use strict';
 
-  // Iubenda Cookie Solution Configuration
-  // Site ID: 1444752
-  // Policy ID: 32284578
+  // Single Iubenda Cookie Solution loader for all pages.
+  // Site ID: 1444752 · Policy ID: 32284578
+  if (window.__iubendaCookieConsentLoaded) {
+    return;
+  }
+  window.__iubendaCookieConsentLoaded = true;
 
-  var _iub = _iub || [];
+  var _iub = window._iub || [];
+  window._iub = _iub;
 
   _iub.csConfiguration = {
     askConsentAtCookiePolicyUpdate: true,
-    enableFadp: true,
-    enableLgpd: true,
+    emailMarketing: { theme: 'dark' },
     enableTcf: true,
-    enableUspr: true,
-    fadpApplies: true,
-    floatingPreferencesButtonDisplay: 'bottom-left',
+    floatingPreferencesButtonDisplay: 'bottom-right',
     googleAdditionalConsentMode: true,
     lang: 'it',
     perPurposeConsent: true,
     preferenceCookie: { expireAfter: 180 },
     siteId: 1444752,
+    storage: { useSiteId: true },
+    cookiePolicyId: 32284578,
+    whitelabel: false,
     tcfPurposes: {
       2: 'consent_only',
-      3: 'consent_only',
-      4: 'consent_only',
-      5: 'consent_only',
-      6: 'consent_only',
       7: 'consent_only',
       8: 'consent_only',
       9: 'consent_only',
       10: 'consent_only',
       11: 'consent_only'
     },
-    cookiePolicyId: 32284578,
     banner: {
-      acceptButtonCaptionColor: '#1A1A1A',
-      acceptButtonColor: '#C9A227',
       acceptButtonDisplay: true,
-      backgroundColor: '#1A1A1A',
-      closeButtonDisplay: false,
-      customizeButtonCaptionColor: '#C9A227',
-      customizeButtonColor: 'transparent',
+      closeButtonRejects: true,
       customizeButtonDisplay: true,
       explicitWithdrawal: true,
       listPurposes: true,
-      logo: null,
-      position: 'float-bottom-center',
-      rejectButtonCaptionColor: '#FFFFFF',
-      rejectButtonColor: '#444444',
-      rejectButtonDisplay: true,
-      showTitle: false,
-      showTotalNumberOfProviders: true,
-      textColor: '#FFFFFF'
+      position: 'float-top-center',
+      showTitle: false
     },
     callback: {
       onConsentGiven: function () {
@@ -62,27 +50,23 @@
     }
   };
 
-  window._iub = _iub;
+  _iub.csLangConfiguration = { it: { cookiePolicyId: 32284578 } };
 
-  // Load Iubenda scripts
-  function loadIubenda() {
-    var tcfStub = document.createElement('script');
-    tcfStub.src = 'https://cs.iubenda.com/autoblocking/1444752.js';
-    document.head.appendChild(tcfStub);
+  [
+    '//cs.iubenda.com/sync/1444752.js',
+    '//cdn.iubenda.com/cs/tcf/stub-v2.js',
+    '//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js'
+  ].forEach(function (src) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = src;
+    document.head.appendChild(script);
+  });
 
-    var csScript = document.createElement('script');
-    csScript.src = '//cdn.iubenda.com/cs/tcf/stub-v2.js';
-    document.head.appendChild(csScript);
-
-    var mainScript = document.createElement('script');
-    mainScript.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
-    mainScript.async = true;
-    document.head.appendChild(mainScript);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadIubenda);
-  } else {
-    loadIubenda();
-  }
+  var mainScript = document.createElement('script');
+  mainScript.type = 'text/javascript';
+  mainScript.charset = 'UTF-8';
+  mainScript.async = true;
+  mainScript.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
+  document.head.appendChild(mainScript);
 })();

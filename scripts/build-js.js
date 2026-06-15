@@ -1,6 +1,6 @@
 /**
  * Build JS: concatena e minifica tutti gli script in un unico bundle.min.js
- * Ordine: main → analytics → cookie-consent → schema → location-tabs → form-validation → whatsapp-widget
+ * Ordine: main → analytics → schema → location-tabs → form-validation → whatsapp-widget
  */
 const fs = require("fs");
 const path = require("path");
@@ -13,7 +13,6 @@ const OUT_FILE = path.join(JS_DIR, "bundle.min.js");
 const ORDER = [
   "main.js",
   "analytics.js",
-  "cookie-consent.js",
   "schema.js",
   "location-tabs.js",
   "form-validation.js",
