@@ -1,0 +1,23 @@
+{
+  "skill_name": "work-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Show me my work map and tell me which projects do not have an owning area.",
+      "expected_output": "Runs the work-map helper, summarizes areas/projects/lab items, and flags projects missing primary_area.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I now have clients. Reconfigure my workspace map from function areas to client areas.",
+      "expected_output": "Runs work-map first, proposes a mapping, and does not move files without obvious ownership or approval.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a workspace index file I can inspect later.",
+      "expected_output": "Runs the work-map helper with --write and reports the generated 00-brain/workspace-index.md file.",
+      "files": []
+    }
+  ]
+}

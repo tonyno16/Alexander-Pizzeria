@@ -21,8 +21,9 @@ nul
 .env.local
 .env.*.local
 
-# Claude / Cursor (opzionale: rimuovi se vuoi versionare)
-.claude/
+# Claude / Cursor: solo il .claude/ root del sito (impostazioni locali).
+# Il .claude/ del template WorkOS (workos-student-template-v1.0/) è versionato di proposito.
+/.claude/
 
 # Dependencies
 node_modules/
