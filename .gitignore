@@ -28,3 +28,4 @@ nul
 node_modules/
 
 ai_docs/refs/
+.vercel
