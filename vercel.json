@@ -2,12 +2,109 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
-  "rewrites": [{ "source": "/404", "destination": "/404.html" }],
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "alexanderpizzeria.com" }],
+      "destination": "https://www.alexanderpizzeria.com/:path*",
+      "permanent": true
+    },
+    { "source": "/pinerolo.html", "destination": "/pinerolo/", "permanent": true },
+    { "source": "/piossasco.html", "destination": "/piossasco/", "permanent": true },
+    { "source": "/giaveno.html", "destination": "/giaveno/", "permanent": true },
+    { "source": "/rivoli.html", "destination": "/rivoli/", "permanent": true },
+    { "source": "/menu.html", "destination": "/menu/", "permanent": true },
+    { "source": "/prenota-un-tavolo.html", "destination": "/prenota/", "permanent": true },
+    { "source": "/prenota-un-tavolo/", "destination": "/prenota/", "permanent": true },
+    { "source": "/alexander-lovers.html", "destination": "/alexander-lovers/", "permanent": true },
+    { "source": "/lavora-con-noi.html", "destination": "/lavora-con-noi/", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog/", "permanent": true },
+    {
+      "source": "/blog-pizza-senza-glutine.html",
+      "destination": "/pizza-senza-glutine/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pizza-senza-glutine/",
+      "destination": "/pizza-senza-glutine/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-impasto-lunga-lievitazione.html",
+      "destination": "/pizza-lunga-lievitazione/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/impasto-lunga-lievitazione/",
+      "destination": "/pizza-lunga-lievitazione/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-pizzeria-pinerolo.html",
+      "destination": "/blog/pizzeria-pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-alexander-fidelity.html",
+      "destination": "/blog/alexander-fidelity/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-rivoli.html",
+      "destination": "/blog/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post-template.html",
+      "destination": "/blog/funghi-porcini-giaveno/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    { "source": "/404", "destination": "/404.html" },
+    { "source": "/pinerolo/", "destination": "/pinerolo.html" },
+    { "source": "/piossasco/", "destination": "/piossasco.html" },
+    { "source": "/giaveno/", "destination": "/giaveno.html" },
+    { "source": "/rivoli/", "destination": "/rivoli.html" },
+    { "source": "/menu/", "destination": "/menu.html" },
+    { "source": "/prenota/", "destination": "/prenota-un-tavolo.html" },
+    { "source": "/alexander-lovers/", "destination": "/alexander-lovers.html" },
+    { "source": "/lavora-con-noi/", "destination": "/lavora-con-noi.html" },
+    { "source": "/blog/", "destination": "/blog.html" },
+    {
+      "source": "/pizza-senza-glutine/",
+      "destination": "/blog-pizza-senza-glutine.html"
+    },
+    {
+      "source": "/pizza-lunga-lievitazione/",
+      "destination": "/blog-impasto-lunga-lievitazione.html"
+    },
+    {
+      "source": "/blog/pizzeria-pinerolo/",
+      "destination": "/blog-pizzeria-pinerolo.html"
+    },
+    {
+      "source": "/blog/alexander-fidelity/",
+      "destination": "/blog-alexander-fidelity.html"
+    },
+    {
+      "source": "/blog/rivoli/",
+      "destination": "/blog-rivoli.html"
+    },
+    {
+      "source": "/blog/funghi-porcini-giaveno/",
+      "destination": "/blog-post-template.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
@@ -15,8 +112,14 @@
       "headers": [
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; preload" },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; preload"
+        },
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
         {
           "key": "Content-Security-Policy",

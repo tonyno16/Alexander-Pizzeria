@@ -229,8 +229,10 @@
   }
 
   // Auto-detect current page and inject appropriate schema
+  // Supports both /pinerolo.html and clean /pinerolo/
   var path = window.location.pathname;
-  var page = path.split("/").pop().replace(".html", "");
+  var segments = path.replace(/\/+$/, "").split("/");
+  var page = (segments.pop() || "").replace(/\.html$/, "");
 
   if (LOCATIONS[page]) {
     injectSchema(generateRestaurantSchema(page));
