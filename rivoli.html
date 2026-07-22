@@ -399,13 +399,22 @@
       <!-- HERO -->
       <section class="hero hero--location">
         <div class="hero__bg"></div>
-        <div
-          class="hero__bg-img"
-          style="
-            background-image: url('/assets/img/locations/rivoli.webp');
-            background-color: #1a1a1a;
-          "
-        ></div>
+        <div class="hero__bg-img">
+          <picture>
+            <source
+              srcset="/assets/img/locations/rivoli.webp"
+              type="image/webp"
+            />
+            <img
+              src="/assets/img/locations/rivoli.png"
+              alt="Alexander Rivoli in Piazza Principe Eugenio"
+              width="1600"
+              height="900"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </div>
         <div class="container hero__inner">
           <div class="hero__content">
             <span class="hero__tagline">Ristorante e Pizzeria · Riconosciuti AIC · Solo Cena · Dal 2024</span>
