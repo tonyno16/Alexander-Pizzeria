@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>
       Blog | Alexander Pizzeria - Pizza Pinerolo, Giaveno, Rivoli, Piossasco
     </title>
@@ -183,6 +181,7 @@
 
     <!-- MAIN -->
     <main id="main-content">
+      <nav class="page-breadcrumb" aria-label="Percorso di navigazione"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Blog</span></div></nav>
       <section class="section">
         <div class="container">
           <h1 class="section-title" style="margin-bottom: var(--space-sm)">
@@ -233,81 +232,10 @@
                   Lievitazione
                 </h2>
                 <p class="blog-card__excerpt">
-                  48 ore di lievitazione con farina macinata a pietra e acqua di
-                  sorgente. Ecco come nasce una pizza Alexander.
+                  48 ore, prefermento biga, cottura oltre 3 minuti a circa
+                  350°C. Il metodo usato in tutte e 4 le sedi.
                 </p>
                 <a href="/pizza-lunga-lievitazione/" class="blog-card__link"
-                  >Leggi l'articolo &rarr;</a
-                >
-              </div>
-            </article>
-
-            <!-- Post 3 -->
-            <article class="blog-card">
-              <img
-                class="blog-card__img"
-                src="/assets/img/blog/pizzeria-pinerolo.jpg"
-                alt="Pizzeria Alexander Pinerolo, Via Midana"
-                loading="lazy"
-              />
-              <div class="blog-card__body">
-                <span class="blog-card__date">5 Febbraio 2026</span>
-                <h2 class="blog-card__title">
-                  La Migliore Pizzeria a Pinerolo: Scopri Alexander in Via
-                  Midana
-                </h2>
-                <p class="blog-card__excerpt">
-                  Una guida completa alla nostra sede di Pinerolo: il menu,
-                  l'atmosfera, la pizza e cosa ci rende speciali nel cuore della
-                  citta.
-                </p>
-                <a href="/blog/pizzeria-pinerolo/" class="blog-card__link"
-                  >Leggi l'articolo &rarr;</a
-                >
-              </div>
-            </article>
-
-            <!-- Post 4 -->
-            <article class="blog-card">
-              <img
-                class="blog-card__img"
-                src="/assets/img/blog/alexander-fidelity.jpg"
-                alt="Programma fedelta Alexander Fidelity"
-                loading="lazy"
-              />
-              <div class="blog-card__body">
-                <span class="blog-card__date">1 Febbraio 2026</span>
-                <h2 class="blog-card__title">
-                  Alexander Fidelity: Come Funziona il Programma Fedelta
-                </h2>
-                <p class="blog-card__excerpt">
-                  Tutto quello che devi sapere sul programma fedelta: iscrizione
-                  gratuita, punti, premi e regali di benvenuto.
-                </p>
-                <a href="/blog/alexander-fidelity/" class="blog-card__link"
-                  >Leggi l'articolo &rarr;</a
-                >
-              </div>
-            </article>
-
-            <!-- Post 5 -->
-            <article class="blog-card">
-              <img
-                class="blog-card__img"
-                src="/assets/img/blog/alexander-rivoli.jpg"
-                alt="Alexander Pizzeria Rivoli, Piazza Principe Eugenio"
-                loading="lazy"
-              />
-              <div class="blog-card__body">
-                <span class="blog-card__date">28 Gennaio 2026</span>
-                <h2 class="blog-card__title">
-                  Dove Mangiare a Rivoli: Alexander in Piazza Principe Eugenio
-                </h2>
-                <p class="blog-card__excerpt">
-                  Scopri la nostra sede nel cuore storico di Rivoli, tra pizza
-                  artigianale e piatti del ristorante in una cornice unica.
-                </p>
-                <a href="/blog/rivoli/" class="blog-card__link"
                   >Leggi l'articolo &rarr;</a
                 >
               </div>
@@ -327,8 +255,8 @@
                   Pizza Senza Glutine a Torino: Le Opzioni di Alexander Pizzeria
                 </h2>
                 <p class="blog-card__excerpt">
-                  Alexander offre pizza senza glutine in tutte le 4 sedi. Scopri
-                  le nostre opzioni per celiaci e intolleranti.
+                  Riconosciuti AIC in tutte e 4 le sedi. Impasto fatto in casa
+                  ogni giorno, senza basi precotte, da €8,50.
                 </p>
                 <a href="/pizza-senza-glutine/" class="blog-card__link"
                   >Leggi l'articolo &rarr;</a
@@ -351,7 +279,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -398,6 +326,8 @@
                 ><a href="/alexander-lovers/">Alexander Lovers</a
                 ><a href="/lavora-con-noi/">Lavora Con Noi</a
                 ><a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -471,5 +401,44 @@
     </footer>
 
     <script src="/assets/js/bundle.min.js" defer></script>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.alexanderpizzeria.com/blog/#collectionpage",
+            "url": "https://www.alexanderpizzeria.com/blog/",
+            "name": "Blog Alexander Pizzeria",
+            "description": "Impasto, pizza senza glutine e funghi porcini di Giaveno.",
+            "inLanguage": "it-IT",
+            "isPartOf": { "@id": "https://www.alexanderpizzeria.com/#website" },
+            "publisher": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "mainEntity": { "@id": "https://www.alexanderpizzeria.com/blog/#itemlist" }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://www.alexanderpizzeria.com/blog/#itemlist",
+            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+            "numberOfItems": 3,
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "url": "https://www.alexanderpizzeria.com/blog/funghi-porcini-giaveno/", "name": "Funghi Porcini di Giaveno" },
+              { "@type": "ListItem", "position": 2, "url": "https://www.alexanderpizzeria.com/pizza-lunga-lievitazione/", "name": "Impasto a lunga lievitazione" },
+              { "@type": "ListItem", "position": 3, "url": "https://www.alexanderpizzeria.com/pizza-senza-glutine/", "name": "Pizza senza glutine" }
+            ]
+          }
+        ]
+      }
+    </script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog" }
+      ]
+    }
+    </script>
   </body>
 </html>

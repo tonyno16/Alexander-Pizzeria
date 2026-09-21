@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>Lavora Con Noi | Alexander Pizzeria - Candidature</title>
     <meta
       name="description"
@@ -185,6 +183,7 @@
 
     <!-- MAIN -->
     <main id="main-content">
+      <nav class="page-breadcrumb" aria-label="Percorso di navigazione"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Lavora con noi</span></div></nav>
       <!-- Page Header -->
       <section
         class="section section--dark"
@@ -449,7 +448,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -496,6 +495,8 @@
                 ><a href="/alexander-lovers/">Alexander Lovers</a
                 ><a href="/lavora-con-noi/">Lavora Con Noi</a
                 ><a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -569,5 +570,15 @@
     </footer>
 
     <script src="/assets/js/bundle.min.js" defer></script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Lavora con noi" }
+      ]
+    }
+    </script>
   </body>
 </html>

@@ -63,8 +63,11 @@
       "url": "https://www.alexanderpizzeria.com/rivoli/",
       "telephone": "+390110608880",
       "priceRange": "10-25 €",
-      "servesCuisine": ["Pizza", "Italiana", "Senza Glutine", "Pesce", "Funghi Porcini"],
-      "acceptsReservations": "True",
+      "servesCuisine": ["Pizza", "Italiana", "Pesce"],
+      "acceptsReservations": true,
+      "currenciesAccepted": "EUR",
+      "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+      "hasMap": "https://maps.app.goo.gl/AYER6g8f8F6SZgW39",
       "description": "Ultima apertura del gruppo Alexander (2024) in Piazza Principe Eugenio, Rivoli. Pizza stile Alexander con forno a vista, riconosciuti AIC. Locale più grande del gruppo: 110 coperti su due piani con ascensore. Solo cena.",
       "address": {
         "@type": "PostalAddress",
@@ -86,20 +89,12 @@
         "closes": "23:30"
       }],
       "specialOpeningHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2026-12-25",
-          "validThrough": "2026-12-25",
-          "opens": "00:00",
-          "closes": "00:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2027-01-01",
-          "validThrough": "2027-01-01",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
+        { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-25", "validThrough": "2026-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-01-01", "validThrough": "2027-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-12-25", "validThrough": "2027-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-01-01", "validThrough": "2028-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-12-25", "validThrough": "2028-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2029-01-01", "validThrough": "2029-01-01", "opens": "00:00", "closes": "00:00" }
       ],
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true},
@@ -116,7 +111,8 @@
       "sameAs": [
         "https://www.instagram.com/alexanderpizzeria_/",
         "https://www.facebook.com/alexanderpizzeria/",
-        "https://www.tripadvisor.it/Restaurant_Review-g661706-d31341035-Reviews-Alexander_Ristorante_Pizzeria_Rivoli-Rivoli_Province_of_Turin_Piedmont.html"
+        "https://www.tripadvisor.it/Restaurant_Review-g661706-d31341035-Reviews-Alexander_Ristorante_Pizzeria_Rivoli-Rivoli_Province_of_Turin_Piedmont.html",
+        "https://maps.app.goo.gl/AYER6g8f8F6SZgW39"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -155,7 +151,7 @@
           "reviewBody": "Ottima esperienza: cibo, servizio e atmosfera al top."
         }
       ],
-      "menu": "https://www.alexanderpizzeria.com/menu/",
+      "hasMenu": { "@id": "https://www.alexanderpizzeria.com/menu/#menu" },
       "potentialAction": {
         "@type": "ReserveAction",
         "target": "https://www.alexanderpizzeria.com/prenota/",
@@ -231,16 +227,8 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link rel="stylesheet" href="/assets/css/hero.css" />
-    <link rel="stylesheet" href="/assets/css/locations.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="preload" href="/assets/css/style.min.css?v=20260922d" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260922d" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -406,7 +394,7 @@
               type="image/webp"
             />
             <img
-              src="/assets/img/locations/rivoli.png"
+              src="/assets/img/locations/rivoli-800.webp" srcset="/assets/img/locations/rivoli-400.webp 400w, /assets/img/locations/rivoli-800.webp 800w, /assets/img/locations/rivoli-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
               alt="Alexander Rivoli in Piazza Principe Eugenio"
               width="1600"
               height="900"
@@ -417,6 +405,7 @@
         </div>
         <div class="container hero__inner">
           <div class="hero__content">
+            <nav class="page-breadcrumb page-breadcrumb--on-dark" aria-label="Percorso di navigazione"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Rivoli</span></nav>
             <span class="hero__tagline">Ristorante e Pizzeria · Riconosciuti AIC · Solo Cena · Dal 2024</span>
             <h1 class="hero__title">Alexander Rivoli</h1>
             <p class="hero__address">
@@ -509,7 +498,7 @@
           </p>
           <div class="location-prenota-wrapper">
             <div class="iframe-wrapper iframe-wrapper--prenota">
-              <iframe
+              <iframe width="100%" height="700"
                 src="https://pnssm.pro/guhcwjm"
                 title="Prenota un tavolo — Alexander Rivoli"
                 loading="lazy"
@@ -626,7 +615,7 @@
           <div class="signature-pizzas signature-pizzas--cards">
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/ade.png" alt="Pizza Ade Alexander: pomodoro, formaggi, cipolle caramellate e salamino piccante." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/ade-800.webp" srcset="/assets/img/signature/ade-400.webp 400w, /assets/img/signature/ade-800.webp 800w, /assets/img/signature/ade-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Pizza Ade Alexander: pomodoro, formaggi, cipolle caramellate e salamino piccante." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Ade (€12,00) — La più venduta</h3>
@@ -635,7 +624,7 @@
             </article>
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/aura-margherita.png" alt="Pizza Aura, margherita Alexander: pomodoro, bufala e basilico." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/aura-margherita-800.webp" srcset="/assets/img/signature/aura-margherita-400.webp 400w, /assets/img/signature/aura-margherita-800.webp 800w, /assets/img/signature/aura-margherita-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Pizza Aura, margherita Alexander: pomodoro, bufala e basilico." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Aura — La nostra Margherita (€9,50)</h3>
@@ -651,7 +640,7 @@
             </article>
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/apollo.png" alt="Pizza Apollo con salsiccia, fontina, cipolle saltate, fior di latte, gorgonzola e grana padano." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/apollo-800.webp" srcset="/assets/img/signature/apollo-400.webp 400w, /assets/img/signature/apollo-800.webp 800w, /assets/img/signature/apollo-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Pizza Apollo con salsiccia, fontina, cipolle saltate, fior di latte, gorgonzola e grana padano." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Apollo (€12,00)</h3>
@@ -660,7 +649,7 @@
             </article>
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/gea.png" alt="Focaccia Gea con burrata, prosciutto crudo, rucola e pomodorini." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/gea-800.webp" srcset="/assets/img/signature/gea-400.webp 400w, /assets/img/signature/gea-800.webp 800w, /assets/img/signature/gea-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Focaccia Gea con burrata, prosciutto crudo, rucola e pomodorini." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Gea (€15,50)</h3>
@@ -669,7 +658,7 @@
             </article>
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/alexander.png" alt="Pizza Alexander gourmet con battuta, tartufo e grana." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/alexander-800.webp" srcset="/assets/img/signature/alexander-400.webp 400w, /assets/img/signature/alexander-800.webp 800w, /assets/img/signature/alexander-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Pizza Alexander gourmet con battuta, tartufo e grana." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Alexander (€14,50)</h3>
@@ -678,7 +667,7 @@
             </article>
             <article class="signature-pizza">
               <div class="signature-pizza__media">
-                <img class="signature-pizza__img" src="/assets/img/signature/senza-glutine.png" alt="Pizza senza glutine Alexander, riconoscimento AIC." width="800" height="600" loading="lazy" decoding="async" />
+                <img class="signature-pizza__img" src="/assets/img/signature/senza-glutine-800.webp" srcset="/assets/img/signature/senza-glutine-400.webp 400w, /assets/img/signature/senza-glutine-800.webp 800w, /assets/img/signature/senza-glutine-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Pizza senza glutine Alexander, riconoscimento AIC." width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div class="signature-pizza__body">
                 <h3 class="signature-pizza__name">Pizza senza glutine (da €8,50)</h3>
@@ -707,7 +696,7 @@
             </article>
             <article class="menu-highlight">
               <div class="menu-highlight__media">
-                <img class="menu-highlight__img" src="/assets/img/cucina/tagliolino-porcini.png" alt="Tagliolini ai funghi porcini freschi" width="960" height="1440" loading="lazy" decoding="async" />
+                <img class="menu-highlight__img" src="/assets/img/cucina/tagliolino-porcini-800.webp" srcset="/assets/img/cucina/tagliolino-porcini-400.webp 400w, /assets/img/cucina/tagliolino-porcini-800.webp 800w, /assets/img/cucina/tagliolino-porcini-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px" alt="Tagliolini ai funghi porcini freschi" width="960" height="1440" loading="lazy" decoding="async" />
               </div>
               <div class="menu-highlight__body">
                 <h3 class="menu-highlight__name">Tagliolini ai Porcini Freschi</h3>
@@ -817,7 +806,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/dama-bianca.png"
+                  src="/assets/img/beers/dama-bianca-800.webp" srcset="/assets/img/beers/dama-bianca-400.webp 400w, /assets/img/beers/dama-bianca-800.webp 800w, /assets/img/beers/dama-bianca-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Dama Bianca — Birrificio Hibu, White IPA"
                   width="400"
                   height="400"
@@ -839,7 +828,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/vaitra.png"
+                  src="/assets/img/beers/vaitra-800.webp" srcset="/assets/img/beers/vaitra-400.webp 400w, /assets/img/beers/vaitra-800.webp 800w, /assets/img/beers/vaitra-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Vaitrà — Birrificio Hibu, American Pale Ale"
                   width="400"
                   height="400"
@@ -861,7 +850,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/entropia.png"
+                  src="/assets/img/beers/entropia-800.webp" srcset="/assets/img/beers/entropia-400.webp 400w, /assets/img/beers/entropia-800.webp 800w, /assets/img/beers/entropia-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Entropia — Birrificio Hibu, Golden Ale anche senza glutine"
                   width="400"
                   height="400"
@@ -884,7 +873,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/trhibu.png"
+                  src="/assets/img/beers/trhibu-800.webp" srcset="/assets/img/beers/trhibu-400.webp 400w, /assets/img/beers/trhibu-800.webp 800w, /assets/img/beers/trhibu-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Trhibu — Birrificio Hibu, American IPA"
                   width="400"
                   height="400"
@@ -906,7 +895,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/eil.png"
+                  src="/assets/img/beers/eil-800.webp" srcset="/assets/img/beers/eil-400.webp 400w, /assets/img/beers/eil-800.webp 800w, /assets/img/beers/eil-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Eil — Birrificio Hibu, Belgian Ale"
                   width="400"
                   height="400"
@@ -928,7 +917,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/gotha.png"
+                  src="/assets/img/beers/gotha-800.webp" srcset="/assets/img/beers/gotha-400.webp 400w, /assets/img/beers/gotha-800.webp 800w, /assets/img/beers/gotha-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Gotha — Birrificio Hibu, Tripel rifermentata"
                   width="400"
                   height="400"
@@ -950,7 +939,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/avanti-march.png"
+                  src="/assets/img/beers/avanti-march-800.webp" srcset="/assets/img/beers/avanti-march-400.webp 400w, /assets/img/beers/avanti-march-800.webp 800w, /assets/img/beers/avanti-march-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Avanti March — Birrificio Hibu, Spicy Saison"
                   width="400"
                   height="400"
@@ -980,7 +969,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/sans-souci.png"
+                    src="/assets/img/beers/sans-souci-800.webp" srcset="/assets/img/beers/sans-souci-400.webp 400w, /assets/img/beers/sans-souci-800.webp 800w, /assets/img/beers/sans-souci-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Sans Souci Lager alla spina"
                     width="400"
                     height="400"
@@ -1005,7 +994,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-blonde.png"
+                    src="/assets/img/beers/affligem-blonde-800.webp" srcset="/assets/img/beers/affligem-blonde-400.webp 400w, /assets/img/beers/affligem-blonde-800.webp 800w, /assets/img/beers/affligem-blonde-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Blonde birra d'abbazia belga alla spina"
                     width="400"
                     height="400"
@@ -1031,7 +1020,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/guinness.png"
+                    src="/assets/img/beers/guinness-800.webp" srcset="/assets/img/beers/guinness-400.webp 400w, /assets/img/beers/guinness-800.webp 800w, /assets/img/beers/guinness-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Guinness stout irlandese alla spina"
                     width="400"
                     height="400"
@@ -1065,7 +1054,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-rossa.png"
+                    src="/assets/img/beers/affligem-rossa-800.webp" srcset="/assets/img/beers/affligem-rossa-400.webp 400w, /assets/img/beers/affligem-rossa-800.webp 800w, /assets/img/beers/affligem-rossa-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Rossa (Rouge) birra d'abbazia belga in bottiglia"
                     width="400"
                     height="400"
@@ -1119,7 +1108,7 @@
                 Asporto
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://pnssm.pro/1d78wgk"
                   title="Ordina d'asporto — Alexander Rivoli"
                   loading="lazy"
@@ -1149,7 +1138,7 @@
                 Menu
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://pnssm.pro/vymy9b4"
                   title="Menu — Alexander Rivoli"
                   loading="lazy"
@@ -1167,7 +1156,7 @@
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
             Raggiungici in Piazza Principe Eugenio 7, nel centro storico di Rivoli.
           </p>
-          <iframe
+          <iframe width="100%" height="450"
             class="location-map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.5!2d7.5148!3d45.0714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d5c1e1e1e1f%3A0x0!2sPiazza+Principe+Eugenio+7%2C+10098+Rivoli+TO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
             allowfullscreen=""
@@ -1193,11 +1182,13 @@
             </p>
           </div>
 
-          <p class="reviews-summary">
-            <span class="reviews-summary__rating">★ 4,2</span> ·
-            recensioni su Google Maps
+          <p class="reviews-summary" data-live-review="rivoli">
+            <span class="reviews-summary__rating">★ <span data-field="rating">4,2</span></span> ·
+            <span data-field="count">140</span> recensioni su Google Maps
           </p>
-          <div class="reviews-grid">
+          <p class="reviews-live" data-live-status hidden></p>
+          <p class="reviews-filter" data-live-filter hidden>Qui solo le recensioni da 4 e 5 stelle. L’ordine è quello di Google. <span translate="no">Google Maps</span></p>
+          <div class="reviews-grid" data-live-quotes="rivoli">
             <article class="review-card">
               <div class="review-card__stars" aria-label="5 stelle su 5">★★★★★</div>
               <blockquote class="review-card__text">
@@ -1205,7 +1196,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Sara Quagliato</span>
-                <span>Google Maps</span>
+                <span class="review-card__when">Google Maps</span>
               </div>
             </article>
             <article class="review-card">
@@ -1215,7 +1206,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Alice Regis</span>
-                <span>Google Maps</span>
+                <span class="review-card__when">Google Maps</span>
               </div>
             </article>
             <article class="review-card">
@@ -1225,7 +1216,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">renata dibella</span>
-                <span>Google Maps</span>
+                <span class="review-card__when">Google Maps</span>
               </div>
             </article>
             <article class="review-card">
@@ -1235,7 +1226,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Cristina Veglia</span>
-                <span>Google Maps</span>
+                <span class="review-card__when">Google Maps</span>
               </div>
             </article>
           </div>
@@ -1417,6 +1408,8 @@
                 <a href="/alexander-lovers/">Alexander Lovers</a>
                 <a href="/lavora-con-noi/">Lavora Con Noi</a>
                 <a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
 
@@ -1510,6 +1503,16 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/bundle.min.js" defer></script>
+    <script src="/assets/js/bundle.min.js?v=20260922b" defer></script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Rivoli" }
+      ]
+    }
+    </script>
   </body>
 </html>

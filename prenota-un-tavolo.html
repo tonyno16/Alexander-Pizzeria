@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>
       Prenota un Tavolo | Alexander Pizzeria Pinerolo, Piossasco, Giaveno,
       Rivoli
@@ -193,6 +191,7 @@
 
     <!-- MAIN -->
     <main id="main-content">
+      <nav class="page-breadcrumb" aria-label="Percorso di navigazione"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Prenota un tavolo</span></div></nav>
       <!-- Page Header -->
       <section
         class="section section--dark"
@@ -256,7 +255,7 @@
           <div class="tab-panel active" data-panel="pinerolo" role="tabpanel">
             <h2 style="margin-bottom: var(--space-md)">Prenota a Pinerolo</h2>
             <p class="text-muted" style="margin-bottom: var(--space-sm)">
-              Via Achille Midana, 37 | Orari: 19:00 - 23:30
+              Via Achille Midana, 37 | Orari: 18:30 - 23:30
             </p>
             <p class="text-muted" style="margin-bottom: var(--space-lg)">
               Preferisci prenotare per telefono? Chiama il
@@ -277,7 +276,7 @@
           <div class="tab-panel" data-panel="piossasco" role="tabpanel">
             <h2 style="margin-bottom: var(--space-md)">Prenota a Piossasco</h2>
             <p class="text-muted" style="margin-bottom: var(--space-sm)">
-              Via Pinerolo, 149 | Orari: 19:00 - 23:30
+              Via Pinerolo, 149 | Orari: 18:30 - 23:30
             </p>
             <p class="text-muted" style="margin-bottom: var(--space-lg)">
               Preferisci prenotare per telefono? Chiama il
@@ -300,7 +299,7 @@
               Prenota a Giaveno (Valsangone)
             </h2>
             <p class="text-muted" style="margin-bottom: var(--space-sm)">
-              Piazza Molines, 45 | Orari: 12:00-15:00 / 19:00-23:30
+              Piazza Molines, 45 | Orari: 12:00-15:00 / 18:30-23:30
             </p>
             <p class="text-muted" style="margin-bottom: var(--space-lg)">
               Preferisci prenotare per telefono? Chiama il
@@ -321,7 +320,7 @@
           <div class="tab-panel" data-panel="rivoli" role="tabpanel">
             <h2 style="margin-bottom: var(--space-md)">Prenota a Rivoli</h2>
             <p class="text-muted" style="margin-bottom: var(--space-sm)">
-              Piazza Principe Eugenio, 7 | Orari: 19:00 - 23:30
+              Piazza Principe Eugenio, 7 | Orari: 18:30 - 23:30
             </p>
             <p class="text-muted" style="margin-bottom: var(--space-lg)">
               Preferisci prenotare per telefono? Chiama il
@@ -376,7 +375,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -423,6 +422,8 @@
                 ><a href="/alexander-lovers/">Alexander Lovers</a
                 ><a href="/lavora-con-noi/">Lavora Con Noi</a
                 ><a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -496,5 +497,15 @@
     </footer>
 
     <script src="/assets/js/bundle.min.js" defer></script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Prenota un tavolo" }
+      ]
+    }
+    </script>
   </body>
 </html>

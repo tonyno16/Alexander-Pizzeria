@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>
       Funghi Porcini di Giaveno: La Tradizione in Tavola | Blog Alexander
       Pizzeria
@@ -46,15 +44,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link rel="stylesheet" href="/assets/css/blog.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="preload" href="/assets/css/style.min.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -287,7 +278,7 @@
               <p>
                 Inoltre, Alexander Valsangone e l'unica sede aperta anche a
                 pranzo (12:00-15:00), oltre al consueto orario serale
-                (19:00-23:30), rendendola perfetta per un pranzo in Valsangone
+                (18:30-23:30), rendendola perfetta per un pranzo in Valsangone
                 durante una gita in montagna o una visita al mercato di Giaveno.
               </p>
 
@@ -416,7 +407,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -463,6 +454,8 @@
                 ><a href="/alexander-lovers/">Alexander Lovers</a
                 ><a href="/lavora-con-noi/">Lavora Con Noi</a
                 ><a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -541,21 +534,44 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Funghi Porcini di Giaveno: La Tradizione in Tavola da Alexander Valsangone",
-        "datePublished": "2026-02-15",
-        "dateModified": "2026-02-15",
-        "author": {
-          "@type": "Organization",
-          "name": "Alexander Pizzeria",
-          "url": "https://www.alexanderpizzeria.com"
-        },
-        "publisher": {
-          "@id": "https://www.alexanderpizzeria.com/#organization"
-        },
-        "image": "https://www.alexanderpizzeria.com/assets/img/blog/funghi-porcini-giaveno.jpg",
-        "description": "Scopri la tradizione secolare dei funghi porcini nella Valsangone e i piatti che puoi gustare da Alexander Valsangone a Giaveno."
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.alexanderpizzeria.com/#organization",
+            "name": "Alexander Pizzeria",
+            "legalName": "Alexander S.R.L.",
+            "url": "https://www.alexanderpizzeria.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp"
+            }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://www.alexanderpizzeria.com/blog/funghi-porcini-giaveno/#article",
+            "mainEntityOfPage": "https://www.alexanderpizzeria.com/blog/funghi-porcini-giaveno/",
+            "headline": "Funghi Porcini di Giaveno: La Tradizione in Tavola da Alexander Valsangone",
+            "description": "La tradizione dei funghi porcini nella Val Sangone e i piatti del Ristorante Valsangone a Giaveno.",
+            "inLanguage": "it-IT",
+            "datePublished": "2026-02-15",
+            "dateModified": "2026-09-21",
+            "author": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "publisher": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "about": { "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant" }
+          }
+        ]
       }
+    </script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.alexanderpizzeria.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Funghi porcini di Giaveno" }
+      ]
+    }
     </script>
   </body>
 </html>

@@ -62,8 +62,11 @@
       "url": "https://www.alexanderpizzeria.com/piossasco/",
       "telephone": "+390117601733",
       "priceRange": "10-20 €",
-      "servesCuisine": ["Pizza", "Italiana", "Senza Glutine", "Senza Lattosio"],
-      "acceptsReservations": "True",
+      "servesCuisine": ["Pizza", "Italiana"],
+      "acceptsReservations": true,
+      "currenciesAccepted": "EUR",
+      "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+      "hasMap": "https://maps.app.goo.gl/CJ6EcvWXjxvTUYpV6",
       "foundingDate": "2009",
       "address": {
         "@type": "PostalAddress",
@@ -85,20 +88,12 @@
         "closes": "23:30"
       }],
       "specialOpeningHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2026-12-25",
-          "validThrough": "2026-12-25",
-          "opens": "00:00",
-          "closes": "00:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2027-01-01",
-          "validThrough": "2027-01-01",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
+        { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-25", "validThrough": "2026-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-01-01", "validThrough": "2027-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-12-25", "validThrough": "2027-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-01-01", "validThrough": "2028-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-12-25", "validThrough": "2028-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2029-01-01", "validThrough": "2029-01-01", "opens": "00:00", "closes": "00:00" }
       ],
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true},
@@ -115,9 +110,10 @@
       "sameAs": [
         "https://www.instagram.com/alexanderpizzeria_/",
         "https://www.facebook.com/alexanderpizzeria/",
-        "https://www.tripadvisor.it/Restaurant_Review-g2530872-d2518032-Reviews-Alexander_Pizzeria-Piossasco_Province_of_Turin_Piedmont.html"
+        "https://www.tripadvisor.it/Restaurant_Review-g2530872-d2518032-Reviews-Alexander_Pizzeria-Piossasco_Province_of_Turin_Piedmont.html",
+        "https://maps.app.goo.gl/CJ6EcvWXjxvTUYpV6"
       ],
-      "award": "#1 di 43 ristoranti a Piossasco su Tripadvisor",
+      "award": "#1 di 37 ristoranti a Piossasco su Tripadvisor",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.2",
@@ -155,7 +151,7 @@
           "reviewBody": "Le pizze sono davvero ottime: ben cotte nel forno a legna, con un impasto leggero e ingredienti di qualità. Locale piccolo ma accogliente e molto pulito."
         }
       ],
-      "menu": "https://www.alexanderpizzeria.com/menu/",
+      "hasMenu": { "@id": "https://www.alexanderpizzeria.com/menu/#menu" },
       "potentialAction": {
         "@type": "ReserveAction",
         "target": "https://www.alexanderpizzeria.com/prenota/",
@@ -246,16 +242,8 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link rel="stylesheet" href="/assets/css/hero.css" />
-    <link rel="stylesheet" href="/assets/css/locations.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="preload" href="/assets/css/style.min.css?v=20260922d" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260922d" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -423,6 +411,7 @@
         ></div>
         <div class="container hero__inner">
           <div class="hero__content">
+            <nav class="page-breadcrumb page-breadcrumb--on-dark" aria-label="Percorso di navigazione"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Piossasco</span></nav>
             <span class="hero__tagline">Pizzeria · Riconosciuti AIC · La Sede Storica dal 2009</span>
             <h1 class="hero__title">Pizzeria Alexander Piossasco</h1>
             <p class="hero__address">
@@ -515,7 +504,7 @@
           </p>
           <div class="location-prenota-wrapper">
             <div class="iframe-wrapper iframe-wrapper--prenota">
-              <iframe
+              <iframe width="100%" height="700"
                 src="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.forms.pienissimo.pro/?id=PMl7Y4"
                 title="Prenota un tavolo - Alexander Piossasco"
                 loading="lazy"
@@ -718,7 +707,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/aura-margherita.png"
+                  src="/assets/img/signature/aura-margherita-800.webp" srcset="/assets/img/signature/aura-margherita-400.webp 400w, /assets/img/signature/aura-margherita-800.webp 800w, /assets/img/signature/aura-margherita-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Aura, margherita Alexander: pomodoro, bufala e basilico su pasta lievitata 48 ore, presentazione fotografica marchio Alexander."
                   width="800"
                   height="600"
@@ -737,7 +726,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/ade.png"
+                  src="/assets/img/signature/ade-800.webp" srcset="/assets/img/signature/ade-400.webp 400w, /assets/img/signature/ade-800.webp 800w, /assets/img/signature/ade-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Ade Alexander: pomodoro, formaggi, cipolle caramellate e salamino piccante, servizio food su fondo nero."
                   width="800"
                   height="600"
@@ -756,7 +745,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/alexander.png"
+                  src="/assets/img/signature/alexander-800.webp" srcset="/assets/img/signature/alexander-400.webp 400w, /assets/img/signature/alexander-800.webp 800w, /assets/img/signature/alexander-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Alexander gourmet: impasto alveolato con prosciutto, grana, tartufo e tartare al centro, Alexander Pizzeria."
                   width="800"
                   height="600"
@@ -775,7 +764,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/gea.png"
+                  src="/assets/img/signature/gea-800.webp" srcset="/assets/img/signature/gea-400.webp 400w, /assets/img/signature/gea-800.webp 800w, /assets/img/signature/gea-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Focaccia Gea con burrata, prosciutto crudo, rucola e pomodorini su piatto bianco, branding Alexander."
                   width="800"
                   height="600"
@@ -794,7 +783,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/imero.png"
+                  src="/assets/img/signature/imero-800.webp" srcset="/assets/img/signature/imero-400.webp 400w, /assets/img/signature/imero-800.webp 800w, /assets/img/signature/imero-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Imero con crema al pistacchio, mortadella a rosetta, burrata centrale e granella di pistacchi."
                   width="800"
                   height="600"
@@ -813,7 +802,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/senza-glutine.png"
+                  src="/assets/img/signature/senza-glutine-800.webp" srcset="/assets/img/signature/senza-glutine-400.webp 400w, /assets/img/signature/senza-glutine-800.webp 800w, /assets/img/signature/senza-glutine-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza senza glutine Alexander con salsiccia e cipolle, stessa cura dell'impasto classico, riconoscimento AIC."
                   width="800"
                   height="600"
@@ -939,7 +928,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/dama-bianca.png"
+                  src="/assets/img/beers/dama-bianca-800.webp" srcset="/assets/img/beers/dama-bianca-400.webp 400w, /assets/img/beers/dama-bianca-800.webp 800w, /assets/img/beers/dama-bianca-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Dama Bianca — Birrificio Hibu, White IPA"
                   width="400"
                   height="400"
@@ -961,7 +950,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/vaitra.png"
+                  src="/assets/img/beers/vaitra-800.webp" srcset="/assets/img/beers/vaitra-400.webp 400w, /assets/img/beers/vaitra-800.webp 800w, /assets/img/beers/vaitra-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Vaitrà — Birrificio Hibu, American Pale Ale"
                   width="400"
                   height="400"
@@ -983,7 +972,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/entropia.png"
+                  src="/assets/img/beers/entropia-800.webp" srcset="/assets/img/beers/entropia-400.webp 400w, /assets/img/beers/entropia-800.webp 800w, /assets/img/beers/entropia-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Entropia — Birrificio Hibu, Golden Ale anche senza glutine"
                   width="400"
                   height="400"
@@ -1006,7 +995,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/trhibu.png"
+                  src="/assets/img/beers/trhibu-800.webp" srcset="/assets/img/beers/trhibu-400.webp 400w, /assets/img/beers/trhibu-800.webp 800w, /assets/img/beers/trhibu-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Trhibu — Birrificio Hibu, American IPA"
                   width="400"
                   height="400"
@@ -1028,7 +1017,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/eil.png"
+                  src="/assets/img/beers/eil-800.webp" srcset="/assets/img/beers/eil-400.webp 400w, /assets/img/beers/eil-800.webp 800w, /assets/img/beers/eil-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Eil — Birrificio Hibu, Belgian Ale"
                   width="400"
                   height="400"
@@ -1050,7 +1039,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/gotha.png"
+                  src="/assets/img/beers/gotha-800.webp" srcset="/assets/img/beers/gotha-400.webp 400w, /assets/img/beers/gotha-800.webp 800w, /assets/img/beers/gotha-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Gotha — Birrificio Hibu, Tripel rifermentata"
                   width="400"
                   height="400"
@@ -1072,7 +1061,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/avanti-march.png"
+                  src="/assets/img/beers/avanti-march-800.webp" srcset="/assets/img/beers/avanti-march-400.webp 400w, /assets/img/beers/avanti-march-800.webp 800w, /assets/img/beers/avanti-march-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Avanti March — Birrificio Hibu, Spicy Saison"
                   width="400"
                   height="400"
@@ -1102,7 +1091,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/sans-souci.png"
+                    src="/assets/img/beers/sans-souci-800.webp" srcset="/assets/img/beers/sans-souci-400.webp 400w, /assets/img/beers/sans-souci-800.webp 800w, /assets/img/beers/sans-souci-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Sans Souci Lager alla spina"
                     width="400"
                     height="400"
@@ -1127,7 +1116,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-blonde.png"
+                    src="/assets/img/beers/affligem-blonde-800.webp" srcset="/assets/img/beers/affligem-blonde-400.webp 400w, /assets/img/beers/affligem-blonde-800.webp 800w, /assets/img/beers/affligem-blonde-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Blonde birra d'abbazia belga alla spina"
                     width="400"
                     height="400"
@@ -1153,7 +1142,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/guinness.png"
+                    src="/assets/img/beers/guinness-800.webp" srcset="/assets/img/beers/guinness-400.webp 400w, /assets/img/beers/guinness-800.webp 800w, /assets/img/beers/guinness-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Guinness stout irlandese alla spina"
                     width="400"
                     height="400"
@@ -1187,7 +1176,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-rossa.png"
+                    src="/assets/img/beers/affligem-rossa-800.webp" srcset="/assets/img/beers/affligem-rossa-400.webp 400w, /assets/img/beers/affligem-rossa-800.webp 800w, /assets/img/beers/affligem-rossa-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Rossa (Rouge) birra d'abbazia belga in bottiglia"
                     width="400"
                     height="400"
@@ -1241,7 +1230,7 @@
                 Asporto
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.delivery.pienissimo.pro/?id=wNYEmx"
                   title="Ordina d'asporto - Alexander Piossasco"
                   loading="lazy"
@@ -1271,7 +1260,7 @@
                 Menu
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10"
                   title="Menu - Alexander Piossasco"
                   loading="lazy"
@@ -1289,7 +1278,7 @@
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
             Raggiungici facilmente in Via Pinerolo 149 a Piossasco.
           </p>
-          <iframe
+          <iframe width="100%" height="450"
             class="location-map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.5!2d7.4619!3d44.9867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d2b1b0a0a0a0a1%3A0x0!2sVia+Pinerolo%2C+149%2C+10045+Piossasco+TO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
             allowfullscreen=""
@@ -1311,15 +1300,17 @@
               🏆 <strong>#1 su Tripadvisor a Piossasco</strong>
             </p>
             <p style="margin: 0; opacity: 0.9;">
-              <strong>#1 di 43 ristoranti a Piossasco</strong> · Oltre 326 recensioni
+              <strong>#1 di 37 ristoranti a Piossasco</strong> · Oltre 326 recensioni
             </p>
           </div>
 
-          <p class="reviews-summary">
-            <span class="reviews-summary__rating">★ 4,2</span> ·
-            679 recensioni verificate su Google
+          <p class="reviews-summary" data-live-review="piossasco">
+            <span class="reviews-summary__rating">★ <span data-field="rating">4,2</span></span> ·
+            <span data-field="count">679</span> recensioni verificate su Google
           </p>
-          <div class="reviews-grid">
+          <p class="reviews-live" data-live-status hidden></p>
+          <p class="reviews-filter" data-live-filter hidden>Qui solo le recensioni da 4 e 5 stelle. L’ordine è quello di Google. <span translate="no">Google Maps</span></p>
+          <div class="reviews-grid" data-live-quotes="piossasco">
             <article class="review-card">
               <div class="review-card__stars" aria-label="5 stelle su 5">★★★★★</div>
               <blockquote class="review-card__text">
@@ -1327,7 +1318,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Vincenzo Piscitelli</span>
-                <span>Marzo 2026</span>
+                <span class="review-card__when">Marzo 2026</span>
               </div>
             </article>
             <article class="review-card">
@@ -1337,7 +1328,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Paolo Giaccaria</span>
-                <span>Marzo 2026</span>
+                <span class="review-card__when">Marzo 2026</span>
               </div>
             </article>
             <article class="review-card">
@@ -1347,7 +1338,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Piero San. (Local Guide)</span>
-                <span>Ottobre 2025</span>
+                <span class="review-card__when">Ottobre 2025</span>
               </div>
             </article>
             <article class="review-card">
@@ -1357,7 +1348,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Ruggero De Luca</span>
-                <span>Settembre 2025</span>
+                <span class="review-card__when">Settembre 2025</span>
               </div>
             </article>
           </div>
@@ -1627,6 +1618,8 @@
                 <a href="/alexander-lovers/">Alexander Lovers</a>
                 <a href="/lavora-con-noi/">Lavora Con Noi</a>
                 <a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
 
@@ -1720,6 +1713,16 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/bundle.min.js" defer></script>
+    <script src="/assets/js/bundle.min.js?v=20260922b" defer></script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Piossasco" }
+      ]
+    }
+    </script>
   </body>
 </html>

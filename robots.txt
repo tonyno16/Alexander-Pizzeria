@@ -3,14 +3,4 @@ Allow: /
 
 Sitemap: https://www.alexanderpizzeria.com/sitemap.xml
 
-# Block admin/private areas (WordPress)
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
-
-# Block search results
-Disallow: /?s=
-Disallow: /search/
-
-# Allow all crawlers to access assets
-Allow: /assets/
-Allow: /data/
+Content-Signal: search=yes, ai-input=yes, ai-train=yes

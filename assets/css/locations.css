@@ -90,10 +90,16 @@
 .location-card__hours {
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   display: flex;
   align-items: flex-start;
   gap: var(--space-sm);
+}
+
+.location-card__note {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-lg);
 }
 
 .location-card__actions {
@@ -358,15 +364,21 @@
   color: var(--color-text);
   font-style: italic;
   line-height: 1.7;
-  margin-bottom: var(--space-md);
-  flex: 1;
+  margin: 0 0 var(--space-md);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .review-card__meta {
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: auto;
   border-top: 1px solid var(--color-border-light);
   padding-top: var(--space-sm);
 }
@@ -374,6 +386,12 @@
 .review-card__author {
   font-weight: var(--font-weight-semibold);
   color: var(--color-black);
+}
+
+.review-card__when {
+  flex-shrink: 0;
+  margin-left: auto;
+  text-align: right;
 }
 
 .reviews-summary {

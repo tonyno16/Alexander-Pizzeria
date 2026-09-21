@@ -63,8 +63,11 @@
       "url": "https://www.alexanderpizzeria.com/giaveno/",
       "telephone": "+390119376286",
       "priceRange": "10-25 €",
-      "servesCuisine": ["Pizza", "Italiana", "Piemontese", "Senza Glutine", "Funghi Porcini"],
-      "acceptsReservations": "True",
+      "servesCuisine": ["Pizza", "Italiana", "Piemontese"],
+      "acceptsReservations": true,
+      "currenciesAccepted": "EUR",
+      "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+      "hasMap": "https://maps.app.goo.gl/899YjB6VdN1DzSBw6",
       "description": "Ristorante storico della Val Sangone rilevato dal gruppo Alexander nel 2023. Specialità ai funghi porcini, cucina piemontese e pizza stile Alexander con forno a legna a vista. Unico locale AIC a Giaveno.",
       "address": {
         "@type": "PostalAddress",
@@ -94,20 +97,12 @@
         }
       ],
       "specialOpeningHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2026-12-25",
-          "validThrough": "2026-12-25",
-          "opens": "00:00",
-          "closes": "00:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2027-01-01",
-          "validThrough": "2027-01-01",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
+        { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-25", "validThrough": "2026-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-01-01", "validThrough": "2027-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2027-12-25", "validThrough": "2027-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-01-01", "validThrough": "2028-01-01", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2028-12-25", "validThrough": "2028-12-25", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "validFrom": "2029-01-01", "validThrough": "2029-01-01", "opens": "00:00", "closes": "00:00" }
       ],
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true},
@@ -121,7 +116,8 @@
       "sameAs": [
         "https://www.instagram.com/alexanderpizzeria_/",
         "https://www.facebook.com/alexanderpizzeria/",
-        "https://www.tripadvisor.it/Restaurant_Review-g1054624-d2423926-Reviews-Ristorante_Valsangone-Giaveno_Province_of_Turin_Piedmont.html"
+        "https://www.tripadvisor.it/Restaurant_Review-g1054624-d2423926-Reviews-Ristorante_Valsangone-Giaveno_Province_of_Turin_Piedmont.html",
+        "https://maps.app.goo.gl/899YjB6VdN1DzSBw6"
       ],
       "award": "Tripadvisor Travellers' Choice",
       "aggregateRating": {
@@ -175,7 +171,7 @@
           "reviewBody": "We went to eat pizza, very light dough, gluten-free pizza, delicious, we will be back again, thanks."
         }
       ],
-      "menu": "https://www.alexanderpizzeria.com/menu/",
+      "hasMenu": { "@id": "https://www.alexanderpizzeria.com/menu/#menu" },
       "potentialAction": {
         "@type": "ReserveAction",
         "target": "https://www.alexanderpizzeria.com/prenota/",
@@ -246,16 +242,8 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link rel="stylesheet" href="/assets/css/hero.css" />
-    <link rel="stylesheet" href="/assets/css/locations.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="preload" href="/assets/css/style.min.css?v=20260922d" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260922d" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -423,6 +411,7 @@
         ></div>
         <div class="container hero__inner">
           <div class="hero__content">
+            <nav class="page-breadcrumb page-breadcrumb--on-dark" aria-label="Percorso di navigazione"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Giaveno</span></nav>
             <span class="hero__tagline">Ristorante Valsangone · Riconosciuti AIC · Pranzo & Cena</span>
             <h1 class="hero__title">Ristorante Valsangone — Alexander Giaveno</h1>
             <p class="hero__address">
@@ -515,7 +504,7 @@
           </p>
           <div class="location-prenota-wrapper">
             <div class="iframe-wrapper iframe-wrapper--prenota">
-              <iframe
+              <iframe width="100%" height="700"
                 src="https://4ajacb1xf2rpvydbkjcepog7qvryk252.forms.pienissimo.pro/?id=swPtp9"
                 title="Prenota un tavolo — Ristorante Valsangone Giaveno"
                 loading="lazy"
@@ -662,7 +651,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/aura-margherita.png"
+                  src="/assets/img/signature/aura-margherita-800.webp" srcset="/assets/img/signature/aura-margherita-400.webp 400w, /assets/img/signature/aura-margherita-800.webp 800w, /assets/img/signature/aura-margherita-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Aura, margherita Alexander: pomodoro, bufala e basilico su pasta lievitata 48 ore."
                   width="800"
                   height="600"
@@ -681,7 +670,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/ade.png"
+                  src="/assets/img/signature/ade-800.webp" srcset="/assets/img/signature/ade-400.webp 400w, /assets/img/signature/ade-800.webp 800w, /assets/img/signature/ade-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Ade Alexander: pomodoro, formaggi, cipolle caramellate e salamino piccante."
                   width="800"
                   height="600"
@@ -700,7 +689,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/apollo.png"
+                  src="/assets/img/signature/apollo-800.webp" srcset="/assets/img/signature/apollo-400.webp 400w, /assets/img/signature/apollo-800.webp 800w, /assets/img/signature/apollo-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Apollo con salsiccia, fontina, cipolle saltate, fior di latte, gorgonzola e grana padano."
                   width="800"
                   height="600"
@@ -719,7 +708,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/gea.png"
+                  src="/assets/img/signature/gea-800.webp" srcset="/assets/img/signature/gea-400.webp 400w, /assets/img/signature/gea-800.webp 800w, /assets/img/signature/gea-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Focaccia Gea con burrata, prosciutto crudo, rucola e pomodorini."
                   width="800"
                   height="600"
@@ -738,7 +727,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/alexander.png"
+                  src="/assets/img/signature/alexander-800.webp" srcset="/assets/img/signature/alexander-400.webp 400w, /assets/img/signature/alexander-800.webp 800w, /assets/img/signature/alexander-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza Alexander gourmet: prosciutto, grana, tartufo e battuta al centro."
                   width="800"
                   height="600"
@@ -757,7 +746,7 @@
               <div class="signature-pizza__media">
                 <img
                   class="signature-pizza__img"
-                  src="/assets/img/signature/senza-glutine.png"
+                  src="/assets/img/signature/senza-glutine-800.webp" srcset="/assets/img/signature/senza-glutine-400.webp 400w, /assets/img/signature/senza-glutine-800.webp 800w, /assets/img/signature/senza-glutine-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Pizza senza glutine Alexander, riconoscimento AIC."
                   width="800"
                   height="600"
@@ -781,14 +770,14 @@
         <div class="container">
           <h2 class="section-title">Specialità ai Funghi Porcini</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
-            Da maggio a novembre, quando i boschi della Val Sangone regalano il miglior porcino.
+            Da maggio a novembre, quando i boschi della Val Sangone regalano il miglior porcino. <a href="/blog/funghi-porcini-giaveno/">La tradizione dei porcini a Giaveno</a>.
           </p>
           <div class="menu-highlights menu-highlights--cards">
             <article class="menu-highlight">
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/tagliolino-porcini.png"
+                  src="/assets/img/cucina/tagliolino-porcini-800.webp" srcset="/assets/img/cucina/tagliolino-porcini-400.webp 400w, /assets/img/cucina/tagliolino-porcini-800.webp 800w, /assets/img/cucina/tagliolino-porcini-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Tagliolino ai funghi porcini"
                   width="960"
                   height="1440"
@@ -806,7 +795,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/porcini-fritti.png"
+                  src="/assets/img/cucina/porcini-fritti-800.webp" srcset="/assets/img/cucina/porcini-fritti-400.webp 400w, /assets/img/cucina/porcini-fritti-800.webp 800w, /assets/img/cucina/porcini-fritti-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Funghi porcini fritti in pastella"
                   width="960"
                   height="1440"
@@ -834,7 +823,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/battuta-fassona-porcini.png"
+                  src="/assets/img/cucina/battuta-fassona-porcini-800.webp" srcset="/assets/img/cucina/battuta-fassona-porcini-400.webp 400w, /assets/img/cucina/battuta-fassona-porcini-800.webp 800w, /assets/img/cucina/battuta-fassona-porcini-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Battuta di Fassona piemontese con porcini trifolati"
                   width="960"
                   height="1440"
@@ -852,7 +841,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/tagliata-porcini.png"
+                  src="/assets/img/cucina/tagliata-porcini-800.webp" srcset="/assets/img/cucina/tagliata-porcini-400.webp 400w, /assets/img/cucina/tagliata-porcini-800.webp 800w, /assets/img/cucina/tagliata-porcini-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Tagliata di manzo Coalvi con funghi porcini"
                   width="960"
                   height="1440"
@@ -882,7 +871,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/plin-piemontese.png"
+                  src="/assets/img/cucina/plin-piemontese-800.webp" srcset="/assets/img/cucina/plin-piemontese-400.webp 400w, /assets/img/cucina/plin-piemontese-800.webp 800w, /assets/img/cucina/plin-piemontese-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Plin alla piemontese con burro e salvia"
                   width="960"
                   height="1440"
@@ -900,7 +889,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/vitello-tonnato.png"
+                  src="/assets/img/cucina/vitello-tonnato-800.webp" srcset="/assets/img/cucina/vitello-tonnato-400.webp 400w, /assets/img/cucina/vitello-tonnato-800.webp 800w, /assets/img/cucina/vitello-tonnato-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Vitello tonnato con salsa tonnata casereccia"
                   width="960"
                   height="1440"
@@ -918,7 +907,7 @@
               <div class="menu-highlight__media">
                 <img
                   class="menu-highlight__img"
-                  src="/assets/img/cucina/tiramisu.png"
+                  src="/assets/img/cucina/tiramisu-800.webp" srcset="/assets/img/cucina/tiramisu-400.webp 400w, /assets/img/cucina/tiramisu-800.webp 800w, /assets/img/cucina/tiramisu-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Tiramisù della tradizione"
                   width="960"
                   height="1440"
@@ -1050,7 +1039,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/dama-bianca.png"
+                  src="/assets/img/beers/dama-bianca-800.webp" srcset="/assets/img/beers/dama-bianca-400.webp 400w, /assets/img/beers/dama-bianca-800.webp 800w, /assets/img/beers/dama-bianca-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Dama Bianca — Birrificio Hibu, White IPA"
                   width="400"
                   height="400"
@@ -1072,7 +1061,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/vaitra.png"
+                  src="/assets/img/beers/vaitra-800.webp" srcset="/assets/img/beers/vaitra-400.webp 400w, /assets/img/beers/vaitra-800.webp 800w, /assets/img/beers/vaitra-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Vaitrà — Birrificio Hibu, American Pale Ale"
                   width="400"
                   height="400"
@@ -1094,7 +1083,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/entropia.png"
+                  src="/assets/img/beers/entropia-800.webp" srcset="/assets/img/beers/entropia-400.webp 400w, /assets/img/beers/entropia-800.webp 800w, /assets/img/beers/entropia-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Entropia — Birrificio Hibu, Golden Ale anche senza glutine"
                   width="400"
                   height="400"
@@ -1117,7 +1106,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/trhibu.png"
+                  src="/assets/img/beers/trhibu-800.webp" srcset="/assets/img/beers/trhibu-400.webp 400w, /assets/img/beers/trhibu-800.webp 800w, /assets/img/beers/trhibu-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Trhibu — Birrificio Hibu, American IPA"
                   width="400"
                   height="400"
@@ -1139,7 +1128,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/eil.png"
+                  src="/assets/img/beers/eil-800.webp" srcset="/assets/img/beers/eil-400.webp 400w, /assets/img/beers/eil-800.webp 800w, /assets/img/beers/eil-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Eil — Birrificio Hibu, Belgian Ale"
                   width="400"
                   height="400"
@@ -1161,7 +1150,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/gotha.png"
+                  src="/assets/img/beers/gotha-800.webp" srcset="/assets/img/beers/gotha-400.webp 400w, /assets/img/beers/gotha-800.webp 800w, /assets/img/beers/gotha-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Gotha — Birrificio Hibu, Tripel rifermentata"
                   width="400"
                   height="400"
@@ -1183,7 +1172,7 @@
               <div class="beer-card__media">
                 <img
                   class="beer-card__img"
-                  src="/assets/img/beers/avanti-march.png"
+                  src="/assets/img/beers/avanti-march-800.webp" srcset="/assets/img/beers/avanti-march-400.webp 400w, /assets/img/beers/avanti-march-800.webp 800w, /assets/img/beers/avanti-march-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                   alt="Sottobicchiere Avanti March — Birrificio Hibu, Spicy Saison"
                   width="400"
                   height="400"
@@ -1213,7 +1202,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/sans-souci.png"
+                    src="/assets/img/beers/sans-souci-800.webp" srcset="/assets/img/beers/sans-souci-400.webp 400w, /assets/img/beers/sans-souci-800.webp 800w, /assets/img/beers/sans-souci-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Sans Souci Lager alla spina"
                     width="400"
                     height="400"
@@ -1238,7 +1227,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-blonde.png"
+                    src="/assets/img/beers/affligem-blonde-800.webp" srcset="/assets/img/beers/affligem-blonde-400.webp 400w, /assets/img/beers/affligem-blonde-800.webp 800w, /assets/img/beers/affligem-blonde-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Blonde birra d'abbazia belga alla spina"
                     width="400"
                     height="400"
@@ -1264,7 +1253,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/guinness.png"
+                    src="/assets/img/beers/guinness-800.webp" srcset="/assets/img/beers/guinness-400.webp 400w, /assets/img/beers/guinness-800.webp 800w, /assets/img/beers/guinness-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Guinness stout irlandese alla spina"
                     width="400"
                     height="400"
@@ -1298,7 +1287,7 @@
                 <div class="beer-card__media">
                   <img
                     class="beer-card__img"
-                    src="/assets/img/beers/affligem-rossa.png"
+                    src="/assets/img/beers/affligem-rossa-800.webp" srcset="/assets/img/beers/affligem-rossa-400.webp 400w, /assets/img/beers/affligem-rossa-800.webp 800w, /assets/img/beers/affligem-rossa-1200.webp 1200w" sizes="(max-width: 700px) 92vw, 480px"
                     alt="Affligem Rossa (Rouge) birra d'abbazia belga in bottiglia"
                     width="400"
                     height="400"
@@ -1352,7 +1341,7 @@
                 Asporto
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://4ajacb1xf2rpvydbkjcepog7qvryk252.delivery.pienissimo.pro/?id=K0nOww"
                   title="Ordina d'asporto — Ristorante Valsangone Giaveno"
                   loading="lazy"
@@ -1382,7 +1371,7 @@
                 Menu
               </h3>
               <div class="iframe-wrapper">
-                <iframe
+                <iframe width="100%" height="700"
                   src="https://4ajacb1xf2rpvydbkjcepog7qvryk252.menu.pienissimo.pro/?id=142"
                   title="Menu — Ristorante Valsangone Giaveno"
                   loading="lazy"
@@ -1400,7 +1389,7 @@
           <p class="section-subtitle" style="margin-bottom: var(--space-xl)">
             Raggiungici in Piazza Molines 45, nel centro di Giaveno.
           </p>
-          <iframe
+          <iframe width="100%" height="450"
             class="location-map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.5!2d7.3497!3d45.0436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478812e7c6c7e5e7%3A0x0!2sPiazza+Molines+45%2C+10094+Giaveno+TO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
             allowfullscreen=""
@@ -1426,14 +1415,16 @@
             </p>
           </div>
 
-          <p class="reviews-summary">
-            <span class="reviews-summary__rating">★ 4,3</span> ·
-            oltre 1.200 recensioni su Google Maps
+          <p class="reviews-summary" data-live-review="giaveno">
+            <span class="reviews-summary__rating">★ <span data-field="rating">4,3</span></span> ·
+            <span data-field="count">1.200</span> recensioni su Google Maps
           </p>
+          <p class="reviews-live" data-live-status hidden></p>
+          <p class="reviews-filter" data-live-filter hidden>Qui solo le recensioni da 4 e 5 stelle. L’ordine è quello di Google. <span translate="no">Google Maps</span></p>
           <p style="text-align:center; max-width: 640px; margin: 0 auto var(--space-xl); font-size: var(--font-size-sm); color: var(--color-text-light);">
             Le citazioni qui sotto sono tratte da recensioni pubbliche su Google Maps. Per leggere tutte le opinioni aggiornate, apri la scheda del locale.
           </p>
-          <div class="reviews-grid">
+          <div class="reviews-grid" data-live-quotes="giaveno">
             <article class="review-card">
               <div class="review-card__stars" aria-label="5 stelle su 5">★★★★★</div>
               <blockquote class="review-card__text">
@@ -1441,7 +1432,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Paola</span>
-                <span>Google Maps · circa 7 mesi fa</span>
+                <span class="review-card__when">circa 7 mesi fa</span>
               </div>
             </article>
             <article class="review-card">
@@ -1451,7 +1442,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Vito Vivona</span>
-                <span>Google Maps · circa 10 mesi fa</span>
+                <span class="review-card__when">circa 10 mesi fa</span>
               </div>
             </article>
             <article class="review-card">
@@ -1461,7 +1452,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Silvio Occhini</span>
-                <span>Google Maps · circa 1 anno fa</span>
+                <span class="review-card__when">circa 1 anno fa</span>
               </div>
             </article>
             <article class="review-card">
@@ -1471,7 +1462,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Mario Carlo Bordone</span>
-                <span>Google Maps · circa 2 mesi fa</span>
+                <span class="review-card__when">circa 2 mesi fa</span>
               </div>
             </article>
             <article class="review-card">
@@ -1481,7 +1472,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Francesco Brunero</span>
-                <span>Google Maps · circa 7 mesi fa</span>
+                <span class="review-card__when">circa 7 mesi fa</span>
               </div>
             </article>
             <article class="review-card">
@@ -1491,7 +1482,7 @@
               </blockquote>
               <div class="review-card__meta">
                 <span class="review-card__author">Carlotta Paglini</span>
-                <span>Google Maps · recensione originale in inglese</span>
+                <span class="review-card__when">recensione originale in inglese</span>
               </div>
             </article>
           </div>
@@ -1739,6 +1730,8 @@
                 <a href="/alexander-lovers/">Alexander Lovers</a>
                 <a href="/lavora-con-noi/">Lavora Con Noi</a>
                 <a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
 
@@ -1832,6 +1825,16 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/bundle.min.js" defer></script>
+    <script src="/assets/js/bundle.min.js?v=20260922b" defer></script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Giaveno" }
+      ]
+    }
+    </script>
   </body>
 </html>

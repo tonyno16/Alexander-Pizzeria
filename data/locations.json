@@ -3,7 +3,7 @@
     "name": "Alexander Pizzeria",
     "legalName": "Alexander S.R.L.",
     "vatId": "IT10021390017",
-    "headquarters": "Via Pinerolo 149, 10045 Piossasco TO, Italia",
+    "headquarters": "Via Toscanini 15, 10045 Piossasco TO, Italia",
     "whatsapp": "+390117601733",
     "whatsappDisplay": "+39 011 760 1733",
     "fidelityUrl": "https://pnssm.pro/psm4t3y",
@@ -35,9 +35,9 @@
       "phone": "+390121332035",
       "phoneDisplay": "+39 0121 332035",
       "hours": {
-        "display": "Tutti i giorni: 19:00 - 23:30",
+        "display": "Tutti i giorni: 18:30 - 23:30",
         "lunch": false,
-        "schema": "Mo-Su 19:00-23:30"
+        "schema": "Mo-Su 18:30-23:30"
       },
       "geo": {
         "lat": 44.883,
@@ -66,9 +66,9 @@
       "phone": "+390117601733",
       "phoneDisplay": "+39 011 760 1733",
       "hours": {
-        "display": "Tutti i giorni: 19:00 - 23:30",
+        "display": "Tutti i giorni: 18:30 - 23:30",
         "lunch": false,
-        "schema": "Mo-Su 19:00-23:30"
+        "schema": "Mo-Su 18:30-23:30"
       },
       "geo": {
         "lat": 44.984,
@@ -97,9 +97,9 @@
       "phone": "+390119376286",
       "phoneDisplay": "+39 011 937 6286",
       "hours": {
-        "display": "Tutti i giorni: 12:00 - 15:00 / 19:00 - 23:30",
+        "display": "Tutti i giorni: 12:00 - 15:00 / 18:30 - 23:30",
         "lunch": true,
-        "schema": "Mo-Su 12:00-15:00,Mo-Su 19:00-23:30"
+        "schema": "Mo-Su 12:00-15:00,Mo-Su 18:30-23:30"
       },
       "geo": {
         "lat": 45.042,
@@ -130,9 +130,9 @@
       "phone": "+390110608880",
       "phoneDisplay": "+39 011 060 8880",
       "hours": {
-        "display": "Tutti i giorni: 19:00 - 23:30",
+        "display": "Tutti i giorni: 18:30 - 23:30",
         "lunch": false,
-        "schema": "Mo-Su 19:00-23:30"
+        "schema": "Mo-Su 18:30-23:30"
       },
       "geo": {
         "lat": 45.072,

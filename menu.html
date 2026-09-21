@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>
       Menu Alexander Pizzeria | Pizza Artigianale Pinerolo, Piossasco, Giaveno,
       Rivoli
@@ -199,6 +197,7 @@
 
     <!-- MAIN -->
     <main id="main-content">
+      <nav class="page-breadcrumb" aria-label="Percorso di navigazione"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Menu</span></div></nav>
       <!-- Page Header -->
       <section
         class="section section--dark"
@@ -217,6 +216,37 @@
           >
             Seleziona la sede per consultare il menu completo. Tante novita, i
             grandi classici e le nostre pizze iconiche.
+          </p>
+        </div>
+      </section>
+
+            <section class="section section--alt">
+        <div class="container">
+          <h2 class="section-title">Il menu Alexander in sintesi</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg)">
+            Tutte le pizze sono a lievitazione 48 ore con prefermento biga e cottura oltre 3 minuti a circa 350°C.
+            Ogni pizza è disponibile anche senza glutine, da €8,50. Prezzi di settembre 2026: il menu della sede, qui sotto, fa fede.
+          </p>
+          <div class="table-scroll">
+            <table class="data-table">
+              <caption>Le Epiche</caption>
+              <thead>
+                <tr><th>Pizza</th><th>Ingredienti</th><th>Prezzo</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Aura, la Margherita</td><td>Polpa di pomodori italiani, bufala campana DOP, crema al basilico</td><td>€9,50</td></tr>
+                <tr><td>Nemesi</td><td>Zucchine, noci, brie, fior di latte</td><td>€10,50</td></tr>
+                <tr><td>Ade</td><td>Pomodoro, fior di latte, gorgonzola DOP, cipolle dorate, scamorza affumicata, salamino piccante</td><td>€12,00</td></tr>
+                <tr><td>Apollo</td><td>Salsiccia, fontina, cipolle saltate, fior di latte, gorgonzola, grana padano</td><td>€12,00</td></tr>
+                <tr><td>Alexander</td><td>Pomodoro, fior di latte, fontina, battuta di fassone piemontese, prosciutto cotto, olio al tartufo, grana</td><td>€14,50</td></tr>
+                <tr><td>Gea</td><td>Burrata DOP, prosciutto crudo di filiera piemontese, rucola, pomodorini</td><td>€15,50</td></tr>
+                <tr><td>Imero</td><td>Crema di pistacchi di Bronte, fior di latte, mortadella IGP, burrata pugliese, granella di pistacchi</td><td>€20,50</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top: var(--space-lg)">
+            Antipasti: farinata piemontese, focaccia con lardo, noci e miele, frittini della casa, frittura di gamberi e calamari.
+            A Giaveno, da maggio a novembre, i piatti ai funghi porcini freschi della Val Sangone.
           </p>
         </div>
       </section>
@@ -379,7 +409,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -427,6 +457,8 @@
                 <a href="/alexander-lovers/">Alexander Lovers</a>
                 <a href="/lavora-con-noi/">Lavora Con Noi</a>
                 <a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -467,7 +499,7 @@
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Sede legale: Via Pinerolo 149, 10045 Piossasco TO</span>
+                <span>Sede legale: Via Toscanini 15, 10045 Piossasco TO</span>
               </div>
             </div>
           </div>
@@ -536,10 +568,22 @@
       {
         "@context": "https://schema.org",
         "@type": "Menu",
+        "@id": "https://www.alexanderpizzeria.com/menu/#menu",
+        "inLanguage": "it-IT",
         "name": "Menu Alexander Pizzeria",
         "description": "Menu completo e ordine online per le 4 sedi: Pinerolo, Piossasco, Giaveno, Rivoli.",
         "url": "https://www.alexanderpizzeria.com/menu/"
       }
+    </script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Menu" }
+      ]
+    }
     </script>
   </body>
 </html>

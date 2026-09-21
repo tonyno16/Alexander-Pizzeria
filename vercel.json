@@ -10,6 +10,27 @@
       "destination": "https://www.alexanderpizzeria.com/:path*",
       "permanent": true
     },
+    { "source": "/blog/pizzeria-pinerolo", "destination": "/pinerolo/", "permanent": true },
+    { "source": "/blog/pizzeria-pinerolo/", "destination": "/pinerolo/", "permanent": true },
+    { "source": "/blog/alexander-fidelity", "destination": "/alexander-lovers/", "permanent": true },
+    { "source": "/blog/alexander-fidelity/", "destination": "/alexander-lovers/", "permanent": true },
+    { "source": "/blog/rivoli", "destination": "/rivoli/", "permanent": true },
+    { "source": "/blog/rivoli/", "destination": "/rivoli/", "permanent": true },
+    { "source": "/news", "destination": "/blog/", "permanent": true },
+    { "source": "/news/", "destination": "/blog/", "permanent": true },
+    { "source": "/news/:path*", "destination": "/blog/", "permanent": true },
+    { "source": "/prenotazione-inst", "destination": "/prenota/", "permanent": true },
+    { "source": "/prenotazione-inst/", "destination": "/prenota/", "permanent": true },
+    { "source": "/odb", "destination": "/", "permanent": true },
+    { "source": "/odb/", "destination": "/", "permanent": true },
+    { "source": "/Pinerolo", "destination": "/pinerolo/", "permanent": true },
+    { "source": "/Pinerolo/", "destination": "/pinerolo/", "permanent": true },
+    { "source": "/Piossasco", "destination": "/piossasco/", "permanent": true },
+    { "source": "/Piossasco/", "destination": "/piossasco/", "permanent": true },
+    { "source": "/Giaveno", "destination": "/giaveno/", "permanent": true },
+    { "source": "/Giaveno/", "destination": "/giaveno/", "permanent": true },
+    { "source": "/Rivoli", "destination": "/rivoli/", "permanent": true },
+    { "source": "/Rivoli/", "destination": "/rivoli/", "permanent": true },
     { "source": "/pinerolo.html", "destination": "/pinerolo/", "permanent": true },
     { "source": "/piossasco.html", "destination": "/piossasco/", "permanent": true },
     { "source": "/giaveno.html", "destination": "/giaveno/", "permanent": true },
@@ -42,17 +63,17 @@
     },
     {
       "source": "/blog-pizzeria-pinerolo.html",
-      "destination": "/blog/pizzeria-pinerolo/",
+      "destination": "/pinerolo/",
       "permanent": true
     },
     {
       "source": "/blog-alexander-fidelity.html",
-      "destination": "/blog/alexander-fidelity/",
+      "destination": "/alexander-lovers/",
       "permanent": true
     },
     {
       "source": "/blog-rivoli.html",
-      "destination": "/blog/rivoli/",
+      "destination": "/rivoli/",
       "permanent": true
     },
     {
@@ -81,21 +102,11 @@
       "destination": "/blog-impasto-lunga-lievitazione.html"
     },
     {
-      "source": "/blog/pizzeria-pinerolo/",
-      "destination": "/blog-pizzeria-pinerolo.html"
-    },
-    {
-      "source": "/blog/alexander-fidelity/",
-      "destination": "/blog-alexander-fidelity.html"
-    },
-    {
-      "source": "/blog/rivoli/",
-      "destination": "/blog-rivoli.html"
-    },
-    {
       "source": "/blog/funghi-porcini-giaveno/",
       "destination": "/blog-post-template.html"
-    }
+    },
+    { "source": "/chi-siamo/", "destination": "/chi-siamo.html" },
+    { "source": "/contatti/", "destination": "/contatti.html" }
   ],
   "headers": [
     {
@@ -121,6 +132,10 @@
           "value": "max-age=31536000; preload"
         },
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), usb=()"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://www.instagram.com https://cdn.iubenda.com https://cs.iubenda.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://static.cdninstagram.com https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.instagram.com https://www.facebook.com https://pnssm.pro https://*.pnssm.pro https://*.forms.pienissimo.pro https://*.menu.pienissimo.pro https://*.delivery.pienissimo.pro https://www.google.com https://vercel.live; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com https://connect.facebook.net https://cs.iubenda.com https://cdn.iubenda.com https://idb.iubenda.com https://pnssm.pro; base-uri 'self'; form-action 'self'"

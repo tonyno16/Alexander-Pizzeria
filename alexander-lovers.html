@@ -5,8 +5,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Webmaster verification: sostituire con i codici da GSC e Bing -->
-    <meta name="google-site-verification" content="INSERIRE_CODICE_GOOGLE" />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>Alexander Lovers | Programma Fedelta Alexander Pizzeria</title>
     <meta
       name="description"
@@ -183,6 +181,7 @@
 
     <!-- MAIN -->
     <main id="main-content">
+      <nav class="page-breadcrumb" aria-label="Percorso di navigazione"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Alexander Lovers</span></div></nav>
       <!-- Hero -->
       <section class="hero" style="min-height: 50vh">
         <div
@@ -461,7 +460,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -508,6 +507,8 @@
                 ><a href="/alexander-lovers/">Alexander Lovers</a
                 ><a href="/lavora-con-noi/">Lavora Con Noi</a
                 ><a href="/blog/">Blog</a>
+              <a href="/chi-siamo/">Chi siamo</a>
+              <a href="/contatti/">Contatti</a>
               </div>
             </div>
             <div class="footer__col">
@@ -581,5 +582,43 @@
     </footer>
 
     <script src="/assets/js/bundle.min.js" defer></script>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MemberProgram",
+            "@id": "https://www.alexanderpizzeria.com/alexander-lovers/#program",
+            "name": "Alexander Lovers",
+            "alternateName": "Alexander Fidelity",
+            "url": "https://www.alexanderpizzeria.com/alexander-lovers/",
+            "description": "Programma fedeltà gratuito di Alexander Pizzeria: 1 punto ogni 10 euro spesi, sconti fino a 30 euro, regalo di benvenuto. Valido in tutte e 4 le sedi.",
+            "hostingOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.alexanderpizzeria.com/alexander-lovers/#faq",
+            "inLanguage": "it-IT",
+            "mainEntity": [
+              { "@type": "Question", "name": "L'iscrizione e gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Si, l'iscrizione al programma Alexander Fidelity e completamente gratuita. Puoi iscriverti online o direttamente in uno dei nostri locali." } },
+              { "@type": "Question", "name": "In quali sedi posso usare la carta fedelta?", "acceptedAnswer": { "@type": "Answer", "text": "La carta fedelta Alexander e valida in tutte le 4 sedi: Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli. I punti si accumulano indipendentemente dalla sede." } },
+              { "@type": "Question", "name": "Come ricevo il regalo di benvenuto?", "acceptedAnswer": { "@type": "Answer", "text": "Dopo l'iscrizione, alla tua prima visita in qualsiasi sede Alexander potrai scegliere il tuo regalo di benvenuto tra: Farinata, Spritz o Patatine Ricche." } },
+              { "@type": "Question", "name": "I punti hanno una scadenza?", "acceptedAnswer": { "@type": "Answer", "text": "I punti accumulati rimangono attivi finche la tua carta fedelta e attiva. Ti consigliamo di utilizzarli regolarmente per approfittare dei vantaggi." } },
+              { "@type": "Question", "name": "Posso accumulare punti anche con gli ordini d'asporto?", "acceptedAnswer": { "@type": "Answer", "text": "Si, i punti fedelta si accumulano sia per i pasti al tavolo che per gli ordini d'asporto, in tutte le sedi Alexander." } }
+            ]
+          }
+        ]
+      }
+    </script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alexanderpizzeria.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Alexander Lovers" }
+      ]
+    }
+    </script>
   </body>
 </html>

@@ -31,7 +31,7 @@
             "Saturday",
             "Sunday",
           ],
-          opens: "19:00",
+          opens: "18:30",
           closes: "23:30",
         },
       ],
@@ -63,7 +63,7 @@
             "Saturday",
             "Sunday",
           ],
-          opens: "19:00",
+          opens: "18:30",
           closes: "23:30",
         },
       ],
@@ -113,7 +113,7 @@
             "Saturday",
             "Sunday",
           ],
-          opens: "19:00",
+          opens: "18:30",
           closes: "23:30",
         },
       ],
@@ -145,7 +145,7 @@
             "Saturday",
             "Sunday",
           ],
-          opens: "19:00",
+          opens: "18:30",
           closes: "23:30",
         },
       ],
@@ -228,24 +228,8 @@
     document.head.appendChild(script);
   }
 
-  // Auto-detect current page and inject appropriate schema
-  // Supports both /pinerolo.html and clean /pinerolo/
-  var path = window.location.pathname;
-  var segments = path.replace(/\/+$/, "").split("/");
-  var page = (segments.pop() || "").replace(/\.html$/, "");
-
-  if (LOCATIONS[page]) {
-    injectSchema(generateRestaurantSchema(page));
-    injectSchema(
-      generateBreadcrumbSchema([
-        { name: "Home", url: BREADCRUMB_BASE + "/" },
-        {
-          name: BREADCRUMB_NAMES[page],
-          url: BREADCRUMB_BASE + "/" + page + "/",
-        },
-      ])
-    );
-  }
+  // Le pagine sede hanno già JSON-LD completo nel HTML.
+  // Non iniettare un secondo Restaurant: gli orari e i campi divergerebbero.
 
   // Export for manual use
   window.AlexanderSchema = {

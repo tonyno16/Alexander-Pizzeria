@@ -9,7 +9,6 @@
       name="google-site-verification"
       content="qaWy0alhUG6TawOkXv2bbdoR06bQ4T3fmlC7ONtSyDQ"
     />
-    <meta name="msvalidate.01" content="INSERIRE_CODICE_BING" />
     <title>
       Alexander Pizzeria | Pizzeria a Pinerolo, Piossasco, Giaveno e Rivoli
     </title>
@@ -72,7 +71,6 @@
       href="/assets/img/hero/hero.webp"
       fetchpriority="high"
     />
-    <link rel="preload" as="image" href="/assets/img/hero/hero.jpg" />
 
     <!-- Preconnect per Iubenda (riduce latenza quando i cookie script si caricano) -->
     <link rel="preconnect" href="https://cs.iubenda.com" />
@@ -98,8 +96,8 @@
     </noscript>
 
     <!-- Styles (unified, minified) -->
-    <link rel="preload" href="/assets/css/style.min.css" as="style" />
-    <link rel="stylesheet" href="/assets/css/style.min.css" />
+    <link rel="preload" href="/assets/css/style.min.css?v=20260922c" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260922c" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -261,15 +259,15 @@
           <!-- main.js usa hero.webp se il browser lo supporta (dopo npm run optimize-images) -->
           <div
             class="hero__slide hero__slide--active"
-            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
+            style="background-image: url(&quot;assets/img/hero/hero.webp&quot;)"
           ></div>
           <div
             class="hero__slide"
-            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
+            style="background-image: url(&quot;assets/img/hero/hero.webp&quot;)"
           ></div>
           <div
             class="hero__slide"
-            style="background-image: url(&quot;assets/img/hero/hero.jpg&quot;)"
+            style="background-image: url(&quot;assets/img/hero/hero.webp&quot;)"
           ></div>
         </div>
         <div class="container hero__inner">
@@ -370,7 +368,7 @@
         </div>
         <div class="trust-badge trust-badge--highlight">
           <span class="trust-badge__stars" aria-hidden="true">★★★★★</span>
-          <span>4.5 su Google</span>
+          <span>Travelers' Choice 2025</span>
         </div>
       </div>
 
@@ -379,8 +377,8 @@
         <div class="container">
           <h2 class="section-title">Dove Trovarci</h2>
           <p class="section-subtitle">
-            4 sedi in provincia di Torino, tutte con la stessa passione per la
-            pizza artigianale.
+            La prima pizzeria apre a Piossasco nel 2009, per mano di Alessandro Fiore.
+            Oggi le sedi sono quattro: Piossasco (2009), Pinerolo (2020), Giaveno – Valsangone (2023) e Rivoli (2024).
           </p>
 
           <div class="locations-grid" style="margin-top: var(--space-xl)">
@@ -436,8 +434,9 @@
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
-                  Tutti i giorni: 19:00 - 23:30
+                  Tutti i giorni: 18:30 - 23:30
                 </p>
+                <p class="location-card__note">Dal 2020 · 90 coperti · forno a legna</p>
                 <div class="location-card__actions">
                   <a
                     class="btn btn--small btn--primary"
@@ -525,8 +524,9 @@
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
-                  Tutti i giorni: 19:00 - 23:30
+                  Tutti i giorni: 18:30 - 23:30
                 </p>
+                <p class="location-card__note">Dal 2009 · 35 coperti · forno a legna</p>
                 <div class="location-card__actions">
                   <a
                     class="btn btn--small btn--primary"
@@ -623,8 +623,9 @@
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
-                  Tutti i giorni: 12:00-15:00 / 19:00-23:30
+                  Tutti i giorni: 12:00-15:00 / 18:30-23:30
                 </p>
+                <p class="location-card__note">Dal 2023 · anche a pranzo · forno a legna</p>
                 <div class="location-card__actions">
                   <a
                     class="btn btn--small btn--primary"
@@ -721,8 +722,9 @@
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
-                  Tutti i giorni: 19:00 - 23:30
+                  Tutti i giorni: 18:30 - 23:30
                 </p>
+                <p class="location-card__note">Dal 2024 · 110 coperti · forno a gas</p>
                 <div class="location-card__actions">
                   <a
                     class="btn btn--small btn--primary"
@@ -767,38 +769,63 @@
           <h2 class="section-title" style="color: var(--color-white)">
             Cosa Dicono di Noi
           </h2>
-          <div class="reviews-summary">
-            <span class="reviews-stars" aria-hidden="true">★★★★★</span>
-            <span class="reviews-summary__text"
-              >4.5/5 basato su 500+ recensioni Google</span
-            >
-          </div>
+          <ul class="reviews-summary__list">
+            <li data-live-review="pinerolo">
+              <a href="/pinerolo/">Pinerolo</a>
+              <strong data-field="rating">4,4</strong>
+              · <span data-field="count">571</span> recensioni
+            </li>
+            <li data-live-review="piossasco">
+              <a href="/piossasco/">Piossasco</a>
+              <strong data-field="rating">4,2</strong>
+              · <span data-field="count">679</span> recensioni
+            </li>
+            <li data-live-review="giaveno">
+              <a href="/giaveno/">Giaveno</a>
+              <strong data-field="rating">4,3</strong>
+              · <span data-field="count">1.200</span> recensioni
+            </li>
+            <li data-live-review="rivoli">
+              <a href="/rivoli/">Rivoli</a>
+              <strong data-field="rating">4,2</strong>
+              · <span data-field="count">140</span> recensioni
+            </li>
+          </ul>
+          <p class="reviews-live" data-live-status hidden></p>
+          <p class="reviews-summary__text">
+            Tripadvisor Travelers' Choice 2025: prima a Pinerolo e a Piossasco.
+          </p>
+          <p class="reviews-filter" data-live-filter hidden>
+            Qui solo le recensioni da 4 e 5 stelle. L’ordine è quello di Google.
+            <span translate="no">Google Maps</span>
+          </p>
           <div class="reviews-quotes">
-            <blockquote class="review-quote">
+            <blockquote class="review-quote" data-live-quote="pinerolo">
               <p class="review-quote__text">
-                "Pizza eccezionale, impasto leggero e digeribile. Locale
-                accogliente, personale gentilissimo. Consigliato!"
+                "Pizza buonissima e digeribilissima. Il personale è molto cortese, attento ai clienti e non lasciano nulla al caso."
               </p>
               <footer class="review-quote__author">
-                — Marco R., Google Reviews
+                — Ale Ada, febbraio 2026, <a href="/pinerolo/">Pinerolo</a>
               </footer>
             </blockquote>
-            <blockquote class="review-quote">
+            <blockquote class="review-quote" data-live-quote="piossasco" hidden>
+              <p class="review-quote__text"></p>
+              <footer class="review-quote__author"></footer>
+            </blockquote>
+            <blockquote class="review-quote" data-live-quote="giaveno">
               <p class="review-quote__text">
-                "La migliore pizza di Pinerolo. Ingredienti di qualità e
-                servizio impeccabile. Torneremo sicuramente."
+                "Siamo stati io e la mia fidanzata che è celiaca: focaccia senza glutine buonissima, poi risotto e tagliatelle con i funghi molto buoni, leggeri ma gustosi. Camerieri preparati e gentili."
               </p>
               <footer class="review-quote__author">
-                — Laura B., Google Reviews
+                — Francesco Brunero, ottobre 2025, <a href="/giaveno/">Giaveno</a>
               </footer>
             </blockquote>
-            <blockquote class="review-quote">
+            <blockquote class="review-quote" data-live-quote="rivoli">
               <p class="review-quote__text">
-                "Specialità funghi porcini buonissime! Ambiente familiare e
-                prezzi onesti. 5 stelle meritate."
+                "Abbiamo avuto il piacere di mangiare una buonissima pizza senza glutine con prodotti di altissima qualità. Il servizio è stato perfetto, cordiale ed efficiente."
               </p>
               <footer class="review-quote__author">
-                — Giuseppe T., Google Reviews
+                — Sara Quagliato, maggio 2026, <a href="/rivoli/">Rivoli</a>
               </footer>
             </blockquote>
           </div>
@@ -1072,9 +1099,7 @@
                 Quali sono gli orari di apertura?
               </summary>
               <p class="faq-accordion__answer">
-                Le nostre pizzerie sono aperte tutti i giorni dalle 19:00 alle
-                23:30. La sede di Giaveno è aperta anche a pranzo dalle 12:00
-                alle 15:00.
+                Le nostre pizzerie sono aperte tutti i giorni dalle 18:30 alle 23:30. La sede di Giaveno (Ristorante Valsangone) è aperta anche a pranzo dalle 12:00 alle 15:00. Le uniche chiusure annuali sono il 25 dicembre e il 1° gennaio.
               </p>
             </details>
             <details class="faq-accordion__item">
@@ -1102,7 +1127,7 @@
                 Avete opzioni vegane?
               </summary>
               <p class="faq-accordion__answer">
-                Si. Diverse pizze possono essere preparate in versione vegana
+                Sì. Diverse pizze possono essere preparate in versione vegana
                 (senza mozzarella o con verdure). Chiedi al personale il menu
                 aggiornato e le varianti disponibili.
               </p>
@@ -1112,8 +1137,7 @@
                 Fate pizze senza glutine?
               </summary>
               <p class="faq-accordion__answer">
-                Offriamo base senza glutine su richiesta. Contattaci in anticipo
-                o chiedi in sede per disponibilità e modalità.
+                Sì: la pizza senza glutine è la specialità di Alexander ed è disponibile in tutte e 4 le sedi. Alexander è riconosciuta da AIC (Associazione Italiana Celiachia) e presente nella guida ufficiale "Alimentazione Fuori Casa". Non usiamo basi pre-cotte: l'impasto senza glutine è preparato in casa ogni giorno con miscele di amidi senza legumi, da materie prime prive di glutine all'origine, non prodotti deglutinati. Stessa lievitazione 48 ore, stessa cottura in forno a legna. Ogni pizza del menù è disponibile anche senza glutine,                 a partire da €8,50. I dettagli sono sulla pagina <a href="/pizza-senza-glutine/">Pizza senza glutine</a>.
               </p>
             </details>
             <details class="faq-accordion__item">
@@ -2179,7 +2203,7 @@
                   Scopri la tradizione secolare dei funghi porcini nella
                   Valsangone e i piatti che puoi gustare da Alexander.
                 </p>
-                <a href="/blog/" class="blog-card__link"
+                <a href="/blog/funghi-porcini-giaveno/" class="blog-card__link"
                   >Leggi di piu &rarr;</a
                 >
               </div>
@@ -2201,7 +2225,7 @@
                   48 ore di lievitazione per una pizza leggera e digeribile.
                   Ecco come prepariamo il nostro impasto.
                 </p>
-                <a href="/blog/" class="blog-card__link"
+                <a href="/pizza-lunga-lievitazione/" class="blog-card__link"
                   >Leggi di piu &rarr;</a
                 >
               </div>
@@ -2209,21 +2233,21 @@
             <article class="card">
               <img
                 class="card__img"
-                src="/assets/img/blog/alexander-fidelity.jpg"
-                alt="Alexander Fidelity programma fedeltà"
+                src="/assets/img/blog/pizza-senza-glutine.jpg"
+                alt="Pizza senza glutine Alexander"
                 loading="lazy"
                 style="width: 100%; height: 200px; object-fit: cover"
               />
               <div class="card__body">
-                <span class="card__meta">5 Febbraio 2026</span>
+                <span class="card__meta">25 Gennaio 2026</span>
                 <h3 class="card__title" style="font-size: var(--font-size-lg)">
-                  Alexander Fidelity: Come Funziona
+                  Pizza senza glutine, riconosciuta AIC
                 </h3>
                 <p class="card__text">
-                  Tutto quello che devi sapere sul programma fedeltà Alexander:
-                  come iscriverti e quali premi ottenere.
+                  Impasto fatto in casa ogni giorno, senza basi precotte, in
+                  tutte e 4 le sedi. Da €8,50.
                 </p>
-                <a href="/blog/" class="blog-card__link"
+                <a href="/pizza-senza-glutine/" class="blog-card__link"
                   >Leggi di piu &rarr;</a
                 >
               </div>
@@ -2253,7 +2277,7 @@
               </div>
               <p class="footer__desc">
                 Pizza artigianale con impasto a lunga lievitazione. 4 sedi in
-                provincia di Torino dal 2004.
+                provincia di Torino dal 2009.
               </p>
               <div class="footer__social">
                 <a
@@ -2307,6 +2331,8 @@
                 <a href="/alexander-lovers/">Alexander Lovers</a>
                 <a href="/lavora-con-noi/">Lavora Con Noi</a>
                 <a href="/blog/">Blog</a>
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/contatti/">Contatti</a>
               </div>
             </div>
 
@@ -2351,7 +2377,7 @@
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Sede legale: Via Pinerolo 149, 10045 Piossasco TO</span>
+                <span>Sede legale: Via Toscanini 15, 10045 Piossasco TO</span>
               </div>
             </div>
           </div>
@@ -2465,122 +2491,180 @@
     </div>
 
     <!-- Scripts (unified, minified, defer) -->
-    <script src="/assets/js/bundle.min.js" defer></script>
+    <script src="/assets/js/bundle.min.js?v=20260922c" defer></script>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://www.alexanderpizzeria.com/#organization",
-        "name": "Alexander Pizzeria",
-        "legalName": "Alexander S.R.L.",
-        "url": "https://www.alexanderpizzeria.com",
-        "logo": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp",
-        "telephone": "+390117601733",
-        "vatID": "IT10021390017",
-        "description": "Alexander Pizzeria: catena di 4 pizzerie in provincia di Torino con pizza artigianale a lunga lievitazione. Sedi a Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli.",
-        "foundingDate": "2004",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+39-011-760-1733",
-          "contactType": "customer service",
-          "areaServed": "IT",
-          "availableLanguage": "Italian"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "2000",
-          "reviewCount": "2000"
-        },
-        "numberOfEmployees": {
-          "@type": "QuantitativeValue",
-          "minValue": 20
-        },
-        "areaServed": {
-          "@type": "State",
-          "name": "Piemonte",
-          "containedInPlace": {
-            "@type": "Country",
-            "name": "Italia"
-          }
-        },
-        "sameAs": [
-          "https://www.instagram.com/alexanderpizzeria_/",
-          "https://www.facebook.com/alexanderpizzeria/"
-        ],
-        "subOrganization": [
-          { "@id": "https://www.alexanderpizzeria.com/pinerolo/#restaurant" },
-          { "@id": "https://www.alexanderpizzeria.com/piossasco/#restaurant" },
-          { "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant" },
-          { "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant" }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "Quali sono gli orari di apertura?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Le nostre pizzerie sono aperte tutti i giorni dalle 19:00 alle 23:30. La sede di Giaveno è aperta anche a pranzo dalle 12:00 alle 15:00."
+            "@type": "WebSite",
+            "@id": "https://www.alexanderpizzeria.com/#website",
+            "url": "https://www.alexanderpizzeria.com/",
+            "name": "Alexander Pizzeria",
+            "alternateName": "Alexander S.R.L.",
+            "description": "Pizza artigianale a lunga lievitazione in 4 sedi in provincia di Torino: Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli.",
+            "inLanguage": "it-IT",
+            "publisher": { "@id": "https://www.alexanderpizzeria.com/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.alexanderpizzeria.com/#organization",
+            "name": "Alexander Pizzeria",
+            "legalName": "Alexander S.R.L.",
+            "url": "https://www.alexanderpizzeria.com/",
+            "logo": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp",
+            "telephone": "+390117601733",
+            "vatID": "IT10021390017",
+            "description": "Alexander Pizzeria: catena di 4 pizzerie in provincia di Torino con pizza artigianale a lunga lievitazione. Sedi a Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli. Società iscritta nel 2009, prima sede a Piossasco nello stesso anno.",
+            "foundingDate": "2009",
+            "founder": {
+              "@type": "Person",
+              "name": "Alessandro Fiore",
+              "jobTitle": "Pizzaiolo e Fondatore",
+              "url": "https://www.alexanderpizzeria.com/chi-siamo/"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Via Toscanini 15",
+              "addressLocality": "Piossasco",
+              "addressRegion": "TO",
+              "postalCode": "10045",
+              "addressCountry": "IT"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+390117601733",
+              "contactType": "customer service",
+              "areaServed": "IT",
+              "availableLanguage": "Italian"
+            },
+            "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 20 },
+            "areaServed": {
+              "@type": "State",
+              "name": "Piemonte",
+              "containedInPlace": { "@type": "Country", "name": "Italia" }
+            },
+            "sameAs": [
+              "https://www.instagram.com/alexanderpizzeria_/",
+              "https://www.instagram.com/alexander.pizzeria/",
+              "https://www.facebook.com/alexanderpizzeria/"
+            ],
+            "subOrganization": [
+              { "@id": "https://www.alexanderpizzeria.com/pinerolo/#restaurant" },
+              { "@id": "https://www.alexanderpizzeria.com/piossasco/#restaurant" },
+              { "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant" },
+              { "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant" }
+            ]
+          },
+          {
+            "@type": "Restaurant",
+            "@id": "https://www.alexanderpizzeria.com/pinerolo/#restaurant",
+            "name": "Alexander Pizzeria Pinerolo",
+            "url": "https://www.alexanderpizzeria.com/pinerolo/",
+            "telephone": "+390121332035",
+            "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Via Achille Midana, 37",
+              "addressLocality": "Pinerolo",
+              "addressRegion": "TO",
+              "postalCode": "10064",
+              "addressCountry": "IT"
             }
           },
           {
-            "@type": "Question",
-            "name": "È possibile prenotare online?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sì, puoi prenotare online direttamente dal nostro sito nella sezione Prenota un Tavolo. La prenotazione è disponibile per tutte le 4 sedi."
+            "@type": "Restaurant",
+            "@id": "https://www.alexanderpizzeria.com/piossasco/#restaurant",
+            "name": "Alexander Pizzeria Piossasco",
+            "url": "https://www.alexanderpizzeria.com/piossasco/",
+            "telephone": "+390117601733",
+            "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Via Pinerolo, 149",
+              "addressLocality": "Piossasco",
+              "addressRegion": "TO",
+              "postalCode": "10045",
+              "addressCountry": "IT"
             }
           },
           {
-            "@type": "Question",
-            "name": "Fate consegna a domicilio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No, non effettuiamo consegna a domicilio. Offriamo solo il servizio d'asporto: puoi ordinare online o per telefono e ritirare la tua pizza in sede."
+            "@type": "Restaurant",
+            "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant",
+            "name": "Ristorante Valsangone",
+            "alternateName": "Alexander Giaveno",
+            "url": "https://www.alexanderpizzeria.com/giaveno/",
+            "telephone": "+390119376286",
+            "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Piazza Molines, 45",
+              "addressLocality": "Giaveno",
+              "addressRegion": "TO",
+              "postalCode": "10094",
+              "addressCountry": "IT"
             }
           },
           {
-            "@type": "Question",
-            "name": "Avete opzioni vegane?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Si. Diverse pizze possono essere preparate in versione vegana (senza mozzarella o con verdure). Chiedi al personale il menu aggiornato e le varianti disponibili."
+            "@type": "Restaurant",
+            "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant",
+            "name": "Alexander Ristorante Pizzeria Rivoli",
+            "alternateName": "Alexander Rivoli",
+            "url": "https://www.alexanderpizzeria.com/rivoli/",
+            "telephone": "+390110608880",
+            "parentOrganization": { "@id": "https://www.alexanderpizzeria.com/#organization" },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Piazza Principe Eugenio, 7",
+              "addressLocality": "Rivoli",
+              "addressRegion": "TO",
+              "postalCode": "10098",
+              "addressCountry": "IT"
             }
           },
           {
-            "@type": "Question",
-            "name": "Fate pizze senza glutine?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Offriamo base senza glutine su richiesta. Contattaci in anticipo o chiedi in sede per disponibilità e modalità."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "È necessario prenotare?",
-
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Consigliamo di prenotare soprattutto nei weekend e nelle sere di punta. Puoi prenotare online dalla pagina Prenota un Tavolo o chiamando la sede che preferisci."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Avete parcheggio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nelle vicinanze delle nostre sedi sono disponibili parcheggi pubblici e strisce blu. Per indicazioni precise consulta la pagina della sede o Google Maps."
-            }
+            "@type": "FAQPage",
+            "@id": "https://www.alexanderpizzeria.com/#faq",
+            "inLanguage": "it-IT",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quali sono gli orari di apertura?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Le nostre pizzerie sono aperte tutti i giorni dalle 18:30 alle 23:30. La sede di Giaveno (Ristorante Valsangone) è aperta anche a pranzo dalle 12:00 alle 15:00. Le uniche chiusure annuali sono il 25 dicembre e il 1° gennaio." }
+              },
+              {
+                "@type": "Question",
+                "name": "Fate pizze senza glutine?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì: la pizza senza glutine è la specialità di Alexander ed è disponibile in tutte e 4 le sedi. Alexander è riconosciuta da AIC (Associazione Italiana Celiachia) e presente nella guida ufficiale \"Alimentazione Fuori Casa\". Non usiamo basi pre-cotte: l'impasto senza glutine è preparato in casa ogni giorno con miscele di amidi senza legumi, da materie prime prive di glutine all'origine, non prodotti deglutinati. Stessa lievitazione 48 ore, stessa cottura in forno a legna. Ogni pizza del menù è disponibile anche senza glutine, a partire da €8,50. I dettagli sono sulla pagina Pizza senza glutine." }
+              },
+              {
+                "@type": "Question",
+                "name": "È possibile prenotare online?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì, puoi prenotare online dalla sezione Prenota un Tavolo. La prenotazione è disponibile per tutte le 4 sedi (Pinerolo, Piossasco, Giaveno, Rivoli)." }
+              },
+              {
+                "@type": "Question",
+                "name": "Fate consegna a domicilio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No, non effettuiamo consegna a domicilio. Offriamo solo il servizio d'asporto: puoi ordinare online o per telefono e ritirare la tua pizza in sede." }
+              },
+              {
+                "@type": "Question",
+                "name": "Avete opzioni vegane?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. Diverse pizze possono essere preparate in versione vegana (senza mozzarella o con verdure). Chiedi al personale il menu aggiornato e le varianti disponibili." }
+              },
+              {
+                "@type": "Question",
+                "name": "È necessario prenotare?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Consigliamo di prenotare soprattutto nei weekend e nelle sere di punta. Puoi prenotare online dalla pagina Prenota un Tavolo o chiamando la sede che preferisci." }
+              },
+              {
+                "@type": "Question",
+                "name": "Avete parcheggio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nelle vicinanze delle nostre sedi sono disponibili parcheggi pubblici e strisce blu. Per indicazioni precise consulta la pagina della sede o Google Maps." }
+              }
+            ]
           }
         ]
       }

@@ -17,6 +17,7 @@ const ORDER = [
   "location-tabs.js",
   "form-validation.js",
   "whatsapp-widget.js",
+  "live-reviews.js",
 ];
 
 async function build() {
