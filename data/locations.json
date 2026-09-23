@@ -8,6 +8,9 @@
     "whatsappDisplay": "+39 011 760 1733",
     "fidelityUrl": "https://pnssm.pro/psm4t3y",
     "website": "https://www.alexanderpizzeria.com",
+    "foundedYear": 2009,
+    "delivery": false,
+    "takeaway": true,
     "socialMedia": {
       "instagram": "https://www.instagram.com/alexanderpizzeria_/",
       "facebook": "https://www.facebook.com/alexanderpizzeria/"
@@ -49,7 +52,18 @@
         "menu": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.menu.pienissimo.pro/?id=111"
       },
       "mapsQuery": "Via+Achille+Midana+37+Pinerolo+TO",
-      "slug": "pinerolo"
+      "slug": "pinerolo",
+      "canonicalUrl": "https://www.alexanderpizzeria.com/pinerolo/",
+      "openedYear": 2020,
+      "whatsapp": "+393534757581",
+      "delivery": false,
+      "takeaway": true,
+      "reservations": true,
+      "glutenFree": true,
+      "aic": true,
+      "woodFiredOven": true,
+      "gasOven": false,
+      "googleMapsUrl": "https://maps.app.goo.gl/s44LyZLYEjPKT3Pu9"
     },
     {
       "id": "piossasco",
@@ -80,7 +94,18 @@
         "menu": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10"
       },
       "mapsQuery": "Via+Pinerolo+149+Piossasco+TO",
-      "slug": "piossasco"
+      "slug": "piossasco",
+      "canonicalUrl": "https://www.alexanderpizzeria.com/piossasco/",
+      "openedYear": 2009,
+      "whatsapp": "+393534757561",
+      "delivery": false,
+      "takeaway": true,
+      "reservations": true,
+      "glutenFree": true,
+      "aic": true,
+      "woodFiredOven": true,
+      "gasOven": false,
+      "googleMapsUrl": "https://maps.app.goo.gl/CJ6EcvWXjxvTUYpV6"
     },
     {
       "id": "giaveno",
@@ -112,6 +137,17 @@
       },
       "mapsQuery": "Piazza+Molines+45+Giaveno+TO",
       "slug": "giaveno",
+      "canonicalUrl": "https://www.alexanderpizzeria.com/giaveno/",
+      "openedYear": 2023,
+      "whatsapp": "+393534686654",
+      "delivery": false,
+      "takeaway": true,
+      "reservations": true,
+      "glutenFree": true,
+      "aic": true,
+      "woodFiredOven": true,
+      "gasOven": false,
+      "googleMapsUrl": "https://maps.app.goo.gl/899YjB6VdN1DzSBw6",
       "specialFeatures": ["porciniMushrooms", "lunchService"],
       "servesCuisine": ["Pizza", "Cucina Italiana", "Piatti ai Funghi Porcini"]
     },
@@ -145,6 +181,17 @@
       },
       "mapsQuery": "Piazza+Principe+Eugenio+7+Rivoli+TO",
       "slug": "rivoli",
+      "canonicalUrl": "https://www.alexanderpizzeria.com/rivoli/",
+      "openedYear": 2024,
+      "whatsapp": "+393534757546",
+      "delivery": false,
+      "takeaway": true,
+      "reservations": true,
+      "glutenFree": true,
+      "aic": true,
+      "woodFiredOven": false,
+      "gasOven": true,
+      "googleMapsUrl": "https://maps.app.goo.gl/AYER6g8f8F6SZgW39",
       "servesCuisine": ["Pizza", "Cucina Italiana"]
     }
   ]

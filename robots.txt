@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://www.alexanderpizzeria.com/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=yes

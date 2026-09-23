@@ -1,4 +1,5 @@
 const http = require("http");
+const https = require("https");
 const fs = require("fs");
 const path = require("path");
 
@@ -73,9 +74,29 @@ function resolveFile(urlPath, callback) {
   });
 }
 
+function proxyReviews(url, res) {
+  const target = "https://www.alexanderpizzeria.com/api/reviews/" + url.search;
+  https
+    .get(target, (upstream) => {
+      res.writeHead(upstream.statusCode || 502, {
+        "Content-Type": upstream.headers["content-type"] || "application/json; charset=utf-8",
+        "Cache-Control": "no-store",
+      });
+      upstream.pipe(res);
+    })
+    .on("error", () => {
+      res.writeHead(502, { "Content-Type": "text/plain; charset=utf-8" });
+      res.end("Reviews unavailable");
+    });
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://127.0.0.1");
   let pathname = decodeURIComponent(url.pathname);
+  if (pathname === "/api/reviews" || pathname === "/api/reviews/") {
+    proxyReviews(url, res);
+    return;
+  }
   if (!path.extname(pathname) && !pathname.endsWith("/")) {
     const withSlash = pathname + "/";
     if (redirects.has(withSlash) || rewrites.has(withSlash)) {

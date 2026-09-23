@@ -238,4 +238,36 @@
     injectSchema: injectSchema,
     locations: LOCATIONS,
   };
+
+  if (!document.querySelector('script[type="application/ld+json"]') || document.documentElement.innerHTML.indexOf("#organization") === -1) {
+    injectSchema({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.alexanderpizzeria.com/#organization",
+      name: "Alexander Pizzeria",
+      legalName: "Alexander S.R.L.",
+      url: "https://www.alexanderpizzeria.com/",
+      foundingDate: "2009",
+      telephone: "+390117601733",
+      vatID: "IT10021390017",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Via Toscanini 15",
+        addressLocality: "Piossasco",
+        postalCode: "10045",
+        addressRegion: "TO",
+        addressCountry: "IT",
+      },
+      sameAs: [
+        "https://www.instagram.com/alexanderpizzeria_/",
+        "https://www.facebook.com/alexanderpizzeria/",
+      ],
+      subOrganization: [
+        { "@id": "https://www.alexanderpizzeria.com/piossasco/#restaurant" },
+        { "@id": "https://www.alexanderpizzeria.com/pinerolo/#restaurant" },
+        { "@id": "https://www.alexanderpizzeria.com/giaveno/#restaurant" },
+        { "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant" },
+      ],
+    });
+  }
 })();

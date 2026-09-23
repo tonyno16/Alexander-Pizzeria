@@ -381,10 +381,16 @@
 /* Griglia embed Instagram (post reali) */
 .instagram-embed-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
   align-items: start;
+}
+.instagram-embed-grid .instagram-media,
+.instagram-embed-grid .instagram-media iframe {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 .instagram-embed-grid .instagram-media {
   border-radius: var(--border-radius-lg);
@@ -392,12 +398,12 @@
 }
 @media (max-width: 992px) {
   .instagram-embed-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 576px) {
   .instagram-embed-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

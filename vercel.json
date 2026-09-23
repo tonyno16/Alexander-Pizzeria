@@ -46,6 +46,7 @@
       "destination": "/pizza-senza-glutine/",
       "permanent": true
     },
+    { "source": "/senza-glutine.html", "destination": "/senza-glutine/", "permanent": true },
     {
       "source": "/blog/pizza-senza-glutine/",
       "destination": "/pizza-senza-glutine/",
@@ -97,6 +98,7 @@
       "source": "/pizza-senza-glutine/",
       "destination": "/blog-pizza-senza-glutine.html"
     },
+    { "source": "/senza-glutine/", "destination": "/senza-glutine.html" },
     {
       "source": "/pizza-lunga-lievitazione/",
       "destination": "/blog-impasto-lunga-lievitazione.html"
