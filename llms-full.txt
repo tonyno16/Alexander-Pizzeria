@@ -1,6 +1,6 @@
 # Alexander Pizzeria
 
-> Catena di 4 pizzerie artigianali in provincia di Torino, fondata nel 2009 a Piossasco da Alessandro Fiore. Alexander S.R.L., P.IVA 10021390017, sede legale Via Toscanini 15, 10045 Piossasco TO. Nessuna consegna a domicilio. Asporto con ritiro in sede. Prenotazione tavolo online.
+> Catena di 4 pizzerie artigianali in provincia di Torino, fondata nel 2009 a Piossasco da Alessandro Fiore. Alexander S.R.L., P.IVA 10021390017, sede legale Via Toscanini 15, 10045 Piossasco TO. Nessuna consegna a domicilio. Asporto con ritiro in sede. Prenotazione tavolo online. Email: info@alexanderpizzeria.com.
 
 ## Metodo
 

@@ -65,11 +65,19 @@
     <!-- Favicon -->
     <link rel="icon" href="/assets/img/logo/favicon.svg" type="image/svg+xml" />
 
-    <!-- Preload LCP (hero): fetchpriority=high; main.js usa hero.webp se supportato -->
+    <!-- Preload LCP (hero): su mobile hero-mobile.webp (vedi hero.css), su desktop hero.webp -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/hero/hero-mobile.webp"
+      media="(max-width: 600px)"
+      fetchpriority="high"
+    />
     <link
       rel="preload"
       as="image"
       href="/assets/img/hero/hero.webp"
+      media="(min-width: 601px)"
       fetchpriority="high"
     />
 
@@ -97,8 +105,8 @@
     </noscript>
 
     <!-- Styles (unified, minified) -->
-    <link rel="preload" href="/assets/css/style.min.css?v=20260922f" as="style" />
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260922f" />
+    <link rel="preload" href="/assets/css/style.min.css?v=20260924a" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=20260924a" />
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -2526,6 +2534,7 @@
             "url": "https://www.alexanderpizzeria.com/",
             "logo": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp",
             "telephone": "+390117601733",
+            "email": "info@alexanderpizzeria.com",
             "vatID": "IT10021390017",
             "description": "Alexander Pizzeria: catena di 4 pizzerie in provincia di Torino con pizza artigianale a lunga lievitazione. Sedi a Pinerolo, Piossasco, Giaveno (Valsangone) e Rivoli. Società iscritta nel 2009, prima sede a Piossasco nello stesso anno.",
             "foundingDate": "2009",
@@ -2546,6 +2555,7 @@
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+390117601733",
+              "email": "info@alexanderpizzeria.com",
               "contactType": "customer service",
               "areaServed": "IT",
               "availableLanguage": "Italian"

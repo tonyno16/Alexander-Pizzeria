@@ -66,6 +66,12 @@
   opacity: 1;
   z-index: 1;
 }
+/* Su telefono in verticale: ritaglio centrale 619x825 (~71KB invece di ~95KB), stessa nitidezza; !important vince sullo style inline impostato da main.js */
+@media (max-width: 600px) {
+  .hero--slider .hero__slide {
+    background-image: url("/assets/img/hero/hero-mobile.webp") !important;
+  }
+}
 
 .hero__inner {
   position: relative;
