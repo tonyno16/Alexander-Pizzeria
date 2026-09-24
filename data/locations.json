@@ -47,9 +47,9 @@
         "lng": 7.33
       },
       "urls": {
-        "booking": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.forms.pienissimo.pro/?id=Fl7E3J",
-        "takeaway": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.delivery.pienissimo.pro/?id=7CZfad",
-        "menu": "https://wwknhl80hqwournhivn1dmt9rf08ppvc.menu.pienissimo.pro/?id=111"
+        "booking": "https://app.lasagna.marketing/v2/prenotazione/?key=6a7c747fe711423f710a9aef",
+        "takeaway": "https://app.lasagna.marketing/v2/menu_digitale/?mode=order&key=6ab4fe576587a85c4901e0c5",
+        "menu": "https://app.lasagna.marketing/v2/menu_digitale/?key=6ab4fe576587a85c4901e0c5"
       },
       "mapsQuery": "Via+Achille+Midana+37+Pinerolo+TO",
       "slug": "pinerolo",
@@ -89,9 +89,9 @@
         "lng": 7.465
       },
       "urls": {
-        "booking": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.forms.pienissimo.pro/?id=PMl7Y4",
-        "takeaway": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.delivery.pienissimo.pro/?id=wNYEmx",
-        "menu": "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10"
+        "booking": "https://app.lasagna.marketing/v2/prenotazione/?key=6a7c78bc240c3dafdf0290ec",
+        "takeaway": "https://app.lasagna.marketing/v2/menu_digitale/?mode=order&key=6ab4ff967fb98b0f480b56d3",
+        "menu": "https://app.lasagna.marketing/v2/menu_digitale/?key=6ab4ff967fb98b0f480b56d3"
       },
       "mapsQuery": "Via+Pinerolo+149+Piossasco+TO",
       "slug": "piossasco",
@@ -131,9 +131,9 @@
         "lng": 7.353
       },
       "urls": {
-        "booking": "https://4ajacb1xf2rpvydbkjcepog7qvryk252.forms.pienissimo.pro/?id=swPtp9",
-        "takeaway": "https://4ajacb1xf2rpvydbkjcepog7qvryk252.delivery.pienissimo.pro/?id=K0nOww",
-        "menu": "https://4ajacb1xf2rpvydbkjcepog7qvryk252.menu.pienissimo.pro/?id=142"
+        "booking": "https://app.lasagna.marketing/v2/prenotazione/?key=6a7c78a3a9ff50bdd7076e1b",
+        "takeaway": "https://app.lasagna.marketing/v2/menu_digitale/?mode=order&key=6aaa9e5e7f0aa186140ce5c2",
+        "menu": "https://app.lasagna.marketing/v2/menu_digitale/?key=6aaa9e5e7f0aa186140ce5c2"
       },
       "mapsQuery": "Piazza+Molines+45+Giaveno+TO",
       "slug": "giaveno",
@@ -175,9 +175,9 @@
         "lng": 7.513
       },
       "urls": {
-        "booking": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.forms.pienissimo.pro/?id=RbxKIr",
-        "takeaway": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.delivery.pienissimo.pro/?id=WCwQ8h",
-        "menu": "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.menu.pienissimo.pro/?id=175"
+        "booking": "https://app.lasagna.marketing/v2/prenotazione/?key=6a47c771839738c24e04af28",
+        "takeaway": "https://app.lasagna.marketing/v2/menu_digitale/?mode=order&key=6a68c1a2820c27aa1b070ad0",
+        "menu": "https://app.lasagna.marketing/v2/menu_digitale/?key=6a68c1a2820c27aa1b070ad0"
       },
       "mapsQuery": "Piazza+Principe+Eugenio+7+Rivoli+TO",
       "slug": "rivoli",

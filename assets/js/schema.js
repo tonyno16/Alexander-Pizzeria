@@ -35,7 +35,7 @@
           closes: "23:30",
         },
       ],
-      menu: "https://wwknhl80hqwournhivn1dmt9rf08ppvc.menu.pienissimo.pro/?id=111",
+      menu: "https://app.lasagna.marketing/v2/menu_digitale/?key=6ab4fe576587a85c4901e0c5",
     },
     piossasco: {
       name: "Alexander Piossasco",
@@ -67,7 +67,7 @@
           closes: "23:30",
         },
       ],
-      menu: "https://5s9dcuw9c2pz665jbv4g4qvmyvjlogfh.menu.pienissimo.pro/?id=10",
+      menu: "https://app.lasagna.marketing/v2/menu_digitale/?key=6ab4ff967fb98b0f480b56d3",
     },
     giaveno: {
       name: "Alexander Valsangone - Pizzeria e Ristorante",
@@ -117,7 +117,7 @@
           closes: "23:30",
         },
       ],
-      menu: "https://4ajacb1xf2rpvydbkjcepog7qvryk252.menu.pienissimo.pro/?id=142",
+      menu: "https://app.lasagna.marketing/v2/menu_digitale/?key=6aaa9e5e7f0aa186140ce5c2",
     },
     rivoli: {
       name: "Alexander Rivoli - Pizzeria e Ristorante",
@@ -149,7 +149,7 @@
           closes: "23:30",
         },
       ],
-      menu: "https://b6u0iddgee4zqtmlqiwjqza4isqefigr.menu.pienissimo.pro/?id=175",
+      menu: "https://app.lasagna.marketing/v2/menu_digitale/?key=6a68c1a2820c27aa1b070ad0",
     },
   };
 
