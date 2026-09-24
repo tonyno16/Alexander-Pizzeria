@@ -247,9 +247,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" /></noscript>
 
     <!-- Styles -->
     <link rel="preload" href="/assets/css/style.min.css?v=20260922f" as="style" />
@@ -421,13 +424,20 @@
       <!-- HERO -->
       <section class="hero hero--location">
         <div class="hero__bg"></div>
-        <div
-          class="hero__bg-img"
-          style="
-            background-image: url('/assets/img/locations/pinerolo.webp');
-            background-color: #1a1a1a;
-          "
-        ></div>
+        <div class="hero__bg-img" style="background-color: #1a1a1a">
+          <picture>
+            <img
+              src="/assets/img/locations/pinerolo-800.webp"
+              srcset="/assets/img/locations/pinerolo-400.webp 400w, /assets/img/locations/pinerolo-800.webp 800w, /assets/img/locations/pinerolo-1200.webp 1024w"
+              sizes="100vw"
+              alt="Alexander Pizzeria Pinerolo in Via Achille Midana 37"
+              width="1024"
+              height="768"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </div>
         <div class="container hero__inner">
           <div class="hero__content">
             <nav class="page-breadcrumb page-breadcrumb--on-dark" aria-label="Percorso di navigazione"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Pinerolo</span></nav>
@@ -1252,7 +1262,7 @@
           </p>
           <iframe width="100%" height="450"
             class="location-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.5!2d7.3305!3d44.8844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d2b1b0a0a0a0a1%3A0x0!2sVia+Achille+Midana%2C+37%2C+10064+Pinerolo+TO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.5!2d7.3417378!3d44.8850792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478825dc789f7ec1%3A0xf488b729bfae8ba8!2sAlexander+Pizzeria+Pinerolo%2C+Via+Achille+Midana+37%2C+10064+Pinerolo+TO!5e0!3m2!1sit!2sit!4v1790208000000!5m2!1sit!2sit"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
