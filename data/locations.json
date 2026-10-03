@@ -14,12 +14,6 @@
     "socialMedia": {
       "instagram": "https://www.instagram.com/alexanderpizzeria_/",
       "facebook": "https://www.facebook.com/alexanderpizzeria/"
-    },
-    "tracking": {
-      "ga4Id": "309439443",
-      "facebookPixelId": "256613265809196",
-      "iubendaSiteId": "1444752",
-      "iubendaPolicyId": "32284578"
     }
   },
   "locations": [
@@ -28,7 +22,9 @@
       "name": "Alexander Pinerolo",
       "city": "Pinerolo",
       "displayCity": "Pinerolo",
-      "type": ["Pizzeria"],
+      "type": [
+        "Pizzeria"
+      ],
       "typeDisplay": "Pizzeria",
       "address": "Via Achille Midana, 37",
       "fullAddress": "Via Achille Midana, 37, 10064 Pinerolo TO",
@@ -70,7 +66,9 @@
       "name": "Alexander Piossasco",
       "city": "Piossasco",
       "displayCity": "Piossasco",
-      "type": ["Pizzeria"],
+      "type": [
+        "Pizzeria"
+      ],
       "typeDisplay": "Pizzeria",
       "address": "Via Pinerolo, 149",
       "fullAddress": "Via Pinerolo, 149, 10045 Piossasco TO",
@@ -112,7 +110,10 @@
       "name": "Alexander Valsangone",
       "city": "Giaveno",
       "displayCity": "Giaveno (Valsangone)",
-      "type": ["Pizzeria", "Ristorante"],
+      "type": [
+        "Pizzeria",
+        "Ristorante"
+      ],
       "typeDisplay": "Pizzeria e Ristorante",
       "address": "Piazza Molines, 45",
       "fullAddress": "Piazza Molines, 45, 10094 Giaveno TO",
@@ -148,15 +149,25 @@
       "woodFiredOven": true,
       "gasOven": false,
       "googleMapsUrl": "https://maps.app.goo.gl/899YjB6VdN1DzSBw6",
-      "specialFeatures": ["porciniMushrooms", "lunchService"],
-      "servesCuisine": ["Pizza", "Cucina Italiana", "Piatti ai Funghi Porcini"]
+      "specialFeatures": [
+        "porciniMushrooms",
+        "lunchService"
+      ],
+      "servesCuisine": [
+        "Pizza",
+        "Cucina Italiana",
+        "Piatti ai Funghi Porcini"
+      ]
     },
     {
       "id": "rivoli",
       "name": "Alexander Rivoli",
       "city": "Rivoli",
       "displayCity": "Rivoli",
-      "type": ["Pizzeria", "Ristorante"],
+      "type": [
+        "Pizzeria",
+        "Ristorante"
+      ],
       "typeDisplay": "Pizzeria e Ristorante",
       "address": "Piazza Principe Eugenio, 7",
       "fullAddress": "Piazza Principe Eugenio, 7, 10098 Rivoli TO",
@@ -192,7 +203,10 @@
       "woodFiredOven": false,
       "gasOven": true,
       "googleMapsUrl": "https://maps.app.goo.gl/AYER6g8f8F6SZgW39",
-      "servesCuisine": ["Pizza", "Cucina Italiana"]
+      "servesCuisine": [
+        "Pizza",
+        "Cucina Italiana"
+      ]
     }
   ]
 }

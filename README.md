@@ -1,5 +1,8 @@
 # Alexander Pizzeria
 
+La versione di produzione dal 3 ottobre 2026 usa il design cinematico: pagine canoniche in cartelle con `index.html`, `site.css`, `site.js`, `live-reviews.js` e `production-consent.js`. Il routing e i redirect legacy sono in `vercel.json`. I file HTML piatti descritti sotto appartengono alla versione precedente e sono esclusi dal deploy; per lo stato attuale e il rollback vedere [il rilascio](docs/releases/2026-10-03-cinematic-production.md).
+
+
 Sito web ufficiale **Alexander Pizzeria** — 4 pizzerie nella provincia di Torino (Pinerolo, Piossasco, Giaveno, Rivoli). Pizza artigianale con impasto a lunga lievitazione.
 
 ## Sedi

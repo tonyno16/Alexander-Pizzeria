@@ -6,47 +6,180 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "alexanderpizzeria.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "alexanderpizzeria.com"
+        }
+      ],
       "destination": "https://www.alexanderpizzeria.com/:path*",
       "permanent": true
     },
-    { "source": "/blog/pizzeria-pinerolo", "destination": "/pinerolo/", "permanent": true },
-    { "source": "/blog/pizzeria-pinerolo/", "destination": "/pinerolo/", "permanent": true },
-    { "source": "/blog/alexander-fidelity", "destination": "/alexander-lovers/", "permanent": true },
-    { "source": "/blog/alexander-fidelity/", "destination": "/alexander-lovers/", "permanent": true },
-    { "source": "/blog/rivoli", "destination": "/rivoli/", "permanent": true },
-    { "source": "/blog/rivoli/", "destination": "/rivoli/", "permanent": true },
-    { "source": "/news", "destination": "/blog/", "permanent": true },
-    { "source": "/news/", "destination": "/blog/", "permanent": true },
-    { "source": "/news/:path*", "destination": "/blog/", "permanent": true },
-    { "source": "/prenotazione-inst", "destination": "/prenota/", "permanent": true },
-    { "source": "/prenotazione-inst/", "destination": "/prenota/", "permanent": true },
-    { "source": "/odb", "destination": "/", "permanent": true },
-    { "source": "/odb/", "destination": "/", "permanent": true },
-    { "source": "/Pinerolo", "destination": "/pinerolo/", "permanent": true },
-    { "source": "/Pinerolo/", "destination": "/pinerolo/", "permanent": true },
-    { "source": "/Piossasco", "destination": "/piossasco/", "permanent": true },
-    { "source": "/Piossasco/", "destination": "/piossasco/", "permanent": true },
-    { "source": "/Giaveno", "destination": "/giaveno/", "permanent": true },
-    { "source": "/Giaveno/", "destination": "/giaveno/", "permanent": true },
-    { "source": "/Rivoli", "destination": "/rivoli/", "permanent": true },
-    { "source": "/Rivoli/", "destination": "/rivoli/", "permanent": true },
-    { "source": "/pinerolo.html", "destination": "/pinerolo/", "permanent": true },
-    { "source": "/piossasco.html", "destination": "/piossasco/", "permanent": true },
-    { "source": "/giaveno.html", "destination": "/giaveno/", "permanent": true },
-    { "source": "/rivoli.html", "destination": "/rivoli/", "permanent": true },
-    { "source": "/menu.html", "destination": "/menu/", "permanent": true },
-    { "source": "/prenota-un-tavolo.html", "destination": "/prenota/", "permanent": true },
-    { "source": "/prenota-un-tavolo/", "destination": "/prenota/", "permanent": true },
-    { "source": "/alexander-lovers.html", "destination": "/alexander-lovers/", "permanent": true },
-    { "source": "/lavora-con-noi.html", "destination": "/lavora-con-noi/", "permanent": true },
-    { "source": "/blog.html", "destination": "/blog/", "permanent": true },
+    {
+      "source": "/blog/pizzeria-pinerolo",
+      "destination": "/pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pizzeria-pinerolo/",
+      "destination": "/pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/alexander-fidelity",
+      "destination": "/alexander-lovers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/alexander-fidelity/",
+      "destination": "/alexander-lovers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/rivoli",
+      "destination": "/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/rivoli/",
+      "destination": "/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/news/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/news/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/prenotazione-inst",
+      "destination": "/prenota/",
+      "permanent": true
+    },
+    {
+      "source": "/prenotazione-inst/",
+      "destination": "/prenota/",
+      "permanent": true
+    },
+    {
+      "source": "/odb",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/odb/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Pinerolo",
+      "destination": "/pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/Pinerolo/",
+      "destination": "/pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/Piossasco",
+      "destination": "/piossasco/",
+      "permanent": true
+    },
+    {
+      "source": "/Piossasco/",
+      "destination": "/piossasco/",
+      "permanent": true
+    },
+    {
+      "source": "/Giaveno",
+      "destination": "/giaveno/",
+      "permanent": true
+    },
+    {
+      "source": "/Giaveno/",
+      "destination": "/giaveno/",
+      "permanent": true
+    },
+    {
+      "source": "/Rivoli",
+      "destination": "/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/Rivoli/",
+      "destination": "/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/pinerolo.html",
+      "destination": "/pinerolo/",
+      "permanent": true
+    },
+    {
+      "source": "/piossasco.html",
+      "destination": "/piossasco/",
+      "permanent": true
+    },
+    {
+      "source": "/giaveno.html",
+      "destination": "/giaveno/",
+      "permanent": true
+    },
+    {
+      "source": "/rivoli.html",
+      "destination": "/rivoli/",
+      "permanent": true
+    },
+    {
+      "source": "/menu.html",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/prenota-un-tavolo.html",
+      "destination": "/prenota/",
+      "permanent": true
+    },
+    {
+      "source": "/prenota-un-tavolo/",
+      "destination": "/prenota/",
+      "permanent": true
+    },
+    {
+      "source": "/alexander-lovers.html",
+      "destination": "/alexander-lovers/",
+      "permanent": true
+    },
+    {
+      "source": "/lavora-con-noi.html",
+      "destination": "/lavora-con-noi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
     {
       "source": "/blog-pizza-senza-glutine.html",
       "destination": "/pizza-senza-glutine/",
       "permanent": true
     },
-    { "source": "/senza-glutine.html", "destination": "/senza-glutine/", "permanent": true },
+    {
+      "source": "/senza-glutine.html",
+      "destination": "/senza-glutine/",
+      "permanent": true
+    },
     {
       "source": "/blog/pizza-senza-glutine/",
       "destination": "/pizza-senza-glutine/",
@@ -81,34 +214,18 @@
       "source": "/blog-post-template.html",
       "destination": "/blog/funghi-porcini-giaveno/",
       "permanent": true
+    },
+    {
+      "source": "/news/:path*/",
+      "destination": "/blog/",
+      "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/404", "destination": "/404.html" },
-    { "source": "/pinerolo/", "destination": "/pinerolo.html" },
-    { "source": "/piossasco/", "destination": "/piossasco.html" },
-    { "source": "/giaveno/", "destination": "/giaveno.html" },
-    { "source": "/rivoli/", "destination": "/rivoli.html" },
-    { "source": "/menu/", "destination": "/menu.html" },
-    { "source": "/prenota/", "destination": "/prenota-un-tavolo.html" },
-    { "source": "/alexander-lovers/", "destination": "/alexander-lovers.html" },
-    { "source": "/lavora-con-noi/", "destination": "/lavora-con-noi.html" },
-    { "source": "/blog/", "destination": "/blog.html" },
     {
-      "source": "/pizza-senza-glutine/",
-      "destination": "/blog-pizza-senza-glutine.html"
-    },
-    { "source": "/senza-glutine/", "destination": "/senza-glutine.html" },
-    {
-      "source": "/pizza-lunga-lievitazione/",
-      "destination": "/blog-impasto-lunga-lievitazione.html"
-    },
-    {
-      "source": "/blog/funghi-porcini-giaveno/",
-      "destination": "/blog-post-template.html"
-    },
-    { "source": "/chi-siamo/", "destination": "/chi-siamo.html" },
-    { "source": "/contatti/", "destination": "/contatti.html" }
+      "source": "/404",
+      "destination": "/404.html"
+    }
   ],
   "headers": [
     {
@@ -116,15 +233,21 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
@@ -133,14 +256,32 @@
           "key": "Strict-Transport-Security",
           "value": "max-age=31536000; preload"
         },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=(), usb=()"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://www.instagram.com https://cdn.iubenda.com https://cs.iubenda.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://static.cdninstagram.com https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; frame-src https://app.lasagna.marketing https://www.instagram.com https://www.facebook.com https://pnssm.pro https://*.pnssm.pro https://*.forms.pienissimo.pro https://*.menu.pienissimo.pro https://*.delivery.pienissimo.pro https://www.google.com https://vercel.live; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com https://connect.facebook.net https://cs.iubenda.com https://cdn.iubenda.com https://idb.iubenda.com https://pnssm.pro; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://www.instagram.com https://cdn.iubenda.com https://cs.iubenda.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://static.cdninstagram.com https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; frame-src https://app.lasagna.marketing https://www.instagram.com https://www.facebook.com https://pnssm.pro https://*.pnssm.pro https://*.forms.pienissimo.pro https://*.menu.pienissimo.pro https://*.delivery.pienissimo.pro https://www.google.com https://vercel.live; connect-src 'self' https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com https://*.analytics.google.com https://connect.facebook.net https://cs.iubenda.com https://cdn.iubenda.com https://idb.iubenda.com https://pnssm.pro; base-uri 'self'; form-action 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
       ]
     }
