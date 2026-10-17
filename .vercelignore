@@ -19,6 +19,11 @@ README.md
 .cursorignore
 .ftpquota
 package-lock.json
+# Internal instructions and local maintenance tools are not website content.
+**/*.md
+**/*.ps1
+guide/
+.gitignore
 # The canonical pages are now directory/index.html; legacy URLs redirect.
 alexander-lovers.html
 blog.html

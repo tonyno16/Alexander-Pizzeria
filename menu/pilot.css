@@ -1,0 +1,36 @@
+/* Pilot menu page: the existing Alexander palette, Lora and Inter. */
+.menu-pilot{--pilot-width:1400px}
+.pilot-header,.pilot-intro,.pilot-actions,.pilot-menu,.pilot-details,.pilot-footer{max-width:var(--pilot-width);margin-inline:auto;padding-inline:clamp(20px,5vw,72px)}
+.pilot-header{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:114px;border-bottom:1px solid var(--rule)}
+.pilot-logo{width:88px;height:88px;object-fit:contain}
+.pilot-header nav{display:flex;gap:32px;font-size:14px}
+.pilot-header a:hover,.pilot-details a:hover,.pilot-footer a:hover{text-decoration:underline;text-underline-offset:5px}
+.pilot-intro{padding-top:42px;padding-bottom:30px;display:grid;grid-template-columns:1fr 220px;gap:36px;align-items:center}
+.pilot-place{color:var(--gold-light);font-size:14px;margin-bottom:12px}
+.pilot-intro h1{font-size:clamp(38px,5vw,68px);letter-spacing:-.04em}
+.pilot-address{margin-top:16px!important;font-size:15px}
+.pilot-venue{width:220px;height:145px;object-fit:cover;object-position:center}
+.pilot-venue-logo{object-fit:contain}
+.pilot-actions{display:flex;gap:12px;padding-bottom:35px;flex-wrap:wrap}
+.pilot-actions .button{min-height:48px;padding:11px 23px;font-size:14px;letter-spacing:0;text-transform:none}
+.pilot-menu{padding-bottom:42px}
+.pilot-menu-bar{background:#fff;color:#111;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ddd}
+.pilot-menu-bar h2{font-size:28px;letter-spacing:-.025em}
+.pilot-external{font-size:13px;text-decoration:underline;text-underline-offset:4px;max-width:260px}
+.pilot-frame-shell{background:#fff;color:#111}
+.pilot-placeholder{min-height:470px;display:grid;grid-template-columns:minmax(200px,1fr) 1.2fr;gap:40px;align-items:center;padding:50px}
+.pilot-placeholder img{width:100%;height:auto}
+.pilot-placeholder h3{font-size:34px;margin-bottom:18px}
+.pilot-placeholder p{color:#555;font-size:15px;max-width:40ch}
+.pilot-placeholder .button{display:inline-flex;margin-top:24px;background:#111;color:#fff;padding:13px 24px;font-size:15px;letter-spacing:0;text-transform:none;border:1px solid #111}
+.pilot-placeholder .button:hover{background:#333}
+.pilot-provider-note{font-size:12px!important;margin-top:20px!important}
+#lasagna-menu{display:block;width:100%;height:max(720px,calc(100svh - 90px));border:0;background:#fff}
+.pilot-status:empty{display:none}.pilot-status{font-size:13px;margin-top:14px;color:var(--gold-light)}
+.pilot-help{font-size:13px;margin-top:20px;max-width:80ch}
+.pilot-details{display:flex;justify-content:space-between;align-items:end;gap:32px;padding-top:42px;padding-bottom:48px;border-top:1px solid var(--rule)}
+.pilot-details h2{font-size:34px;margin-bottom:18px}.pilot-details a{display:inline-block;color:var(--gold-light);margin-top:14px;font-size:14px}
+.pilot-footer{padding-block:28px;display:flex;justify-content:space-between;gap:25px;border-top:1px solid var(--rule);font-size:12px}
+.pilot-footer div{display:flex;gap:18px;flex-wrap:wrap}.pilot-footer button{border:0;background:none;color:inherit;padding:0;font:inherit}
+@media(max-width:700px){.pilot-header{min-height:92px}.pilot-logo{height:70px;width:70px}.pilot-header nav{gap:18px;font-size:12px}.pilot-intro{padding-top:30px;grid-template-columns:1fr}.pilot-venue{display:none}.pilot-intro h1{font-size:42px}.pilot-actions{gap:8px;padding-bottom:25px}.pilot-actions .button{flex:1;padding:11px 12px;font-size:12px;white-space:nowrap}.pilot-menu-bar{padding:20px;display:block}.pilot-menu-bar h2{font-size:27px;margin-bottom:14px}.pilot-placeholder{display:flex;flex-direction:column;align-items:start;gap:24px;min-height:0;padding:26px 22px 34px}.pilot-placeholder img{width:240px;max-width:100%;align-self:center}.pilot-placeholder h3{font-size:30px}.pilot-details,.pilot-footer{display:block}.pilot-details>div+div,.pilot-footer>div{margin-top:22px}#lasagna-menu{height:max(640px,calc(100svh - 80px))}.pilot-menu{padding-inline:12px}.pilot-help,.pilot-status{padding-inline:8px}}
+@media(max-width:380px){.pilot-actions{display:grid;grid-template-columns:1fr 1fr}.pilot-actions>a:first-child{grid-column:1/-1}.pilot-header nav{gap:12px;font-size:11px}.pilot-intro h1{font-size:37px}}
