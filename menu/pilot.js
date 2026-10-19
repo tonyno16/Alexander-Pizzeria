@@ -14,10 +14,9 @@
   var pageTitle = (takeaway ? 'Asporto ' : 'Menu ') + venues[venue].name + ' | Alexander';
   var flowName = takeaway ? 'takeaway' : 'menu';
   var frame = document.getElementById('lasagna-menu');
-  var trigger = document.getElementById('show-menu');
-  var placeholder = document.getElementById('menu-placeholder');
   var status = document.getElementById('menu-status');
-  var opened = false;
+  var embedLoaded = false;
+  var embedLoadMeasured = false;
   var production = /^(www\.)?alexanderpizzeria\.com$/i.test(window.location.hostname);
   var gaId = 'G-VP4K6WX6P4'; // Existing site GA4 property; verify ingestion before release.
   var measurementGranted = false;
@@ -59,11 +58,18 @@
     } else {
       window.gtag('consent', 'update', { analytics_storage: 'granted' });
     }
+    measureEmbedLoad();
   }
 
   function measure(name) {
     if (!measurementGranted || !gaStarted || !window.gtag) return;
     window.gtag('event', name, { send_to: gaId, location: venue, page_location: pageLocation() });
+  }
+
+  function measureEmbedLoad() {
+    if (!embedLoaded || embedLoadMeasured || !measurementGranted || !gaStarted || !window.gtag) return;
+    measure(flowName + '_embed_load');
+    embedLoadMeasured = true;
   }
 
   // Preserve the existing Meta consent callback. Never grant consent ourselves.
@@ -87,20 +93,20 @@
     if (action) measure(action.getAttribute('data-menu-event'));
   });
 
-  trigger.addEventListener('click', function (event) {
-    event.preventDefault();
-    if (opened) return;
-    var url = new URL(frame.getAttribute('data-src'));
+  function loadEmbed() {
+    var url;
+    try { url = new URL(frame.getAttribute('data-src')); } catch (_) { return; }
     if (url.origin !== 'https://app.lasagna.marketing' || url.pathname !== '/v2/menu_digitale/' || url.searchParams.get('key') !== venues[venue].key) return;
     if (takeaway ? url.searchParams.get('mode') !== 'order' : url.searchParams.has('mode')) return;
-    opened = true;
-    placeholder.hidden = true;
     frame.hidden = false;
     status.textContent = takeaway ? 'Caricamento del servizio asporto…' : 'Caricamento del menu…';
     frame.addEventListener('load', function () {
+      embedLoaded = true;
       status.textContent = takeaway ? 'Se il servizio non compare o il pagamento non si apre, continua in una nuova scheda dal collegamento qui sopra.' : 'Se il menu non compare, aprilo in una nuova scheda dal collegamento qui sopra.';
+      measureEmbedLoad();
     }, { once: true });
     frame.src = url.href;
-    frame.focus();
-  });
+  }
+
+  loadEmbed();
 })();
