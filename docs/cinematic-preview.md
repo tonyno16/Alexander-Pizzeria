@@ -90,3 +90,13 @@ Verifiche superate per tutte e quattro le pagine: HTTP 200, caricamento immagini
 Titolo, canonica e JSON-LD delle quattro pagine confrontati con il punto di partenza: identici. Rivoli mantiene mercoledì chiuso e forno a gas; Giaveno conserva orari di pranzo e FAQ pizza al tegamino. Per Rivoli sostituito il filmato generico di un forno a legna nella sezione senza glutine con la fotografia del prodotto già usata nella homepage, senza attribuirla a una sede. Foto principali dei locali conservate.
 
 Controllo visivo desktop e mobile completato. Rapporto `venues-verification.json` e screenshot per ogni sede nella cartella esterna `_working/cinematic-review-2026-10-21/`. Graphify aggiornato con AST locale e clustering senza etichette esterne; indice escluso da Git.
+
+## Cloud aggiornato con le sedi — 21 ottobre 2026
+
+Link stabile da usare per le prossime revisioni: https://alexander-cinematico-anteprima.vercel.app
+
+Alias aggiunto esclusivamente per l'anteprima; non sostituisce domini del sito principale. Destinazione: https://alexander-pizzeria-ll3zr5ky9-tonynos-projects-524f5113.vercel.app — deployment `dpl_3kZuasNne5sMXvSzd1fCXFTAYKKU`, target `preview`, stato `Ready`, commit applicativo `4497733`.
+
+Verificate da browser senza login tutte e quattro le pagine sul link stabile: HTTP 200, intestazione noindex/nofollow, immagini caricate, recensioni aggiornate, prenotazione corretta, stile e navigazione desktop/mobile funzionanti; nessun errore JavaScript o risposta HTTP di errore. Verificato il percorso homepage → pagina Rivoli. Feed recensioni disponibile per quattro sedi. La produzione Vercel rimane `alexander-pizzeria-47qzjvvm6-tonynos-projects-524f5113.vercel.app`; stato della cartella originale invariato.
+
+Rapporto finale `venues-cloud-verification.json`; screenshot `venues-cloud-desktop.png` e `venues-cloud-mobile.png` nella cartella di verifica esterna al repository. Per ripristinare la sola anteprima, riassociare il suo alias al deployment precedente senza modificare produzione o domini principali.
