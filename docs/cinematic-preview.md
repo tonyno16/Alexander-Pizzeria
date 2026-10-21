@@ -1,6 +1,6 @@
 # Homepage cinematografica — anteprima locale
 
-Branch: `design/cinematic-homepage`. Base: `3729868` (main locale). Nessun deploy o modifica della cartella originale.
+Branch: `design/cinematic-homepage`. Base: `3729868` (main locale). Nessun deploy in produzione o modifica della cartella originale.
 
 ## Direzione
 
@@ -15,7 +15,7 @@ Sequenza: apertura fotografica / prenotazione quattro sedi / pizze / impasto / i
 - Impasto: testo presente nel sito/prototipo (biga, 48 ore).
 - L'immagine del mockup non è fonte per ingredienti, recensioni o caratteristiche commerciali.
 - Pagine interne mantengono lo stile esistente; questa fase riguarda la homepage.
-- `noindex, nofollow` nella homepage di anteprima; non è controllo di accesso. Anteprima servita solo localmente.
+- `noindex, nofollow` nella homepage di anteprima; non è controllo di accesso. Anteprima cloud separata: accesso senza login e intestazione HTTP `X-Robots-Tag: noindex, nofollow`.
 - Nessuna analitica né cookie di marketing nella nuova homepage.
 
 ## Immagine principale
@@ -59,3 +59,16 @@ L'anteprima locale è su `http://localhost:4179/`. Gli screenshot e il rapporto 
 Aggiunta prima della prenotazione finale, con quattro recensioni Google reali, una per sede. Voti medi e conteggi restano distinti per locale. Fonte: endpoint esistente `/api/reviews/`, rilevazione `2026-10-21T05:46:08.014Z`; riusato `live-reviews.js` senza modifiche. Le recensioni selezionate e i link coincidono con quelli della precedente homepage. Il contenuto HTML datato resta disponibile se l'aggiornamento non risponde.
 
 Verificati aggiornamento dei quattro locali, link alle singole recensioni, contenuto disponibile con API bloccata, scorrimento delle schede su telefono, assenza di errori JavaScript e scorrimento laterale della pagina a 1440, 768, 390 e 320 pixel. Controllo visivo desktop e mobile completato. Screenshot `reviews-desktop.png` e `reviews-mobile.png` nella cartella di verifica esterna al repository.
+
+## Anteprima cloud condivisibile — 21 ottobre 2026
+
+- URL finale: https://alexander-pizzeria-gqltdeyrj-tonynos-projects-524f5113.vercel.app
+- Provider/progetto: Vercel, progetto esistente `alexander-pizzeria`.
+- Deployment: `dpl_KsGYMcYwmvbtdNXmLWFLW7EcoRqi`; target `preview`, stato `Ready`; contenuto applicativo del commit `e60c33a`.
+- Nessuna promozione, modifica DNS o modifica delle destinazioni di produzione. L'ultima produzione verificata resta `alexander-pizzeria-47qzjvvm6-tonynos-projects-524f5113.vercel.app`.
+- Verificata risposta HTTP 200 in un nuovo browser senza sessione autenticata: link condivisibile senza login. Intestazione anti-indicizzazione presente.
+- Logo, immagini e schede recensioni caricati; apertura desktop e telefono 390px verificata senza errori JavaScript o scorrimento orizzontale.
+- La configurazione di esclusione del caricamento ignora il file `.git` della copia di lavoro e solo le cartelle prototipo alla radice; include le nuove fotografie in `assets/img/cinematic/`.
+- Nel solo ambiente Vercel `preview`, l'endpoint recensioni riutilizza il feed pubblico e già memorizzato del sito principale. Nessuna chiave API di produzione copiata. Dati live verificati per quattro sedi, rilevazione `2026-10-21T05:46:08.014Z`. Il comportamento di produzione resta invariato.
+- Verificati con risposta simulata il riuso del feed, la gestione della fonte non disponibile e il percorso di produzione senza chiave. Graphify aggiornato con AST locale, senza elaborazione semantica esterna.
+- Screenshot e rapporto: `cloud-desktop.png`, `cloud-mobile.png`, `cloud-verification.json` nella cartella esterna `_working/cinematic-review-2026-10-21/`.
