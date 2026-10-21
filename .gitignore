@@ -30,3 +30,12 @@ node_modules/
 ai_docs/refs/
 .vercel
 .env*.local
+
+# Local code indexes and tool caches
+.codex/
+.serena/
+graphify-out/
+.graphify_cache*/
+.graphify_*.json
+__pycache__/
+**/__pycache__/
