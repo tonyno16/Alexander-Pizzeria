@@ -1,3 +1,4 @@
+.git
 .git/
 .vercel/
 .codex/
@@ -9,8 +10,8 @@ graphify-out/
 node_modules/
 .env*
 *.log
-cinematic/
-v2/
+/cinematic/
+/v2/
 ai_docs/
 docs/
 scripts/
