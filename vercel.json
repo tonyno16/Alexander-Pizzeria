@@ -5,6 +5,16 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/chi-siamo.html",
+      "destination": "/chi-siamo/",
+      "permanent": true
+    },
+    {
+      "source": "/contatti.html",
+      "destination": "/contatti/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
