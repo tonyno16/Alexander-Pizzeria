@@ -16,6 +16,8 @@ Rapporti e screenshot sono conservati fuori dal repository, in `_working/cinemat
 
 ## Passaggio al dominio principale dopo approvazione del risultato
 
+La modifica concreta per i punti 2 e 3 è già preparata in `docs/cinematic-production.patch` e verificata con `git apply --check`. Non è applicata all'anteprima. La patch ripristina le indicazioni di indicizzazione e inserisce il caricatore del consenso prima degli altri script, così anche il menu può collegarsi ai callback originali. Dopo eventuali ulteriori modifiche alle pagine, rigenerarla e verificarla prima dell'uso. La patch e questo documento sono esclusi dal deployment.
+
 1. Confrontare il branch con lo stato aggiornato di `main`, preservando le modifiche già presenti nella cartella originale. Integrare solo il lavoro del restyling e le correzioni documentate. Il sito principale non è stato modificato da questa lavorazione.
 2. Preparare una versione per produzione: sostituire i meta `noindex,nofollow` dell'anteprima con le indicazioni di indicizzazione originali, mantenendo la pagina 404 esclusa. Mantenere l'header `X-Robots-Tag: noindex, nofollow` per gli host Vercel e le canoniche sul dominio pubblico, già corrette. Non promuovere direttamente il deployment di anteprima con i suoi meta attuali.
 3. Ripristinare il caricatore di consenso esistente `production-consent.js` sulle pagine effettive della versione per produzione, senza nuovi identificativi o consensi automatici; verificare accettazione, rifiuto, revoca e click intent. I test esistenti devono passare nuovamente. L'anteprima non carica strumenti di tracciamento della produzione.
