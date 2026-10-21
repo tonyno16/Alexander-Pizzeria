@@ -121,6 +121,26 @@ function cacheHeaders(res) {
 }
 
 module.exports = async function handler(req, res) {
+  // Previews reuse the public, cached feed; no production API key is copied.
+  if (process.env.VERCEL_ENV === "preview") {
+    try {
+      const response = await fetch("https://www.alexanderpizzeria.com/api/reviews/", {
+        signal: AbortSignal.timeout(8000),
+      });
+      if (response.ok) {
+        const body = await response.json();
+        if (body.live === true && body.locations && Number.isFinite(Date.parse(body.updatedAt))) {
+          cacheHeaders(res);
+          res.status(200).json(body);
+          return;
+        }
+      }
+    } catch { /* Keep the dated HTML reviews if the public feed is unavailable. */ }
+    res.setHeader("Cache-Control", "no-store");
+    res.status(200).json({ live: false, locations: {} });
+    return;
+  }
+
   const key = process.env.GOOGLE_PLACES_API_KEY;
   if (!key) {
     res.setHeader("Cache-Control", "no-store");
