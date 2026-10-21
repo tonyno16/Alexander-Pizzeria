@@ -130,3 +130,25 @@ Percorsi: `/pizza-lunga-lievitazione/` e `/senza-glutine/`. Deployment `dpl_6khG
 Verifica pubblica senza login superata su entrambe le pagine: HTTP 200, intestazione noindex/nofollow, fotografie caricate, navigazione desktop e mobile, pulsanti di scelta sede con destinazione presente nella pagina, nessun errore JavaScript o HTTP. Verificati anche homepage → Impasto, collegamenti aggiornati nelle pagine sedi e feed recensioni ancora disponibile. Stato di produzione invariato: ultima produzione `alexander-pizzeria-47qzjvvm6-tonynos-projects-524f5113.vercel.app`. Nessuna modifica ai domini principali.
 
 Rapporto `craft-cloud-verification.json` e screenshot `pizza-lunga-lievitazione-cloud-desktop.png`, `pizza-lunga-lievitazione-cloud-mobile.png`, `senza-glutine-cloud-desktop.png`, `senza-glutine-cloud-mobile.png` nella cartella esterna di verifica. Ripristino dell'anteprima: riassociare il solo alias al precedente deployment `dpl_3kZuasNne5sMXvSzd1fCXFTAYKKU`.
+
+## Piano Storia, Contatti, Lovers e approfondimento senza glutine — 22 ottobre 2026
+
+Sistema coerente con le pagine approvate: nero #11100E, carbone #1C1915, oro #C9A227, ambra #BA8A45, avorio #F7F0E5, testo #C7BFAF; Lora nei titoli e Inter nel testo. Header/footer originali Alexander; impaginazione a sinistra, pulsanti diretti e leggibili su telefono. Nessuna nuova libreria o generazione di immagini.
+
+Storia: [prima sede reale / racconto] → [Alessandro e Alessio] → [2009/2020/2023/2024 con foto dei locali] → [scegli sede]. La cronologia usa date effettive e conserva il testo originale. Non uso la fotografia `media/team.webp`, che mostra una filigrana stock: preferisco la foto già verificata di Piossasco senza attribuire persone non identificate al gruppo.
+
+Contatti: [titolo e accesso rapido alle sedi] → [quattro foto, telefoni, WhatsApp, menu, prenotazione e asporto] → [informazioni utili] → [quattro mappe attivabili]. Gli orari di Rivoli sono allineati alla pagina specifica (mercoledì chiuso). Non vengono inviati messaggi o prenotazioni durante le verifiche.
+
+Lovers: [titolo e rappresentazione grafica HTML/CSS con il logo Alexander] → [benvenuto, visite, vantaggi] → [portale fedeltà esistente]. Non riutilizzo l'immagine della carta con marchio American Express e numero esemplificativo per evitare di presentarla come una carta di pagamento. Nessuna modifica alle condizioni del programma o iscrizione effettuata.
+
+Approfondimento `/pizza-senza-glutine/`: adotto l'impaginazione editoriale già usata per l'Impasto, conservando testo, FAQ, note sulla preparazione e collegamenti alla pagina Senza glutine. Questa pagina è parte del percorso di approfondimento della pagina appena aggiornata. Titoli, canoniche e JSON-LD restano invariati per tutte le pagine.
+
+## Verifiche Storia, Contatti, Lovers e approfondimento — 22 ottobre 2026
+
+Quattro pagine aggiornate e nuovo `cinematic-brand.css`. La storia e i contatti sono raggiungibili da tutte le undici pagine già convertite; la navigazione mantiene i percorsi completi per Impasto e Senza glutine. Storia con cronologia e foto delle quattro sedi; Contatti con quattro destinazioni di prenotazione e menu, telefoni, asporto e WhatsApp esistenti; Lovers con grafica HTML/CSS e portale originale `https://pnssm.pro/psm4t3y`; articolo senza glutine con sommario apribile e tabelle scorribili.
+
+Confronto automatico con baseline: titoli, H1, canoniche e JSON-LD invariati; paragrafi della storia, testo dei vantaggi e articolo senza glutine conservati. Link originali telefono/WhatsApp/asporto/indicazioni conservati. Correzioni intenzionali: chiusura del mercoledì di Rivoli nel riepilogo e nella scheda Contatti, immagini sostituite nella Storia e Lovers; anteprima social della Storia ora usa Piossasco anziché la foto stock. Nessuna iscrizione, messaggio o prenotazione inviati.
+
+Verificati HTTP 200, tutte le immagini caricate, logo originale, un solo H1, ID univoci, apertura menu mobile e chiusura con Escape/focus ripristinato, target dei pulsanti fissi e quattro mappe attivabili solo al clic. Nessun errore JavaScript né scorrimento orizzontale a 1440/1100/1024/768/390/320px. Screenshot desktop/mobile esaminati; card Lovers leggibile e cronologia coerente con il sistema grafico. Graphify rigenerato esclusivamente con AST locale, clustering senza etichette esterne e indice escluso da Git.
+
+Baseline `brand-baseline.json`, rapporto `brand-local-verification.json`, script di verifica e screenshot nelle cartelle esterne `_working/cinematic-review-2026-10-21/`. Per ripristinare il codice usare il commit precedente `a4765bb`; l'alias dell'anteprima può essere riportato al deployment `dpl_6khGF95gHQD9s56bWGM65kAqpDwB` senza modificare la produzione.
