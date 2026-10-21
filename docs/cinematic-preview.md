@@ -53,3 +53,9 @@ Foto ingredienti — sorgente `assets/img/signature/aura-margherita.png`, `trans
 - Sito originale e relativo stato Git invariati rispetto all'inizio del lavoro. Nessun push o deploy.
 
 L'anteprima locale è su `http://localhost:4179/`. Gli screenshot e il rapporto dettagliato sono nella cartella di lavoro esterna al repository `_working/cinematic-review-2026-10-21/`.
+
+## Sezione Dicono di noi — 21 ottobre 2026
+
+Aggiunta prima della prenotazione finale, con quattro recensioni Google reali, una per sede. Voti medi e conteggi restano distinti per locale. Fonte: endpoint esistente `/api/reviews/`, rilevazione `2026-10-21T05:46:08.014Z`; riusato `live-reviews.js` senza modifiche. Le recensioni selezionate e i link coincidono con quelli della precedente homepage. Il contenuto HTML datato resta disponibile se l'aggiornamento non risponde.
+
+Verificati aggiornamento dei quattro locali, link alle singole recensioni, contenuto disponibile con API bloccata, scorrimento delle schede su telefono, assenza di errori JavaScript e scorrimento laterale della pagina a 1440, 768, 390 e 320 pixel. Controllo visivo desktop e mobile completato. Screenshot `reviews-desktop.png` e `reviews-mobile.png` nella cartella di verifica esterna al repository.
