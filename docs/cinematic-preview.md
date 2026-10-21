@@ -120,3 +120,13 @@ Fotografie reali esistenti; per il Senza glutine usata la foto al tavolo già pr
 Controllati: HTTP 200, tutte le immagini caricate, due loghi originali, un solo H1, nessun ID duplicato, menu mobile con Escape, sommario dell'articolo, entrambe le tabelle (8 righe metodo e 4 confronto), FAQ senza glutine, quattro destinazioni di prenotazione e target dei pulsanti fissi. Nessun errore JavaScript o scorrimento orizzontale della pagina a 1440/1024/768/390/320px. Controllo visivo desktop/mobile completato; riutilizzato il comportamento di movimento ridotto del sistema grafico. Nessun nuovo video automatico, tracciamento o dipendenza.
 
 Rapporto `craft-verification.json`, baseline `craft-baseline.json` e screenshot delle due pagine nella cartella di verifica esterna `_working/cinematic-review-2026-10-21/`. Graphify aggiornato esclusivamente con AST locale e clustering senza etichette esterne; indice escluso da Git.
+
+## Cloud Impasto e Senza glutine — 22 ottobre 2026
+
+Stesso link stabile: https://alexander-cinematico-anteprima.vercel.app
+
+Percorsi: `/pizza-lunga-lievitazione/` e `/senza-glutine/`. Deployment `dpl_6khGF95gHQD9s56bWGM65kAqpDwB`, URL tecnico `https://alexander-pizzeria-9axxwt2pr-tonynos-projects-524f5113.vercel.app`, target `preview`, stato `Ready`, commit applicativo `8a7a02a`. Alias di anteprima aggiornato dopo il completamento del deployment.
+
+Verifica pubblica senza login superata su entrambe le pagine: HTTP 200, intestazione noindex/nofollow, fotografie caricate, navigazione desktop e mobile, pulsanti di scelta sede con destinazione presente nella pagina, nessun errore JavaScript o HTTP. Verificati anche homepage → Impasto, collegamenti aggiornati nelle pagine sedi e feed recensioni ancora disponibile. Stato di produzione invariato: ultima produzione `alexander-pizzeria-47qzjvvm6-tonynos-projects-524f5113.vercel.app`. Nessuna modifica ai domini principali.
+
+Rapporto `craft-cloud-verification.json` e screenshot `pizza-lunga-lievitazione-cloud-desktop.png`, `pizza-lunga-lievitazione-cloud-mobile.png`, `senza-glutine-cloud-desktop.png`, `senza-glutine-cloud-mobile.png` nella cartella esterna di verifica. Ripristino dell'anteprima: riassociare il solo alias al precedente deployment `dpl_3kZuasNne5sMXvSzd1fCXFTAYKKU`.
