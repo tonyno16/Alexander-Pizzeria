@@ -72,3 +72,21 @@ Verificati aggiornamento dei quattro locali, link alle singole recensioni, conte
 - Nel solo ambiente Vercel `preview`, l'endpoint recensioni riutilizza il feed pubblico e già memorizzato del sito principale. Nessuna chiave API di produzione copiata. Dati live verificati per quattro sedi, rilevazione `2026-10-21T05:46:08.014Z`. Il comportamento di produzione resta invariato.
 - Verificati con risposta simulata il riuso del feed, la gestione della fonte non disponibile e il percorso di produzione senza chiave. Graphify aggiornato con AST locale, senza elaborazione semantica esterna.
 - Screenshot e rapporto: `cloud-desktop.png`, `cloud-mobile.png`, `cloud-verification.json` nella cartella esterna `_working/cinematic-review-2026-10-21/`.
+
+## Piano delle quattro sedi — 21 ottobre 2026
+
+Continuità della homepage: nero caldo #11100E, carbone #1C1915, oro #C9A227, ambra #BA8A45, avorio #F7F0E5, testo secondario #C7BFAF. Lora nei titoli, Inter nel testo. Foto reale del locale a tutta larghezza, titolo a sinistra, prenotazione diretta della sede; sotto, indirizzo/orari/contatti, storia e caratteristiche, pizze, senza glutine, mappa attivabile, recensioni, domande frequenti e invito finale. Sul telefono foto e titolo restano leggibili e il pulsante di prenotazione è fisso.
+
+Schema: [logo / navigazione / prenota] → [foto del locale + nome e prenotazione] → [dove / quando / contatti] → [storia / caratteristiche] → [pizze] → [senza glutine] → [mappa] → [recensioni] → [FAQ / prenota / altri locali].
+
+Revisione rispetto al riferimento: stessa palette e pulsanti della homepage; evito un'apertura generica uguale per tutti usando le foto delle quattro sedi. Conservo titoli SEO, canoniche e dati strutturati. I contenuti del corpo pagina restano quelli delle sedi attuali. Confermati sul sito pubblico Rivoli (forno a gas, mercoledì chiuso) e Giaveno (apertura a pranzo e pizza al tegamino a pranzo). Il JSON sedi riporta ancora tutti i giorni per Rivoli: in queste pagine prevalgono testo e schema già presenti nella pagina specifica, confermati online; il JSON non viene modificato in questo intervento.
+
+## Verifiche locali delle sedi — 21 ottobre 2026
+
+Pagine: `piossasco/index.html`, `pinerolo/index.html`, `giaveno/index.html`, `rivoli/index.html`. Stile condiviso con la homepage tramite `cinematic-home.css`, regole delle sedi in `cinematic-venues.css`, navigazione e mappe in `cinematic-venues.js`. Fotografie esistenti, nessuna nuova generazione di immagini. Rimossi dalla nuova versione delle sedi gli script del precedente menu e del tracciamento di produzione; sono mantenuti l'aggiornamento delle recensioni e le mappe solo su richiesta. Nessun cambiamento alle pagine del sito principale.
+
+Verifiche superate per tutte e quattro le pagine: HTTP 200, caricamento immagini, due loghi originali, un solo H1, nessun ID duplicato, collegamenti prenotazione corrispondenti alla sede, menu della sede, apertura/chiusura del menu mobile e focus con Escape, FAQ native funzionanti. Mappe non caricate prima del clic; al clic destinazione Google Maps specifica e iframe visibile (richiesta intercettata nella verifica per evitare dipendenze esterne). Nessuno scorrimento orizzontale a 1440/1024/768/390/320px; nessun errore JavaScript.
+
+Titolo, canonica e JSON-LD delle quattro pagine confrontati con il punto di partenza: identici. Rivoli mantiene mercoledì chiuso e forno a gas; Giaveno conserva orari di pranzo e FAQ pizza al tegamino. Per Rivoli sostituito il filmato generico di un forno a legna nella sezione senza glutine con la fotografia del prodotto già usata nella homepage, senza attribuirla a una sede. Foto principali dei locali conservate.
+
+Controllo visivo desktop e mobile completato. Rapporto `venues-verification.json` e screenshot per ogni sede nella cartella esterna `_working/cinematic-review-2026-10-21/`. Graphify aggiornato con AST locale e clustering senza etichette esterne; indice escluso da Git.
