@@ -100,3 +100,23 @@ Alias aggiunto esclusivamente per l'anteprima; non sostituisce domini del sito p
 Verificate da browser senza login tutte e quattro le pagine sul link stabile: HTTP 200, intestazione noindex/nofollow, immagini caricate, recensioni aggiornate, prenotazione corretta, stile e navigazione desktop/mobile funzionanti; nessun errore JavaScript o risposta HTTP di errore. Verificato il percorso homepage → pagina Rivoli. Feed recensioni disponibile per quattro sedi. La produzione Vercel rimane `alexander-pizzeria-47qzjvvm6-tonynos-projects-524f5113.vercel.app`; stato della cartella originale invariato.
 
 Rapporto finale `venues-cloud-verification.json`; screenshot `venues-cloud-desktop.png` e `venues-cloud-mobile.png` nella cartella di verifica esterna al repository. Per ripristinare la sola anteprima, riassociare il suo alias al deployment precedente senza modificare produzione o domini principali.
+
+## Piano Impasto e Senza glutine — 21 ottobre 2026
+
+Continuità con homepage e sedi: nero caldo #11100E, carbone #1C1915, oro #C9A227, ambra #BA8A45, avorio #F7F0E5 e testo #C7BFAF. Lora per titoli, Inter per lettura e controlli. Header e footer con logo originale e navigazione già usata dalle sedi. Nessuna nuova dipendenza o immagine generata.
+
+Impasto: [foto reale del mestiere / titolo / vai al metodo] → [metadati e sommario / articolo completo e tabella] → [scelta della sede e prenotazione]. Allineamento a sinistra e misura di lettura contenuta. Il sommario risponde alla lunghezza reale del contenuto, non è una decorazione.
+
+Senza glutine: [foto reale del prodotto / titolo / scegli sede] → [preparazione] → [riferimento AIC] → [quattro sedi con foto e prenotazione] → [FAQ / invito finale]. Nessuna promessa aggiuntiva di assenza assoluta di contaminazione o benefici medici. Riferimento AIC del 19 maggio 2026 verificato sulla fonte originale https://piemonte.celiachia.it/nuovo-locale-afc-a-rivoli-to/.
+
+Revisione del piano: riprendo il riferimento richiesto e il sistema già approvato; differenzio il racconto del metodo dalla scelta pratica del locale. Mantengo titoli, canoniche, JSON-LD, testo tecnico del metodo e informazioni alimentari esistenti. Correggo solo l'orario incoerente di Rivoli nella griglia senza glutine, copiandolo dalla pagina specifica già verificata: mercoledì chiuso.
+
+## Verifiche Impasto e Senza glutine — 21 ottobre 2026
+
+Pagine aggiornate: `pizza-lunga-lievitazione/index.html`, `senza-glutine/index.html`; nuovo foglio di stile `cinematic-craft.css`, con header/footer e navigazione esistenti delle sedi. I collegamenti Impasto e Senza glutine della homepage e delle quattro sedi ora aprono le pagine complete. Header e pulsante fisso portano alla scelta della sede nella pagina corrente; le prenotazioni delle quattro sedi mantengono le rispettive destinazioni.
+
+Fotografie reali esistenti; per il Senza glutine usata la foto al tavolo già presente nella homepage. Testo del metodo e della preparazione conservati, come titolo, H1, canonica e JSON-LD (confronto automatico con la versione iniziale). Uniche correzioni informative: mercoledì chiuso per Rivoli nella scheda Senza glutine e nel riepilogo orari dell'articolo Impasto, coerenti con la pagina specifica verificata nella fase precedente. Non modificate ricette, dati strutturati o riferimenti AIC.
+
+Controllati: HTTP 200, tutte le immagini caricate, due loghi originali, un solo H1, nessun ID duplicato, menu mobile con Escape, sommario dell'articolo, entrambe le tabelle (8 righe metodo e 4 confronto), FAQ senza glutine, quattro destinazioni di prenotazione e target dei pulsanti fissi. Nessun errore JavaScript o scorrimento orizzontale della pagina a 1440/1024/768/390/320px. Controllo visivo desktop/mobile completato; riutilizzato il comportamento di movimento ridotto del sistema grafico. Nessun nuovo video automatico, tracciamento o dipendenza.
+
+Rapporto `craft-verification.json`, baseline `craft-baseline.json` e screenshot delle due pagine nella cartella di verifica esterna `_working/cinematic-review-2026-10-21/`. Graphify aggiornato esclusivamente con AST locale e clustering senza etichette esterne; indice escluso da Git.
