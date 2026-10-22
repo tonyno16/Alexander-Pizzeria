@@ -21,4 +21,16 @@ Produzione iniziale: deployment `dpl_AoA5yvMvDMVvbgFn3YEHKskg9MYu`, URL `https:/
 
 Deployment con ambiente produzione e `--skip-domain`, controllo della URL tecnica e del feed recensioni, poi promozione sul dominio ufficiale. Questo mantiene il vecchio sito attivo durante le verifiche del candidato. Documentazione CLI verificata: https://vercel.com/docs/cli/deploy e https://vercel.com/docs/cli/promote. Consenso e callback riscontrati con interfaccia reale; riferimento originale https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide-2/.
 
-Stato: candidato preparato, pubblicazione e verifica del dominio da registrare sotto.
+## Pubblicazione completata e verificata
+
+Deployment `dpl_A1JcgqutifTtZrEAW2o7wsSG48y5`, URL tecnica `https://alexander-pizzeria-8l4hdc496-tonynos-projects-524f5113.vercel.app`, ambiente produzione, Ready, commit applicativo `1fdc871`. Creato con `--prod --skip-domain` e promosso dopo il superamento dei controlli. Prima della promozione il dominio ufficiale corrispondeva ancora alla homepage precedente; dopo la promozione `vercel inspect https://www.alexanderpizzeria.com` risolve questo nuovo deployment.
+
+Verifiche prima e dopo la promozione: 25 pagine e 10 risorse corrispondenti ai file locali, nessun errore; sitemap di 24 URL, indicizzazione consentita sul dominio pubblico e negata tramite header sulle URL tecniche; cinque redirect legacy corretti; pagina inesistente, patch interna, AGENTS.md e `.env` restituiscono 404. Feed recensioni produzione `live: true`, quattro sedi, rilevazione `2026-10-22T08:18:22.974Z`; nessuna chiave copiata o esposta. Rapporti esterni `staged-deployment.json` e `public-deployment.json`.
+
+Suite browser sul dominio pubblico superata su 25 pagine e sei larghezze: foto, loghi, menu mobile, FAQ, scelta menu/prenotazione, movimento ridotto e assenza di overflow. Nessun errore JavaScript o HTTP interno. In questa suite le librerie Iubenda sono simulate per misurare l'impaginazione senza banner; interfaccia reale testata separatamente. Rapporto `complete-cloud-verification.json` nella cartella di verifica produzione.
+
+Consenso reale sul sito pubblico: rifiuto senza tracker, accettazione dopo salvataggio con loader GA4/Meta, successiva revoca con GA4 disabilitato e revoca Meta. Tutti gli endpoint di misura intercettati durante i test: nessun evento inviato alle proprietà reali e nessuna prova dell'effettiva ingestione nelle dashboard di analisi. Rapporto `public-consent-verification.json` e screenshot nella cartella di verifica produzione.
+
+Otto servizi menu/asporto reali caricati sul dominio ufficiale, con riquadro portato nella parte visibile: tutti superati. Rapporto `provider-cloud-verification.json` nella precedente cartella di verifica anteprima, con `base` uguale al dominio pubblico. Nessun ordine, prenotazione, iscrizione, candidatura o pagamento eseguito.
+
+Graphify rigenerato esclusivamente con AST locale e clustering senza etichette esterne: 180 nodi, 210 archi, indice escluso da Git. L'anteprima stabile rimane associata al proprio deployment separato e noindex. Per ripristinare il sito precedente usare il deployment di rollback sopra registrato e poi verificare il dominio pubblico.

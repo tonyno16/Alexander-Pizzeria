@@ -2,6 +2,8 @@
 
 22 ottobre 2026. Branch `design/cinematic-homepage`, cartella di lavoro separata `Alexander Preview cinematic`. Anteprima pubblica: https://alexander-cinematico-anteprima.vercel.app.
 
+**Stato aggiornato: pubblicato in produzione il 22 ottobre 2026 dopo approvazione del gestore.** Dominio https://www.alexanderpizzeria.com, deployment `dpl_A1JcgqutifTtZrEAW2o7wsSG48y5`, commit applicativo `1fdc871`, ramo di rilascio `release/cinematic-production-2026-10-22`. Passaggi di indicizzazione e consenso già applicati e verificati. Il piano sotto rimane lo storico della preparazione; non riapplicare la patch al ramo di rilascio. Rapporto completo in `docs/releases/2026-10-22-cinematic-production.md`.
+
 ## Risultato preparato
 
 Tutte le 25 pagine principali e di servizio condividono il sistema grafico: homepage, quattro locali, menu generale e quattro menu, quattro pagine asporto, prenotazione, impasto, senza glutine e approfondimento, storia, contatti, Lovers, blog e articolo Giaveno, candidature e pagina di errore. I vecchi URL conservano i reindirizzamenti; privacy e cookie policy rimandano alle pagine Iubenda esistenti.
