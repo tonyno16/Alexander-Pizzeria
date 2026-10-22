@@ -34,3 +34,7 @@ Consenso reale sul sito pubblico: rifiuto senza tracker, accettazione dopo salva
 Otto servizi menu/asporto reali caricati sul dominio ufficiale, con riquadro portato nella parte visibile: tutti superati. Rapporto `provider-cloud-verification.json` nella precedente cartella di verifica anteprima, con `base` uguale al dominio pubblico. Nessun ordine, prenotazione, iscrizione, candidatura o pagamento eseguito.
 
 Graphify rigenerato esclusivamente con AST locale e clustering senza etichette esterne: 180 nodi, 210 archi, indice escluso da Git. L'anteprima stabile rimane associata al proprio deployment separato e noindex. Per ripristinare il sito precedente usare il deployment di rollback sopra registrato e poi verificare il dominio pubblico.
+
+## Allineamento dei sorgenti
+
+Il rilascio e il rapporto sono stati inviati a `origin/main` con avanzamento lineare, senza forzature. Anche il checkout originale `Alexander Sito` è stato aggiornato a `main` dopo la pubblicazione: `.gitignore`, `.graphifyignore` e `AGENTS.md` locali sono stati copiati, verificati con SHA256 e ripristinati byte per byte dopo l'avanzamento del ramo. Le cartelle locali `.agents/`, `aura-3d/`, `cinematic/` e `v2/` sono rimaste intatte. Backup e impronte sono conservati fuori da Git in `_working/cinematic-production-2026-10-22/original-checkout-backup/`. Gli eventuali file locali di istruzioni/esclusione modificati restano tali e non entrano nel rilascio. Il sito pubblicato e i file applicativi del ramo principale sono allineati.
