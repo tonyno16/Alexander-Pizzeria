@@ -49,3 +49,6 @@
 /* Keep the full Giaveno search description readable above the booking links. */
 [data-venue="giaveno"] .location-hero-copy>p:not(.eyebrow){max-width:70ch;line-height:1.65}
 @media(max-width:760px){[data-venue="giaveno"] .location-hero-copy>p:not(.eyebrow){max-width:35ch}}
+
+/* Keep the two article actions readable against the gold button background. */
+.seo-applied .seo-cta a.seo-cta__button{color:#111;text-decoration:none}
