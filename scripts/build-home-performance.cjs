@@ -28,7 +28,10 @@ async function build() {
   for (const [source, filename, width] of images) {
     const pipeline = sharp(path.join(root, source)).rotate().resize({ width, withoutEnlargement: true });
     if (filename.endsWith('.avif')) {
-      await pipeline.avif({ quality: 55, effort: 6, chromaSubsampling: '4:2:0' }).toFile(path.join(out, filename));
+      // The first mobile image is transfer-bound; keep its full resolution
+      // while spending more build time on a smaller AVIF payload.
+      const mobileHero = filename === 'hero-mobile.avif';
+      await pipeline.avif({ quality: mobileHero ? 40 : 55, effort: mobileHero ? 9 : 6, chromaSubsampling: '4:2:0' }).toFile(path.join(out, filename));
     } else {
       await pipeline.webp({ quality: filename.startsWith('logo-') ? 84 : 74, effort: 6 }).toFile(path.join(out, filename));
     }
