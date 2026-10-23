@@ -38,6 +38,19 @@ async function build() {
   const css = new CleanCSS({ level: 2, rebase: false }).minify(source);
   if (css.errors.length) throw new Error(css.errors.join('\n'));
   fs.writeFileSync(path.join(root, 'cinematic-home.min.css'), css.styles + '\n');
+  // The first viewport must not wait for another stylesheet round trip.
+  // Keep this generated from the shared files so later SEO/layout fixes propagate.
+  const page = path.join(root, 'index.html');
+  const html = fs.readFileSync(page, 'utf8');
+  const existingStyle = /<style id="home-performance-css">[\s\S]*?<\/style>/;
+  const stylesheet = '<link href="/cinematic-home.min.css" rel="stylesheet"/>';
+  const inline = '<style id="home-performance-css">' + css.styles + '</style>';
+  if (!existingStyle.test(html) && !html.includes(stylesheet)) {
+    throw new Error('Homepage stylesheet insertion point missing');
+  }
+  fs.writeFileSync(page, existingStyle.test(html)
+    ? html.replace(existingStyle, () => inline)
+    : html.replace(stylesheet, inline));
   console.log(`Homepage assets: ${images.length} image variants; CSS ${Buffer.byteLength(source)} -> ${Buffer.byteLength(css.styles)} bytes.`);
 }
 
