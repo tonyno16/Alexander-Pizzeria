@@ -45,3 +45,7 @@
   outline: 3px solid #fff;
   outline-offset: 4px;
 }
+
+/* Keep the full Giaveno search description readable above the booking links. */
+[data-venue="giaveno"] .location-hero-copy>p:not(.eyebrow){max-width:70ch;line-height:1.65}
+@media(max-width:760px){[data-venue="giaveno"] .location-hero-copy>p:not(.eyebrow){max-width:35ch}}

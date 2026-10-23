@@ -5,6 +5,76 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/giaveno.html",
+      "destination": "https://www.alexanderpizzeria.com/giaveno/",
+      "statusCode": 301
+    },
+    {
+      "source": "/giaveno/gi-ristorante.html",
+      "destination": "https://www.alexanderpizzeria.com/giaveno/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rivoli.html",
+      "destination": "https://www.alexanderpizzeria.com/rivoli/",
+      "statusCode": 301
+    },
+    {
+      "source": "/piossasco.html",
+      "destination": "https://www.alexanderpizzeria.com/piossasco/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pinerolo.html",
+      "destination": "https://www.alexanderpizzeria.com/pinerolo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog-pizzeria-pinerolo.html",
+      "destination": "https://www.alexanderpizzeria.com/pinerolo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prenota-un-tavolo.html",
+      "destination": "https://www.alexanderpizzeria.com/prenota/",
+      "statusCode": 301
+    },
+    {
+      "source": "/menu.html",
+      "destination": "https://www.alexanderpizzeria.com/menu/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog.html",
+      "destination": "https://www.alexanderpizzeria.com/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alexander-lovers.html",
+      "destination": "https://www.alexanderpizzeria.com/alexander-lovers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/lavora-con-noi.html",
+      "destination": "https://www.alexanderpizzeria.com/lavora-con-noi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://www.alexanderpizzeria.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/pizzeria-pinerolo",
+      "destination": "https://www.alexanderpizzeria.com/pinerolo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/pizzeria-pinerolo/",
+      "destination": "https://www.alexanderpizzeria.com/pinerolo/",
+      "statusCode": 301
+    },
+    {
       "source": "/chi-siamo.html",
       "destination": "/chi-siamo/",
       "permanent": true
@@ -23,16 +93,6 @@
         }
       ],
       "destination": "https://www.alexanderpizzeria.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/blog/pizzeria-pinerolo",
-      "destination": "/pinerolo/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/pizzeria-pinerolo/",
-      "destination": "/pinerolo/",
       "permanent": true
     },
     {
@@ -131,53 +191,8 @@
       "permanent": true
     },
     {
-      "source": "/pinerolo.html",
-      "destination": "/pinerolo/",
-      "permanent": true
-    },
-    {
-      "source": "/piossasco.html",
-      "destination": "/piossasco/",
-      "permanent": true
-    },
-    {
-      "source": "/giaveno.html",
-      "destination": "/giaveno/",
-      "permanent": true
-    },
-    {
-      "source": "/rivoli.html",
-      "destination": "/rivoli/",
-      "permanent": true
-    },
-    {
-      "source": "/menu.html",
-      "destination": "/menu/",
-      "permanent": true
-    },
-    {
-      "source": "/prenota-un-tavolo.html",
-      "destination": "/prenota/",
-      "permanent": true
-    },
-    {
       "source": "/prenota-un-tavolo/",
       "destination": "/prenota/",
-      "permanent": true
-    },
-    {
-      "source": "/alexander-lovers.html",
-      "destination": "/alexander-lovers/",
-      "permanent": true
-    },
-    {
-      "source": "/lavora-con-noi.html",
-      "destination": "/lavora-con-noi/",
-      "permanent": true
-    },
-    {
-      "source": "/blog.html",
-      "destination": "/blog/",
       "permanent": true
     },
     {
@@ -206,11 +221,6 @@
       "permanent": true
     },
     {
-      "source": "/blog-pizzeria-pinerolo.html",
-      "destination": "/pinerolo/",
-      "permanent": true
-    },
-    {
       "source": "/blog-alexander-fidelity.html",
       "destination": "/alexander-lovers/",
       "permanent": true
@@ -221,17 +231,16 @@
       "permanent": true
     },
     {
-      "source": "/blog-post-template.html",
-      "destination": "/blog/funghi-porcini-giaveno/",
-      "permanent": true
-    },
-    {
       "source": "/news/:path*/",
       "destination": "/blog/",
       "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/blog-post-template.html",
+      "destination": "/api/gone"
+    },
     {
       "source": "/404",
       "destination": "/404.html"
