@@ -13,6 +13,14 @@
   var pixelId = '1242459011329386';
   // Preview and local environments must never feed the production audience.
   var productionHost = /^(www\.)?alexanderpizzeria\.com$/i.test(window.location.hostname);
+  function publishConsent(preference) {
+    var purposes = preference && preference.purposes || {};
+    window.alexanderConsent = Object.freeze({
+      analytics: productionHost && purposes[4] === true,
+      marketing: productionHost && purposes[5] === true
+    });
+    window.dispatchEvent(new CustomEvent('alexander:consent', { detail: window.alexanderConsent }));
+  }
   function updateMarketingConsent(granted) {
     marketingGranted = productionHost && granted === true;
     if (!marketingGranted) {
@@ -114,8 +122,9 @@
     callback: {
       onPreferenceExpressedOrNotNeeded: function (preference) {
         updateMarketingConsent(!!(preference && preference.purposes && preference.purposes[5] === true));
+        publishConsent(preference);
       },
-      onConsentRejected: function () { updateMarketingConsent(false); }
+      onConsentRejected: function () { updateMarketingConsent(false); publishConsent(null); }
     }
   };
 
