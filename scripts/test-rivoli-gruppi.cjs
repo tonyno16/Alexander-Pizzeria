@@ -34,7 +34,7 @@ function harness(host = 'www.alexanderpizzeria.com', search = '') {
   document.getElementById = id => elements[id];
   document.querySelector = () => null;
   document.querySelectorAll = selector => selector === '[data-booking-direct]' ? [direct] : [intro];
-  window.location = { hostname: host, pathname: '/rivoli/', search, href: `https://${host}/rivoli/${search}` };
+  window.location = { hostname: host, pathname: '/giro-pizza-rivoli/', search, href: `https://${host}/giro-pizza-rivoli/${search}` };
   window.innerHeight = 800;
   window.scrollY = 700;
   window.fbq = (...args) => meta.push(args);
@@ -76,6 +76,7 @@ test('Measurement consent does not grant advertising consent', () => {
   assert.equal(updates.at(-1)[2].ad_user_data, 'denied');
   const pageview = h.window.dataLayer.find(x => x[0] === 'event' && x[1] === 'page_view');
   assert.equal(pageview[2].page_referrer, 'https://www.google.com/');
+  assert.equal(pageview[2].page_location, 'https://www.alexanderpizzeria.com/giro-pizza-rivoli/');
 });
 test('Marketing-only consent tracks one Meta booking click, never GA4 or Lead', () => {
   const h = harness(); h.grant(false, true); h.click(h.open);
@@ -112,12 +113,17 @@ test('Direct fallback keeps ordinary link navigation available', () => {
   assert.equal(new URL(h.direct.href).hostname, 'app.lasagna.marketing');
 });
 test('HTML and structured FAQ stay aligned; supplied layout and inline form present', () => {
-  const html = fs.readFileSync(path.join(root, 'rivoli/index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'giro-pizza-rivoli/index.html'), 'utf8');
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   const faq = schema['@graph'].find(x => x['@type'] === 'FAQPage');
   assert.equal(faq.mainEntity.length, (html.match(/class="faq-item"/g) || []).length);
   assert.equal((html.match(/class="formula-card(?: highlight)?"/g) || []).length, 3);
   assert.match(html, /--bg-dark: #141414/);
+  assert.ok(html.includes('rel="canonical" href="https://www.alexanderpizzeria.com/giro-pizza-rivoli/"'));
+  assert.ok(html.includes('alexander-locale-800.webp'));
+  const venue = fs.readFileSync(path.join(root, 'rivoli/index.html'), 'utf8');
+  assert.ok(!venue.includes('data-rivoli-groups'));
+  assert.ok(venue.includes('https://www.alexanderpizzeria.com/rivoli/'));
   assert.match(html, /id="lasagna-iframe"[\s\S]*?loading="lazy"/);
   assert.match(html, /id="lasagna-direct-link"[^>]+href="https:\/\/app\.lasagna\.marketing/);
   assert.ok(!html.includes('onclick='));

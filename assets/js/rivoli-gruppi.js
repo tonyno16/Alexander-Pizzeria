@@ -27,7 +27,7 @@
     return target.href;
   }
   function pageLocation() {
-    var page = new URL('https://www.alexanderpizzeria.com/rivoli/');
+    var page = new URL('https://www.alexanderpizzeria.com/giro-pizza-rivoli/');
     campaignParams().forEach(function (value, key) { page.searchParams.set(key, value); });
     return page.href;
   }

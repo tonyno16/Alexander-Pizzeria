@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Rivoli — Giro Pizza Gruppi & Senza Glutine (Lun, Mar, Gio)</title>
+  <meta name="description" content="Giro Pizza a Rivoli da 20€ tutto incluso (min. 8 persone) lunedì, martedì e giovedì. Formule dedicate anche per tavoli misti e celiaci. Prenota ora!">
+
+  <style>
+    :root {
+      --bg-dark: #141414;
+      --bg-card: #1f1f1f;
+      --accent-gold: #f5b041;
+      --accent-red: #d9381e;
+      --text-light: #f8f9fa;
+      --text-muted: #cccccc;
+      --border-radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.5;
+      padding-bottom: 70px; /* Spazio per sticky CTA mobile */
+    }
+
+    /* TOP BAR FISSA */
+    .top-bar {
+      background-color: var(--accent-red);
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 20px 0 30px;
+      border-bottom: 1px solid #333;
+    }
+
+    .eyebrow {
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub strong {
+      color: #fff;
+    }
+
+    .hero-img-wrapper {
+      position: relative;
+      margin: 20px 0;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      border: 2px solid var(--accent-gold);
+    }
+
+    .hero-img-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .badge-overlay {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(20, 20, 20, 0.92);
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    /* BOTTONI CTA */
+    .btn-cta {
+      display: inline-block;
+      width: 100%;
+      max-width: 460px;
+      background: linear-gradient(135deg, #f5b041 0%, #e67e22 100%);
+      color: #111;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-align: center;
+      text-decoration: none;
+      padding: 16px 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(245, 176, 65, 0.35);
+      transition: transform 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-cta:active {
+      transform: scale(0.98);
+    }
+
+    .micro-copy {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* SEZIONI E CARD */
+    .section {
+      padding: 32px 0;
+      border-bottom: 1px solid #2b2b2b;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 16px;
+      color: var(--accent-gold);
+      line-height: 1.3;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 18px 0;
+    }
+
+    .checklist li {
+      background: var(--bg-card);
+      margin-bottom: 10px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-gold);
+      font-size: 0.98rem;
+    }
+
+    .scarcity-box {
+      background: rgba(217, 56, 30, 0.15);
+      border: 1px solid var(--accent-red);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      margin-top: 18px;
+    }
+
+    /* GRIGLIA TAVOLI MISTI */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .formula-card {
+      background: var(--bg-card);
+      border: 1px solid #383838;
+      border-radius: var(--border-radius);
+      padding: 18px;
+    }
+
+    .formula-card.highlight {
+      border: 2px solid var(--accent-gold);
+    }
+
+    .formula-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .formula-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .formula-price {
+      background: var(--accent-gold);
+      color: #111;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* BOX MODULO LASAGNA */
+    .booking-box {
+      background: var(--bg-card);
+      border: 2px solid var(--accent-gold);
+      border-radius: var(--border-radius);
+      padding: 20px 14px;
+      margin-top: 15px;
+    }
+
+    .steps-list {
+      margin: 0 0 18px 20px;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    .steps-list li {
+      margin-bottom: 8px;
+    }
+
+    .steps-list strong {
+      color: #fff;
+    }
+
+    .warning-time {
+      background: #2c2210;
+      border: 1px solid var(--accent-gold);
+      color: #ffd27d;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .iframe-container {
+      width: 100%;
+      height: 640px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 16px;
+      background: var(--bg-card);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* STICKY FOOTER MOBILE */
+    .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(20, 20, 20, 0.96);
+      border-top: 1px solid #333;
+      padding: 10px 16px;
+      text-align: center;
+      z-index: 999;
+    }
+
+    @media (min-width: 680px) {
+      h1 { font-size: 2.3rem; }
+      .grid-cards { grid-template-columns: repeat(3, 1fr); }
+      .sticky-footer { display: none; }
+      body { padding-bottom: 20px; }
+    }
+
+    /* Correzioni di accessibilità e spazio, senza cambiare il layout fornito. */
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    .skip { position: fixed; left: 12px; top: -100px; z-index: 1100; background: #141414; color: #fff; padding: 10px; }
+    .skip:focus { top: 10px; }
+    .formula-header { gap: 10px; flex-wrap: wrap; align-items: flex-start; }
+    .formula-price { white-space: nowrap; flex-shrink: 0; }
+    .steps-list a { color: var(--accent-gold); text-underline-offset: 3px; }
+    .legal-footer { max-width: 780px; margin: 0 auto; padding: 20px 16px 35px; color: var(--text-muted); font-size: .78rem; text-align: center; }
+    .legal-footer nav { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 15px; }
+    .legal-footer a, .legal-footer button { color: var(--text-muted); background: none; border: 0; text-decoration: underline; font: inherit; cursor: pointer; }
+    .iframe-container iframe { display: block; }
+    .sticky-footer[hidden] { display: none; }
+    @media(max-width:679px) {
+      body { padding-bottom: 104px; }
+      .sticky-footer { padding-right: 64px; padding-bottom: max(10px, env(safe-area-inset-bottom)); }
+      .sticky-footer .btn-cta { font-size: .85rem !important; }
+      .badge-overlay { font-size: .82rem; padding: 7px 10px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .btn-cta { transition: none; } }
+  </style>
+
+  <link rel="canonical" href="https://www.alexanderpizzeria.com/giro-pizza-rivoli/">
+  <link rel="icon" href="/assets/img/logo/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#141414">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://www.alexanderpizzeria.com/giro-pizza-rivoli/">
+  <meta property="og:title" content="Alexander Rivoli — Giro pizza in gruppo">
+  <meta property="og:description" content="Giro classico 20 € a persona, minimo 8. Lunedì, martedì e giovedì, anche con formule senza glutine.">
+  <meta property="og:image" content="https://www.alexanderpizzeria.com/assets/img/rivoli-gruppi/alexander-locale-800.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script defer src="/production-consent.js"></script>
+  <script defer src="/assets/js/rivoli-gruppi.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.alexanderpizzeria.com/#organization",
+      "name": "Alexander Pizzeria",
+      "legalName": "Alexander S.R.L.",
+      "url": "https://www.alexanderpizzeria.com/",
+      "sameAs": [
+        "https://www.instagram.com/alexanderpizzeria_/",
+        "https://www.facebook.com/alexanderpizzeria/"
+      ],
+      "logo": "https://www.alexanderpizzeria.com/assets/img/logo/logo.webp"
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant",
+      "name": "Alexander Rivoli",
+      "url": "https://www.alexanderpizzeria.com/rivoli/",
+      "parentOrganization": {
+        "@id": "https://www.alexanderpizzeria.com/#organization"
+      },
+      "telephone": "+390110608880",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Piazza Principe Eugenio, 7",
+        "addressLocality": "Rivoli",
+        "addressRegion": "TO",
+        "postalCode": "10098",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "18:30",
+          "closes": "23:30"
+        }
+      ],
+      "hasMenu": "https://www.alexanderpizzeria.com/menu/rivoli/",
+      "acceptsReservations": true,
+      "servesCuisine": [
+        "Pizza artigianale",
+        "Pizza senza glutine",
+        "Cucina italiana"
+      ],
+      "sameAs": [
+        "https://maps.app.goo.gl/AYER6g8f8F6SZgW39"
+      ],
+      "priceRange": "€€",
+      "description": "Locale aderente al programma Alimentazione Fuori Casa di AIC."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.alexanderpizzeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rivoli",
+          "item": "https://www.alexanderpizzeria.com/rivoli/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Giro pizza in gruppo",
+          "item": "https://www.alexanderpizzeria.com/giro-pizza-rivoli/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.alexanderpizzeria.com/giro-pizza-rivoli/#faq",
+      "url": "https://www.alexanderpizzeria.com/giro-pizza-rivoli/",
+      "inLanguage": "it-IT",
+      "about": {
+        "@id": "https://www.alexanderpizzeria.com/rivoli/#restaurant"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Fino a che ora possiamo arrivare dopo l'allenamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Accogliamo i gruppi per il Giro Pizza con arrivo al locale entro le ore 22:00 (le 22:00 indicano l’arrivo, non la fine della cena)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se siamo meno di 8 persone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le formule Giro Pizza da 20 € e 22 € richiedono un minimo complessivo di 8 persone al tavolo. Se siete un gruppo più piccolo, potete prenotare liberamente e cenare scegliendo dal nostro menu alla carta (anche senza glutine)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove si trova il locale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Siamo nel centro di Rivoli, in Piazza Principe Eugenio 7."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come funziona con i bambini o se cambia il numero del gruppo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contatta la sede per concordare le condizioni dei bambini e le eventuali variazioni. Se il gruppo scende sotto 8, la formula giro pizza va verificata con il responsabile di sala."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È obbligatorio prenotare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, è consigliato. Per i gruppi è utile concordare prima disponibilità, orario, formula e richieste alimentari."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le bevande sono senza limiti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No: è inclusa una bevanda a persona fra quelle della formula. Le consumazioni aggiuntive sono a parte."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body data-venue="rivoli" data-rivoli-groups>
+  <a class="skip" href="#contenuto">Vai al contenuto</a>
+
+  <!-- 1. TOP BAR FISSA -->
+  <div class="top-bar">
+    📍 Alexander Rivoli (Piazza Principe Eugenio 7) · Speciale Gruppi: LUN, MAR e GIO
+  </div>
+
+  <main class="container" id="contenuto">
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+      <div class="eyebrow">Lunedì, Martedì e Giovedì Sera · Minimo 8 Persone</div>
+      <h1>La Cena di Gruppo a Rivoli dove Nessuno Resta Escluso (e il Conto è Chiaro Prima di Sedersi)</h1>
+      <p class="hero-sub">
+        <strong>Giro Pizza Classico a 20 € a persona:</strong> Farinate calde, Giro Pizza, 1 Birra Sans Souci alla spina da 0,4L (o bibita/acqua), Focaccia con Nutella e Coperto inclusi. Formule dedicate anche per tavoli misti e celiaci.
+      </p>
+
+      <!-- Fotografia fornita dal titolare: Alexander con impasto classico. -->
+      <div class="hero-img-wrapper">
+        <img src="/assets/img/rivoli-gruppi/alexander-locale-800.webp" srcset="/assets/img/rivoli-gruppi/alexander-locale-480.webp 480w, /assets/img/rivoli-gruppi/alexander-locale-800.webp 800w" sizes="(max-width:680px) calc(100vw - 36px), 744px" width="800" height="993" alt="Pizza Alexander e birra con la sala di Rivoli sullo sfondo" fetchpriority="high" decoding="async">
+        <div class="badge-overlay">Classico 20 € · Min. 8</div>
+      </div>
+
+      <p class="micro-copy" style="margin-bottom:16px">Nella formula classica è inclusa una Sans Souci alla spina da 0,4 l, oppure acqua o bibita. Il bicchiere nella foto è illustrativo.</p>
+      <a href="#prenota-ora" class="btn-cta" data-booking-intro>
+        👉 VERIFICA DISPONIBILITÀ E BLOCCA IL TAVOLO
+      </a>
+      <p class="micro-copy">
+        Prenotazione consigliata · Formula da concordare con la sede · Arrivo gruppi entro le 22:00
+      </p>
+    </section>
+
+    <!-- 3. COSA INCLUDE LA FORMULA DA 20 € -->
+    <section class="section">
+      <h2>Dimentica la calcolatrice a fine serata. Ecco cosa c'è nei tuoi 20 €:</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        Quando organizzi una tavolata tra amici o con la squadra dopo l'allenamento, dividere il conto è sempre un problema. Il lunedì, martedì e giovedì sera da Alexander Rivoli (per gruppi di almeno 8 persone) è tutto compreso:
+      </p>
+
+      <ul class="checklist">
+        <li>🍕 <strong>Partenza con le Farinate:</strong> Calde e appena sfornate per iniziare subito in compagnia.</li>
+        <li>🔥 <strong>Giro Pizza in Condivisione:</strong> Le nostre pizze servite a spicchi al centro del tavolo, incluse le speciali confermate nel giro (<em>Alexander, Ade, Apollo, Aura, Nemesi</em>).</li>
+        <li>🍺 <strong>1 Bevanda Inclusa:</strong> Una birra <strong>Sans Souci alla spina da 0,4 litri</strong>, oppure acqua, oppure una bibita <em>(consumazioni extra a parte)</em>.</li>
+        <li>🍫 <strong>Dolce Finale:</strong> Chiusura con la nostra Focaccia con Nutella.</li>
+        <li>🍽️ <strong>Coperto Incluso:</strong> Nessun costo nascosto alla cassa.</li>
+      </ul>
+
+      <div class="scarcity-box">
+        ⚠️ <strong>Nota sulla disponibilità di sala:</strong> Per organizzare il servizio del gruppo, <strong>concordate disponibilità e orario con la sede</strong>. L’arrivo per il giro pizza è entro le 22:00; la prenotazione è consigliata.
+      </div>
+    </section>
+
+    <!-- 4. SPECCHIETTO TAVOLI MISTI & SENZA GLUTINE -->
+    <section class="section">
+      <h2>Hai amici celiaci nel gruppo? Si siedono con voi e mangiano insieme a voi.</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        Non dovete più cambiare pizzeria o dividere la tavolata. Raggiunto il <strong>minimo complessivo di 8 persone al tavolo</strong>, ecco come funziona:
+      </p>
+
+      <div class="grid-cards">
+        <div class="formula-card">
+          <div class="formula-header">
+            <span class="formula-title">1. Giro Classico</span>
+            <span class="formula-price">20 € / persona</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Farinate, giro pizza classico, 1 Sans Souci alla spina da 0,4L (o acqua/bibita), focaccia con Nutella e coperto.
+          </p>
+        </div>
+
+        <div class="formula-card highlight">
+          <div class="formula-header">
+            <span class="formula-title">2. Tavolo Misto (1–4 Celiaci)</span>
+            <span class="formula-price">20 € / persona</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Chi mangia senza glutine ha <strong>1 pizza individuale senza glutine</strong> (a scelta fra quelle a menu fino a 14 €) + farinata senza glutine, dolce, coperto e una birra senza glutine oppure acqua o bibita a <strong>20 €</strong>. Non è un giro senza glutine individuale. Gli altri fanno il giro classico a 20 €.
+          </p>
+        </div>
+
+        <div class="formula-card">
+          <div class="formula-header">
+            <span class="formula-title">3. Giro Senza Glutine (5+ o Tutto il Tavolo)</span>
+            <span class="formula-price">22 € / persona</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Con almeno 5 persone senza glutine, <strong>tutto il sottogruppo fa il giro dedicato a 22 € ciascuno</strong>. Gli altri fanno il classico a 20 €. Per il tavolo interamente senza glutine: 22 € a persona, minimo 8.<br><br>Inclusi farinate, giro pizza SG, una birra SG oppure acqua o bibita, focaccia con Nutella e coperto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BOX DI CONVERSIONE LASAGNA -->
+    <section class="section" id="prenota-ora">
+      <h2>Blocca ora il tavolo per il tuo gruppo (Lun, Mar o Gio)</h2>
+
+      <div class="booking-box">
+        <ol class="steps-list">
+          <li>Inserisci <strong>cellulare, nome e cognome</strong>; poi scegli persone, eventuali persone senza glutine, giorno e orario. Controlla i dati: il secondo «Avanti» può confermare direttamente il tavolo.</li>
+          <li><strong>La prenotazione non seleziona il giro pizza:</strong> concorda la formula e le esigenze alimentari con il responsabile di sala. <a href="tel:+390110608880">Chiama 011 060 8880</a> oppure <a href="https://wa.me/393534757546" target="_blank" rel="noopener noreferrer">scrivi alla sede su WhatsApp</a>.</li>
+        </ol>
+
+        <div class="warning-time">
+          ⏰ Per il Giro Pizza Gruppi seleziona lunedì, martedì o giovedì, con arrivo entro le 22:00. Il calendario generale può proporre anche altri giorni e orari.
+        </div>
+
+        <div class="iframe-container">
+          <iframe
+            id="lasagna-iframe"
+            data-booking-src="https://app.lasagna.marketing/v2/prenotazione/?key=6a47c771839738c24e04af28"
+            title="Prenotazione Tavolo Alexander Rivoli"
+            loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 14px;">
+          <a id="lasagna-direct-link" data-booking-direct href="https://app.lasagna.marketing/v2/prenotazione/?key=6a47c771839738c24e04af28" target="_blank" rel="noopener" style="color: var(--accent-gold); font-size: 0.85rem;">
+            Non visualizzi correttamente il calendario? Clicca qui per aprirlo a tutto schermo ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MICRO-FAQ ANTI-ATTRITO -->
+    <section class="section" style="border-bottom: none;">
+      <h2>Domande Frequenti per chi organizza il tavolo</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Fino a che ora possiamo arrivare dopo l'allenamento?</div>
+        <div class="faq-a">Accogliamo i gruppi per il Giro Pizza con arrivo al locale <strong>entro le ore 22:00</strong> (le 22:00 indicano l’arrivo, non la fine della cena).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Cosa succede se siamo meno di 8 persone?</div>
+        <div class="faq-a">Le formule Giro Pizza da 20 € e 22 € richiedono un minimo complessivo di 8 persone al tavolo. Se siete un gruppo più piccolo, potete prenotare liberamente e cenare scegliendo dal nostro menu alla carta (anche senza glutine).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Dove si trova il locale?</div>
+        <div class="faq-a">Siamo nel centro di Rivoli, in <strong>Piazza Principe Eugenio 7</strong>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Come funziona con i bambini o se cambia il numero del gruppo?</div>
+        <div class="faq-a">Contatta la sede per concordare le condizioni dei bambini e le eventuali variazioni. Se il gruppo scende sotto 8, la formula giro pizza va verificata con il responsabile di sala.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">È obbligatorio prenotare?</div>
+        <div class="faq-a">No, è consigliato. Per i gruppi è utile concordare prima disponibilità, orario, formula e richieste alimentari.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le bevande sono senza limiti?</div>
+        <div class="faq-a">No: è inclusa una bevanda a persona fra quelle della formula. Le consumazioni aggiuntive sono a parte.</div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="legal-footer">Alexander S.R.L. · P.IVA IT10021390017<br>Via Toscanini 15, Piossasco (TO)<nav aria-label="Informazioni legali"><a href="/rivoli/">La sede di Rivoli</a><a href="https://www.iubenda.com/privacy-policy/32284578">Privacy</a><a href="https://www.iubenda.com/privacy-policy/32284578/cookie-policy">Cookie policy</a><button class="iubenda-cs-preferences-link" type="button">Preferenze cookie</button></nav></footer>
+
+  <!-- STICKY CTA MOBILE -->
+  <div class="sticky-footer" id="mobile-cta">
+    <a href="#prenota-ora" class="btn-cta" style="padding: 12px 18px; font-size: 1rem;" data-booking-intro>
+      🍕 PRENOTA IL TAVOLO · CLASSICO 20 €
+    </a>
+  </div>
+
+  <!-- Misurazione e parametri gestiti da rivoli-gruppi.js con consenso. -->
+
+</body>
+</html>
